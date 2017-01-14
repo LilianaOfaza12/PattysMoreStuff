@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pattysmorestuff",
+  "name": "Pattys More Stuff",
+  "description": "Adds more stuff using vanilla resources.",
+  "version": "",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["StuffTheChickien"],
+  "credits": "Redbullslurpie, for helping me with stuff and things!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

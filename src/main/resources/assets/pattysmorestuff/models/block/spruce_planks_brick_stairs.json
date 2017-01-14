@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "pattysmorestuff:blocks/spruce_planks_brick",
+        "top": "pattysmorestuff:blocks/spruce_planks_brick",
+        "side": "pattysmorestuff:blocks/spruce_planks_brick"
+    }
+}

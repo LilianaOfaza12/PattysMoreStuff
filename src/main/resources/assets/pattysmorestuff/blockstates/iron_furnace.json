@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "pattysmorestuff:iron_furnace" },
+        "facing=south": { "model": "pattysmorestuff:iron_furnace", "y": 180 },
+        "facing=west":  { "model": "pattysmorestuff:iron_furnace", "y": 270 },
+        "facing=east":  { "model": "pattysmorestuff:iron_furnace", "y": 90 }
+    }
+}

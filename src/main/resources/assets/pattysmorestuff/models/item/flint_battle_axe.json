@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "pattysmorestuff:items/flint_battle_axe"
+    }
+}

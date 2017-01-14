@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "pattysmorestuff:items/lightgray_glass_battle_axe"
+    }
+}

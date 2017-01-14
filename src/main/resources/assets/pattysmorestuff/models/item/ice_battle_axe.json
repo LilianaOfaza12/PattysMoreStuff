@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "pattysmorestuff:items/ice_battle_axe"
+    }
+}
