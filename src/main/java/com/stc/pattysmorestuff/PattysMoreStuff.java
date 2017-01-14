@@ -7,7 +7,7 @@ import com.stc.pattysmorestuff.blocks.ModBlocks;
 import com.stc.pattysmorestuff.food.init.ModFood;
 import com.stc.pattysmorestuff.furnaces.init.ModFurnaces;
 import com.stc.pattysmorestuff.gui.GuiHandler;
-import com.stc.pattysmorestuff.handlers.PlayerEvent;
+import com.stc.pattysmorestuff.handlers.PlayerEventHandler;
 import com.stc.pattysmorestuff.random.init.ModRandomItems;
 import com.stc.pattysmorestuff.tileentity.*;
 import com.stc.pattysmorestuff.tools.init.ModDyeToolBattleaxe;
@@ -45,7 +45,7 @@ public class PattysMoreStuff
     )
     public static CommonProxy proxy;
     public static Configuration Config;
-
+    public static boolean spawnWithBook = true;
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -105,7 +105,7 @@ public class PattysMoreStuff
         GameRegistry.registerTileEntity(TileEntityAcaciaCrate.class, Strings.MODID + "TileEntityAcaciaCrate");
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
-        MinecraftForge.EVENT_BUS.register(new PlayerEvent());
+        MinecraftForge.EVENT_BUS.register(new PlayerEventHandler());
     }
 
 

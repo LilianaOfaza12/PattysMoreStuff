@@ -2,7 +2,6 @@ package com.stc.pattysmorestuff.proxy;
 
 import com.stc.pattysmorestuff.ConfigPreInit;
 import com.stc.pattysmorestuff.ModPMS;
-import com.stc.pattysmorestuff.PattysMoreStuff;
 import com.stc.pattysmorestuff.armor.init.ModArmor;
 import com.stc.pattysmorestuff.armor.init.ModDyeArmor;
 import com.stc.pattysmorestuff.blocks.ModBlocks;
@@ -17,7 +16,6 @@ import com.stc.pattysmorestuff.tools.init.ModTools;
 import com.stc.pattysmorestuff.tools.init.ModToolDyePaxels;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * Created by peeweebirch70 on 10/11/2016.
