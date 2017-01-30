@@ -8,7 +8,7 @@ import net.minecraft.client.gui.GuiButton;
 import java.util.List;
 
 /**
- * Created by patrick on 13/01/2017.
+ * Created by StuffTheChicken on 13/01/2017.
  */
 public class PageContentOne extends BookPage
 {

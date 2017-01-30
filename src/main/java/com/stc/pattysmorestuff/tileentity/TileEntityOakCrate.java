@@ -1,22 +1,20 @@
 package com.stc.pattysmorestuff.tileentity;
 
-import com.stc.pattysmorestuff.blocks.ModBlocks;
 import net.minecraft.block.BlockChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.*;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ContainerChest;
+import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityLockableLoot;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.datafix.DataFixer;
-import net.minecraft.util.datafix.FixTypes;
-import net.minecraft.util.datafix.walkers.ItemStackDataLists;
-import net.minecraft.util.math.AxisAlignedBB;
+
 
 /**
- * Created by patrick on 09/01/2017.
+ * Created by StuffTheChicken on 09/01/2017.
  */
 public class TileEntityOakCrate extends TileEntityLockableLoot implements ITickable {
 

@@ -1,12 +1,10 @@
 package com.stc.pattysmorestuff.random.items;
 
-import com.stc.pattysmorestuff.ModTabs;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import com.stc.pattysmorestuff.random.init.ModRandomItems;
-import com.stc.pattysmorestuff.tools.init.ModTools;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
@@ -24,7 +22,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 /**
- * Created by patrick on 31/12/2016.
+ * Created by StuffTheChicken on 31/12/2016.
  */
 public class ItemInfWaterBucket extends Item {
 

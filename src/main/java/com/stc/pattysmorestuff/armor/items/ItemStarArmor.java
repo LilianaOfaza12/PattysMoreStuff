@@ -1,6 +1,6 @@
 package com.stc.pattysmorestuff.armor.items;
 
-import com.stc.pattysmorestuff.ModTabs;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;

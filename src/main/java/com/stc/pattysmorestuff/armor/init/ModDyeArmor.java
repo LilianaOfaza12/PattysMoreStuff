@@ -1,7 +1,7 @@
 package com.stc.pattysmorestuff.armor.init;
 
+import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.armor.items.ItemDyeArmor;
-import com.stc.pattysmorestuff.ConfigPreInit;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -9,7 +9,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * Created by peeweebirch70 on 13/11/2016.
+ * Created by StuffTheChicken on 13/11/2016.
  */
 public class ModDyeArmor {
         public static Item black_helmet;

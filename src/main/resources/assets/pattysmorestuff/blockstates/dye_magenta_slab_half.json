@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "pattysmorestuff:dye_magenta_slab_bottom" },
+        "half=top": { "model": "pattysmorestuff:dye_magenta_slab_top" }
+    }
+}

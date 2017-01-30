@@ -2,7 +2,7 @@ package com.stc.pattysmorestuff.tools.items;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
-import com.stc.pattysmorestuff.ModTabs;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.material.Material;
@@ -14,7 +14,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.*;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -27,7 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.Set;
 
 /**
- * Created by peeweebirch70 on 14/11/2016.
+ * Created by StuffTheChicken on 14/11/2016.
  */
 public class ItemPaxel extends ItemTool {
 

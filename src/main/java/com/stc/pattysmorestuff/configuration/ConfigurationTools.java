@@ -1,12 +1,12 @@
 package com.stc.pattysmorestuff.configuration;
 
+import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.PattysMoreStuff;
-import com.stc.pattysmorestuff.ConfigPreInit;
 import net.minecraft.init.SoundEvents;
 import net.minecraftforge.common.util.EnumHelper;
 
 /**
- * Created by peeweebirch70 on 11/11/2016.
+ * Created by StuffTheChicken on 11/11/2016.
  */
 public class ConfigurationTools {
 

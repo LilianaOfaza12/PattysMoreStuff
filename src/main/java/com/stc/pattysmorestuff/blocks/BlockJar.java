@@ -1,12 +1,11 @@
 package com.stc.pattysmorestuff.blocks;
 
-import com.stc.pattysmorestuff.ModTabs;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import com.stc.pattysmorestuff.tileentity.TileEntityJar;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
@@ -23,14 +22,12 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
 /**
- * Created by patrick on 12/01/2017.
+ * Created by StuffTheChicken on 12/01/2017.
  */
 public class BlockJar extends Block implements ITileEntityProvider {
 
@@ -83,6 +80,19 @@ public class BlockJar extends Block implements ITileEntityProvider {
         }
 
         super.breakBlock(worldIn, pos, state);
+    }
+
+    @Override
+    public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state)
+    {
+        if (!world.isRemote)
+        {
+            for (int i = 0; i < getMetaFromState(state); i++)
+            {
+                EntityItem cookie = new EntityItem(world, pos.getX() + 0.5, pos.getY() + 0.8, pos.getZ() + 0.5, new ItemStack(Items.COOKIE));
+                world.spawnEntity(cookie);
+            }
+        }
     }
 
     @Override

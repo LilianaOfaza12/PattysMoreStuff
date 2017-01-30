@@ -1,6 +1,6 @@
 package com.stc.pattysmorestuff.tileentity;
 
-import com.stc.pattysmorestuff.ConfigPreInit;
+import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.furnaces.blocks.BlockGoldFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -25,7 +25,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by patrick on 08/01/2017.
+ * Created by StuffTheChicken on 08/01/2017.
  */
 public class TileEntityGoldFurnace extends TileEntityLockable implements ITickable, ISidedInventory {
 

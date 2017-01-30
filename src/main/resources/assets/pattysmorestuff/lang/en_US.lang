@@ -173,10 +173,10 @@ item.brown_chestplate.name=Brown Chestplate
 item.brown_leggings.name=Brown Leggings
 item.brown_boots.name=Brown Boots
 
-item.lapis_helmet.name=Lapis Helmet
-item.lapis_chestplate.name=Lapis Chestplate
-item.lapis_leggings.name=Lapis Leggings
-item.lapis_boots.name=Lapis Boots
+item.lapis_helmet.name=Lapis Lazuli Helmet
+item.lapis_chestplate.name=Lapis Lazuli Chestplate
+item.lapis_leggings.name=Lapis Lazuli Leggings
+item.lapis_boots.name=Lapis Lazuli Boots
 
 item.purple_helmet.name=Purple Helmet
 item.purple_chestplate.name=Purple Chestplate
@@ -232,11 +232,6 @@ item.white_helmet.name=White Helmet
 item.white_chestplate.name=White Chestplate
 item.white_leggings.name=White Leggings
 item.white_boots.name=White Boots
-
-item.black_glass_helmet.name=Black Glass Helmet
-item.black_glass_chestplate.name=Black Glass Chestplate
-item.black_glass_leggings.name=Black Glass Leggings
-item.black_glass_boots.name=Black Glass Boots
 
 item.emerald_pickaxe.name=Emerald Pickaxe
 item.emerald_axe.name=Emerald Axe
@@ -463,12 +458,12 @@ item.purple_hoe.name=Purple Hoe
 item.purple_sword.name=Purple Sword
 item.purple_paxel.name=Purple Paxel
 
-item.blue_pickaxe.name=Lapis Pickaxe
-item.blue_axe.name=Lapis Axe
-item.blue_shovel.name=Lapis Shovel
-item.blue_hoe.name=Lapis Hoe
-item.blue_sword.name=Lapis Sword
-item.blue_paxel.name=Lapis Paxel
+item.blue_pickaxe.name=Lapis Lazuli Pickaxe
+item.blue_axe.name=Lapis Lazuli Axe
+item.blue_shovel.name=Lapis Lazuli Shovel
+item.blue_hoe.name=Lapis Lazuli Hoe
+item.blue_sword.name=Lapis Lazuli Sword
+item.blue_paxel.name=Lapis Lazuli Paxel
 
 item.brown_pickaxe.name=Brown Pickaxe
 item.brown_axe.name=Brown Axe
@@ -505,6 +500,7 @@ item.gold_paxel.name=Gold Paxel
 item.diamond_paxel.name=Diamond Paxel
 
 item.time_wand.name=Time Wand
+item.info_book.name=PattysMoreStuff Information Book
 
 item.fried_egg.name=Fried Egg
 item.bacon_raw.name=Raw Bacon
@@ -517,8 +513,6 @@ item.inf_water_bucket.name=Infinite Water Bucket
 item.iron_apple.name=Iron Apple
 item.diamond_apple.name=Diamond Apple
 item.emerald_apple.name=Emerald Apple
-
-item.info_book.name=PattysMoreStuff Information Book
 
 tile.dye_black_block.name=Black Dye Block
 tile.dye_red_block.name=Red Dye Block
@@ -536,11 +530,45 @@ tile.dye_magenta_block.name=Magenta Dye Block
 tile.dye_orange_block.name=Orange Dye Block
 tile.dye_white_block.name=White Dye Block
 
+tile.dye_black_slab_half.name=Black Dye Slab
+tile.dye_red_slab_half.name=Red Dye Slab
+tile.dye_green_slab_half.name=Green Dye Slab
+tile.dye_brown_slab_half.name=Brown Dye Slab
+tile.dye_blue_slab_half.name=Lapis Lazuli Slab
+tile.dye_purple_slab_half.name=Purple Dye Slab
+tile.dye_cyan_slab_half.name=Cyan Dye Slab
+tile.dye_silver_slab_half.name=Light Gray Dye Slab
+tile.dye_gray_slab_half.name=Gray Dye Slab
+tile.dye_pink_slab_half.name=Pink Dye Slab
+tile.dye_lime_slab_half.name=Lime Dye Slab
+tile.dye_yellow_slab_half.name=Yellow Dye Slab
+tile.dye_light_blue_slab_half.name=Light Blue Dye Slab
+tile.dye_magenta_slab_half.name=Magenta Dye Slab
+tile.dye_orange_slab_half.name=Orange Dye Slab
+tile.dye_white_slab_half.name=White Dye Slab
+
+tile.dye_black_slab_double.name=Black Dye Double Slab
+tile.dye_red_slab_double.name=Red Dye Double Slab
+tile.dye_green_slab_double.name=Green Dye Double Slab
+tile.dye_brown_slab_double.name=Brown Dye Double Slab
+tile.dye_blue_slab_double.name=Lapis Lazuli Double Slab
+tile.dye_purple_slab_double.name=Purple Dye Double Slab
+tile.dye_cyan_slab_double.name=Cyan Dye Double Slab
+tile.dye_silver_slab_double.name=Light Gray Dye Double Slab
+tile.dye_gray_slab_double.name=Gray Dye Double Slab
+tile.dye_pink_slab_double.name=Pink Dye Double Slab
+tile.dye_lime_slab_double.name=Lime Dye Double Slab
+tile.dye_yellow_slab_double.name=Yellow Dye Double Slab
+tile.dye_light_blue_slab_double.name=Light Blue Dye Double Slab
+tile.dye_magenta_slab_double.name=Magenta Dye Double Slab
+tile.dye_orange_slab_double.name=Orange Dye Double Slab
+tile.dye_white_slab_double.name=White Dye Double Slab
+
 tile.dye_black_stairs.name=Black Dye Stairs
 tile.dye_red_stairs.name=Red Dye Stairs
 tile.dye_green_stairs.name=Green Dye Stairs
 tile.dye_brown_stairs.name=Brown Dye Stairs
-tile.dye_blue_stairs.name=Lapis Stairs
+tile.dye_blue_stairs.name=Lapis Lazuli Stairs
 tile.dye_purple_stairs.name=Purple Dye Stairs
 tile.dye_cyan_stairs.name=Cyan Dye Stairs
 tile.dye_silver_stairs.name=Light Gray Dye Stairs
@@ -569,6 +597,40 @@ tile.stonebrick_light_blue.name=Light Blue Stone Bricks
 tile.stonebrick_magenta.name=Magenta Stone Bricks
 tile.stonebrick_orange.name=Orange Stone Bricks
 tile.stonebrick_white.name=White Stone Bricks
+
+tile.stonebrick_black_slab_half.name=Black Stone Brick Slab
+tile.stonebrick_red_slab_half.name=Red Stone Brick Slab
+tile.stonebrick_green_slab_half.name=Green Stone Brick Slab
+tile.stonebrick_brown_slab_half.name=Brown Stone Brick Slab
+tile.stonebrick_blue_slab_half.name=Lapis Lazuli Stone Brick Slab
+tile.stonebrick_purple_slab_half.name=Purple Stone Brick Slab
+tile.stonebrick_cyan_slab_half.name=Cyan Stone Brick Slab
+tile.stonebrick_silver_slab_half.name=Light Gray Stone Brick Slab
+tile.stonebrick_gray_slab_half.name=Gray Stone Brick Slab
+tile.stonebrick_pink_slab_half.name=Pink Stone Brick Slab
+tile.stonebrick_lime_slab_half.name=Lime Stone Brick Slab
+tile.stonebrick_yellow_slab_half.name=Yellow Stone Brick Slab
+tile.stonebrick_light_blue_slab_half.name=Light Blue Stone Brick Slab
+tile.stonebrick_magenta_slab_half.name=Magenta Stone Brick Slab
+tile.stonebrick_orange_slab_half.name=Orange Stone Brick Slab
+tile.stonebrick_white_slab_half.name=White Stone Brick Slab
+
+tile.stonebrick_black_slab_double.name=Black Stone Brick Double Slab
+tile.stonebrick_red_slab_double.name=Red Stone Brick Double Slab
+tile.stonebrick_green_slab_double.name=Green Stone Brick Double Slab
+tile.stonebrick_brown_slab_double.name=Brown Stone Brick Double Slab
+tile.stonebrick_blue_slab_double.name=Lapis Lazuli Stone Brick Double Slab
+tile.stonebrick_purple_slab_double.name=Purple Stone Brick Double Slab
+tile.stonebrick_cyan_slab_double.name=Cyan Stone Brick Double Slab
+tile.stonebrick_silver_slab_double.name=Light Gray Stone Brick Double Slab
+tile.stonebrick_gray_slab_double.name=Gray Stone Brick Double Slab
+tile.stonebrick_pink_slab_double.name=Pink Stone Brick Double Slab
+tile.stonebrick_lime_slab_double.name=Lime Stone Brick Double Slab
+tile.stonebrick_yellow_slab_double.name=Yellow Stone Brick Double Slab
+tile.stonebrick_light_blue_slab_double.name=Light Blue Stone Brick Double Slab
+tile.stonebrick_magenta_slab_double.name=Magenta Stone Brick Double Slab
+tile.stonebrick_orange_slab_double.name=Orange Stone Brick Double Slab
+tile.stonebrick_white_slab_double.name=White Stone Brick Double Slab
 
 tile.stonebrick_black_stairs.name=Black Stone Brick Stairs
 tile.stonebrick_red_stairs.name=Red Stone Brick Stairs
@@ -636,3 +698,6 @@ tile.diamond_furnace.name=Diamond Furnace
 tile.diamond_furnace_active.name=Diamond Furnace Active
 tile.emerald_furnace.name=Emerald Furnace
 tile.emerald_furnace_active.name=Emerald Furnace Active
+
+tile.reinforced_obsidian.name=Reinforced Obsidian
+tile.reinforced_glass.name=Reinforced Glass

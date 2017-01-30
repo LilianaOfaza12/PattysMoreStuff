@@ -9,7 +9,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 /**
- * Created by patrick on 12/01/2017.
+ * Created by StuffTheChicken on 12/01/2017.
  */
 public class RendererJar extends TileEntitySpecialRenderer<TileEntityJar> {
 

@@ -1,7 +1,7 @@
 package com.stc.pattysmorestuff.random.items;
 
-import com.stc.pattysmorestuff.ConfigPreInit;
-import com.stc.pattysmorestuff.ModTabs;
+import com.stc.pattysmorestuff.lib.ConfigPreInit;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import java.util.List;
 
 /**
- * Created by patrick on 07/01/2017.
+ * Created by StuffTheChicken on 07/01/2017.
  */
 public class ItemTimeWand extends Item {
 

@@ -12,7 +12,7 @@ import net.minecraft.tileentity.TileEntity;
 import javax.annotation.Nullable;
 
 /**
- * Created by patrick on 12/01/2017.
+ * Created by StuffTheChicken on 12/01/2017.
  */
 public class TileEntityJar extends TileEntity
 {

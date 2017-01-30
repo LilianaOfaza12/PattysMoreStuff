@@ -1,6 +1,5 @@
 package com.stc.pattysmorestuff.tools.items;
 
-import com.stc.pattysmorestuff.ModTabs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

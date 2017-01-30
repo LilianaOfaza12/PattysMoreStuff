@@ -1,18 +1,14 @@
 package com.stc.pattysmorestuff.tools.init;
 
-import com.stc.pattysmorestuff.ConfigPreInit;
-import com.stc.pattysmorestuff.PattysMoreStuff;
-import com.stc.pattysmorestuff.random.items.ItemInfWaterBucket;
-import com.stc.pattysmorestuff.tools.items.ItemObsidianIngot;
+import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.tools.items.*;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * Created by peeweebirch70 on 14/11/2016.
+ * Created by StuffTheChicken on 14/11/2016.
  */
 public class ModTools {
 

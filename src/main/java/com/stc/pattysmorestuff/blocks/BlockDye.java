@@ -1,12 +1,8 @@
 package com.stc.pattysmorestuff.blocks;
 
-import com.stc.pattysmorestuff.ModTabs;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-
-import java.util.List;
 
 /**
  * Created by peeweebirch70 on 14/11/2016.

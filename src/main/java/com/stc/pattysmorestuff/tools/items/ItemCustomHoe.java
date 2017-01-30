@@ -1,7 +1,6 @@
 package com.stc.pattysmorestuff.tools.items;
 
-import com.stc.pattysmorestuff.ModTabs;
-import com.stc.pattysmorestuff.PattysMoreStuff;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.item.ItemHoe;
 
 /**

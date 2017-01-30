@@ -9,17 +9,19 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * Created by patrick on 31/12/2016.
+ * Created by StuffTheChicken on 31/12/2016.
  */
 public class ModRandomItems {
 
     public static Item inf_water_bucket;
     public static Item time_wand;
 
+
     public static void init() {
 
         inf_water_bucket = new ItemInfWaterBucket("inf_water_bucket", Blocks.FLOWING_WATER);
         time_wand = new ItemTimeWand("time_wand");
+
 
         register(inf_water_bucket);
         register(time_wand);

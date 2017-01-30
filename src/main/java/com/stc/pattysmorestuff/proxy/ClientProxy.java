@@ -1,24 +1,28 @@
 package com.stc.pattysmorestuff.proxy;
 
-import com.stc.pattysmorestuff.ConfigPreInit;
-import com.stc.pattysmorestuff.ModPMS;
+import com.stc.pattysmorestuff.PattysMoreStuff;
+import com.stc.pattysmorestuff.blocks.init.ModExtraBlocks;
+import com.stc.pattysmorestuff.lib.ConfigPreInit;
+import com.stc.pattysmorestuff.items.init.ModPMS;
 import com.stc.pattysmorestuff.armor.init.ModArmor;
 import com.stc.pattysmorestuff.armor.init.ModDyeArmor;
-import com.stc.pattysmorestuff.blocks.ModBlocks;
+import com.stc.pattysmorestuff.blocks.init.ModBlocks;
 import com.stc.pattysmorestuff.food.init.ModFood;
 import com.stc.pattysmorestuff.furnaces.init.ModFurnaces;
 import com.stc.pattysmorestuff.random.init.ModRandomItems;
-import com.stc.pattysmorestuff.tileentity.*;
+import com.stc.pattysmorestuff.tileentity.TileEntityJar;
 import com.stc.pattysmorestuff.tileentity.render.RendererJar;
 import com.stc.pattysmorestuff.tools.init.ModDyeToolBattleaxe;
 import com.stc.pattysmorestuff.tools.init.ModDyeTools;
-import com.stc.pattysmorestuff.tools.init.ModTools;
 import com.stc.pattysmorestuff.tools.init.ModToolDyePaxels;
+import com.stc.pattysmorestuff.tools.init.ModTools;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.IReloadableResourceManager;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
 /**
- * Created by peeweebirch70 on 10/11/2016.
+ * Created by StuffTheChicken on 10/11/2016.
  */
 public class ClientProxy extends CommonProxy {
 
@@ -28,6 +32,7 @@ public class ClientProxy extends CommonProxy {
         if(ConfigPreInit.disableBlocks) {
             ModBlocks.registerRenders();
         }
+        ModExtraBlocks.registerRenders();
         ModFurnaces.registerRenders();
         ModPMS.registerRenders();
 

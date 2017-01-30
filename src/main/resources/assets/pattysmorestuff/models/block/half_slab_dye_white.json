@@ -1,8 +1,0 @@
-{
-    "parent": "block/half_slab",
-    "textures": {
-        "bottom": "pattysmorestuff:blocks/dye_white_block",
-        "top": "pattysmorestuff:blocks/dye_white_block",
-        "side": "pattysmorestuff:blocks/dye_white_block"
-    }
-}

@@ -1,9 +1,6 @@
 package com.stc.pattysmorestuff.furnaces.init;
 
-import com.stc.pattysmorestuff.ModTabs;
-import com.stc.pattysmorestuff.blocks.BlockDye;
-import com.stc.pattysmorestuff.blocks.BlockDyeOre;
-import com.stc.pattysmorestuff.blocks.BlockDyeStairs;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import com.stc.pattysmorestuff.furnaces.blocks.BlockDiamondFurnace;
 import com.stc.pattysmorestuff.furnaces.blocks.BlockEmeraldFurnace;
 import com.stc.pattysmorestuff.furnaces.blocks.BlockGoldFurnace;
@@ -11,7 +8,6 @@ import com.stc.pattysmorestuff.furnaces.blocks.BlockIronFurnace;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
@@ -19,7 +15,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * Created by patrick on 08/01/2017.
+ * Created by StuffTheChicken on 08/01/2017.
  */
 public class ModFurnaces {
 
@@ -38,16 +34,16 @@ public class ModFurnaces {
 
     public static void init() {
 
-        registerBlock(iron_furnace = new BlockIronFurnace("iron_furnace", false).setCreativeTab(ModTabs.tabPattysBlocks));
+        registerBlock(iron_furnace = new BlockIronFurnace("iron_furnace", false).setCreativeTab(ModTabs.tabPattysDecoration));
         registerBlock(iron_furnace_active = new BlockIronFurnace("iron_furnace_active", true));
 
-        registerBlock(gold_furnace = new BlockGoldFurnace("gold_furnace", false).setCreativeTab(ModTabs.tabPattysBlocks));
+        registerBlock(gold_furnace = new BlockGoldFurnace("gold_furnace", false).setCreativeTab(ModTabs.tabPattysDecoration));
         registerBlock(gold_furnace_active = new BlockGoldFurnace("gold_furnace_active", true));
 
-        registerBlock(diamond_furnace = new BlockDiamondFurnace("diamond_furnace", false).setCreativeTab(ModTabs.tabPattysBlocks));
+        registerBlock(diamond_furnace = new BlockDiamondFurnace("diamond_furnace", false).setCreativeTab(ModTabs.tabPattysDecoration));
         registerBlock(diamond_furnace_active = new BlockDiamondFurnace("diamond_furnace_active", true));
 
-        registerBlock(emerald_furnace = new BlockEmeraldFurnace("emerald_furnace", false).setCreativeTab(ModTabs.tabPattysBlocks));
+        registerBlock(emerald_furnace = new BlockEmeraldFurnace("emerald_furnace", false).setCreativeTab(ModTabs.tabPattysDecoration));
         registerBlock(emerald_furnace_active = new BlockEmeraldFurnace("emerald_furnace_active", true));
     }
 

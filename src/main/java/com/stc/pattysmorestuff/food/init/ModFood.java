@@ -10,7 +10,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * Created by patrick on 21/12/2016.
+ * Created by StuffTheChicken on 21/12/2016.
  */
 public class ModFood {
 

@@ -1,10 +1,10 @@
 package com.stc.pattysmorestuff.proxy;
 
-import com.stc.pattysmorestuff.world.gen.WorldGenDye;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import net.minecraft.entity.player.EntityPlayer;
 
 /**
- * Created by peeweebirch70 on 10/11/2016.
+ * Created by StuffTheChicken on 10/11/2016.
  */
 public class CommonProxy {
 

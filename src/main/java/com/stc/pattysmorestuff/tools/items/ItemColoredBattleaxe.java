@@ -2,8 +2,7 @@ package com.stc.pattysmorestuff.tools.items;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
-import com.stc.pattysmorestuff.ModTabs;
-import com.stc.pattysmorestuff.PattysMoreStuff;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

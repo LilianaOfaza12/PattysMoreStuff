@@ -1,8 +1,7 @@
 package com.stc.pattysmorestuff.tools.items;
 
 import com.google.common.collect.Sets;
-import com.stc.pattysmorestuff.ModTabs;
-import com.stc.pattysmorestuff.PattysMoreStuff;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -14,7 +13,7 @@ import net.minecraft.item.ItemTool;
 import java.util.Set;
 
 /**
- * Created by peeweebirch70 on 14/11/2016.
+ * Created by StuffTheChicken on 14/11/2016.
  */
 public class ItemAx extends ItemTool {
 

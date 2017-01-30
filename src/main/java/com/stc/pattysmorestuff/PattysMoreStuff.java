@@ -2,22 +2,29 @@ package com.stc.pattysmorestuff;
 
 import com.stc.pattysmorestuff.armor.init.ModArmor;
 import com.stc.pattysmorestuff.armor.init.ModDyeArmor;
+import com.stc.pattysmorestuff.blocks.init.ModBlocks;
+import com.stc.pattysmorestuff.blocks.init.ModExtraBlocks;
 import com.stc.pattysmorestuff.configuration.ConfigurationTools;
-import com.stc.pattysmorestuff.blocks.ModBlocks;
+import com.stc.pattysmorestuff.crafting.ModCrafting;
 import com.stc.pattysmorestuff.food.init.ModFood;
 import com.stc.pattysmorestuff.furnaces.init.ModFurnaces;
 import com.stc.pattysmorestuff.gui.GuiHandler;
 import com.stc.pattysmorestuff.handlers.PlayerEventHandler;
-import com.stc.pattysmorestuff.random.init.ModRandomItems;
-import com.stc.pattysmorestuff.tileentity.*;
-import com.stc.pattysmorestuff.tools.init.ModDyeToolBattleaxe;
-import com.stc.pattysmorestuff.crafting.ModCrafting;
+import com.stc.pattysmorestuff.items.init.ModPMS;
+import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.lib.Strings;
 import com.stc.pattysmorestuff.proxy.CommonProxy;
+import com.stc.pattysmorestuff.random.init.ModRandomItems;
+import com.stc.pattysmorestuff.tabs.ModTabs;
+import com.stc.pattysmorestuff.tileentity.*;
+import com.stc.pattysmorestuff.tools.init.ModDyeToolBattleaxe;
 import com.stc.pattysmorestuff.tools.init.ModDyeTools;
-import com.stc.pattysmorestuff.tools.init.ModTools;
 import com.stc.pattysmorestuff.tools.init.ModToolDyePaxels;
+import com.stc.pattysmorestuff.tools.init.ModTools;
 import com.stc.pattysmorestuff.world.gen.WorldGenDye;
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
@@ -30,7 +37,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
 import java.io.File;
+import java.util.Collections;
+
+import static net.minecraft.world.biome.Biome.EXPLORATION_BIOMES_LIST;
 
 @Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
 public class PattysMoreStuff
@@ -46,6 +57,7 @@ public class PattysMoreStuff
     public static CommonProxy proxy;
     public static Configuration Config;
     public static boolean spawnWithBook = true;
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -58,7 +70,7 @@ public class PattysMoreStuff
         if(ConfigPreInit.disableBlocks) {
             ModBlocks.init();
         }
-
+        ModExtraBlocks.init();
         ModFurnaces.init();
 
         if(ConfigPreInit.disableTools) {
@@ -84,6 +96,7 @@ public class PattysMoreStuff
         ModCrafting.recipes();
 
         GameRegistry.registerWorldGenerator(new WorldGenDye(), 0);
+
         proxy.registerRenders();
     }
 

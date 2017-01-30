@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 import javax.annotation.Nullable;
 
 /**
- * Created by patrick on 13/01/2017.
+ * Created by StuffTheChicken on 13/01/2017.
  */
 public class GuiHandler implements IGuiHandler {
 

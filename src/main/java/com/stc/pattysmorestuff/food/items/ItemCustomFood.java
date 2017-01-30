@@ -1,13 +1,12 @@
 package com.stc.pattysmorestuff.food.items;
 
 
-import com.stc.pattysmorestuff.ModTabs;
-import net.minecraft.creativetab.CreativeTabs;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.item.ItemFood;
 
 
 /**
- * Created by patrick on 21/12/2016.
+ * Created by StuffTheChicken on 21/12/2016.
  */
 public class ItemCustomFood extends ItemFood {
 

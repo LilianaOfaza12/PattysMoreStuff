@@ -6,7 +6,7 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.text.TextFormatting;
 
 /**
- * Created by patrick on 13/01/2017.
+ * Created by StuffTheChicken on 13/01/2017.
  */
 public class PageTitle extends BookPage
 {

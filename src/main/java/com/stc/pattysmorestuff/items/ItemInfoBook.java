@@ -12,7 +12,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
 /**
- * Created by patrick on 13/01/2017.
+ * Created by StuffTheChicken on 13/01/2017.
  */
 public class ItemInfoBook extends Item {
 

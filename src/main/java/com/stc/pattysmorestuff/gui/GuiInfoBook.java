@@ -1,9 +1,6 @@
 package com.stc.pattysmorestuff.gui;
 
-import com.stc.pattysmorestuff.gui.pages.PageContentOne;
-import com.stc.pattysmorestuff.gui.pages.PageContentTwo;
-import com.stc.pattysmorestuff.gui.pages.PageTitle;
-import com.stc.pattysmorestuff.gui.pages.BookPage;
+import com.stc.pattysmorestuff.gui.pages.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
@@ -22,13 +19,12 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by patrick on 13/01/2017.
+ * Created by StuffTheChicken on 13/01/2017.
  */
 public class GuiInfoBook extends GuiScreen {
 
     private static final ResourceLocation page_1 = new ResourceLocation("pattysmorestuff:textures/gui/recipebook_1.png");
     private static final ResourceLocation page_2 = new ResourceLocation("pattysmorestuff:textures/gui/recipebook_2.png");
-
     public int bookWidth = 146;
     public int bookHeight = 180;
 
@@ -59,10 +55,14 @@ public class GuiInfoBook extends GuiScreen {
         PageContentTwo contentsPageTwo = new PageContentTwo(this);
         pages.put(pageCount, contentsPageTwo);
 
+        PageContentThree contentsPageThree = new PageContentThree(this);
+        pages.put(pageCount, contentsPageThree);
+
     }
 
     public void initGui()
     {
+
         Keyboard.enableRepeatEvents(true);
 
         int i = (this.width - 18) / 2;
@@ -286,7 +286,6 @@ public class GuiInfoBook extends GuiScreen {
     static class NextPageButton extends GuiButton
     {
         private final boolean rightButton;
-        private static final String __OBFID = "CL_00000745";
 
         public NextPageButton(int id, int posX, int posY, boolean rightButton)
         {

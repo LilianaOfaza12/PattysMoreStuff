@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=top": { "model": "pattysmorestuff:stonebrick_orange" },
+		"half=bottom": { "model": "pattysmorestuff:stonebrick_orange" }
+    }
+}

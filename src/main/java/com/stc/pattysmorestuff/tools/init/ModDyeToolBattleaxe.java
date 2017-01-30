@@ -1,15 +1,14 @@
 package com.stc.pattysmorestuff.tools.init;
 
-import com.stc.pattysmorestuff.PattysMoreStuff;
+import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.tools.items.ItemColoredBattleaxe;
-import com.stc.pattysmorestuff.ConfigPreInit;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * Created by peeweebirch70 on 13/11/2016.
+ * Created by StuffTheChicken on 13/11/2016.
  */
 public class ModDyeToolBattleaxe {
 

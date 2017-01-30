@@ -1,6 +1,6 @@
 package com.stc.pattysmorestuff.world.gen;
 
-import com.stc.pattysmorestuff.blocks.ModBlocks;
+import com.stc.pattysmorestuff.blocks.init.ModBlocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 import java.util.Random;
 
 /**
- * Created by patrick on 21/12/2016.
+ * Created by StuffTheChicken on 21/12/2016.
  */
 public class WorldGenDye implements IWorldGenerator{
 

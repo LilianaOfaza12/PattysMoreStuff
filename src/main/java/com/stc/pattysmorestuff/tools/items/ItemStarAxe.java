@@ -1,8 +1,7 @@
 package com.stc.pattysmorestuff.tools.items;
 
 import com.google.common.collect.Sets;
-import com.stc.pattysmorestuff.ModTabs;
-import com.stc.pattysmorestuff.PattysMoreStuff;
+import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -16,7 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.Set;
 
 /**
- * Created by peeweebirch70 on 14/11/2016.
+ * Created by StuffTheChicken on 14/11/2016.
  */
 public class ItemStarAxe extends ItemTool {
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] {Blocks.PLANKS, Blocks.BOOKSHELF, Blocks.LOG, Blocks.LOG2, Blocks.CHEST, Blocks.PUMPKIN, Blocks.LIT_PUMPKIN, Blocks.MELON_BLOCK, Blocks.LADDER, Blocks.WOODEN_BUTTON, Blocks.WOODEN_PRESSURE_PLATE});

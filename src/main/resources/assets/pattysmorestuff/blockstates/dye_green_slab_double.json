@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=top": { "model": "pattysmorestuff:dye_green_block" },
+		"half=bottom": { "model": "pattysmorestuff:dye_green_block" }
+    }
+}
