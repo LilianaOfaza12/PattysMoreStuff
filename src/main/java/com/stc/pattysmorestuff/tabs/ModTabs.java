@@ -3,12 +3,14 @@ package com.stc.pattysmorestuff.tabs;
 import com.stc.pattysmorestuff.armor.init.ModArmor;
 import com.stc.pattysmorestuff.blocks.init.ModBlocks;
 import com.stc.pattysmorestuff.food.init.ModFood;
+import com.stc.pattysmorestuff.items.init.ModPMS;
 import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.random.init.ModRandomItems;
 import com.stc.pattysmorestuff.tools.init.ModTools;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Loader;
 
 /**
  * Created by StuffTheChicken on 11/11/2016.
@@ -24,6 +26,7 @@ public class ModTabs {
     public static CreativeTabs tabPattysFood;
     public static CreativeTabs tabPattysMisc;
     public static CreativeTabs tabPattysDecoration;
+    public static CreativeTabs tabPattysBaubles;
 
 
 
@@ -34,7 +37,7 @@ public class ModTabs {
             tabPattysBlocks = new CreativeTabs(CreativeTabs.getNextID(), "Blocks") {
                 @Override
                 public ItemStack getTabIconItem() {
-                    return new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick_lime));
+                    return new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 5);
                 }
 
                 @Override
@@ -137,5 +140,19 @@ public class ModTabs {
             }
         };
 
+        if(Loader.isModLoaded("baubles")) {
+
+            tabPattysBaubles = new CreativeTabs(CreativeTabs.getNextID(), "Baubles") {
+                @Override
+                public ItemStack getTabIconItem() {
+                    return new ItemStack(ModPMS.ring_of_flight);
+                }
+
+                @Override
+                public String getTranslatedTabLabel() {
+                    return "Pattys Baubles";
+                }
+            };
+        }
     }
 }

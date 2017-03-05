@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "pattysmorestuff:blocks/dye_yellow_block"
-    }
-}

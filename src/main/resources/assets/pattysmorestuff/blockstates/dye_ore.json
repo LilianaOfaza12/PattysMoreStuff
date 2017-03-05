@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "pattysmorestuff:dye_ore" }
-    }
+	"variants": {
+		"type=overworld": { "model": "pattysmorestuff:dye_ore_overworld" },
+		"type=nether": { "model": "pattysmorestuff:dye_ore_nether" },
+		"type=end": { "model": "pattysmorestuff:dye_ore_end" }
+	}
 }

@@ -2,13 +2,25 @@ package com.stc.pattysmorestuff.tools.items;
 
 import com.google.common.collect.Sets;
 import com.stc.pattysmorestuff.tabs.ModTabs;
+import com.stc.pattysmorestuff.tools.init.ModTools;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.EnumSkyBlock;
+import net.minecraft.world.World;
 
 import java.util.Set;
 
@@ -41,4 +53,19 @@ public class ItemAx extends ItemTool {
         Material material = state.getMaterial();
         return material != Material.WOOD && material != Material.PLANTS && material != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
     }
+
+    @Override
+    public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+        for(int i = 0; i < 9; i++){
+
+            if(worldIn.getBlockState(pos).getBlock() == Blocks.LOG && worldIn.getBlockState(pos).getBlock() == Blocks.LOG2) {
+               worldIn.getBlockState(pos).getBlock().dropBlockAsItem(worldIn, pos, worldIn.getBlockState(pos), i);
+
+            }
+
+        }
+
+        return super.onItemUse(player, worldIn, pos, hand, facing, hitX, hitY, hitZ);
+    }
+
 }

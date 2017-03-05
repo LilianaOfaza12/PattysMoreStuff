@@ -1,7 +1,10 @@
 package com.stc.pattysmorestuff.blocks.init;
 
+import com.stc.pattysmorestuff.blocks.BlockDyeBrick;
+import com.stc.pattysmorestuff.blocks.item.ItemBlockMeta;
 import com.stc.pattysmorestuff.blocks.stairs.BlockStonebrickStairs;
 import com.stc.pattysmorestuff.blocks.stairs.BlockWoodBrickPlankStairs;
+import com.stc.pattysmorestuff.handlers.EnumHandler;
 import com.stc.pattysmorestuff.tabs.ModTabs;
 import com.stc.pattysmorestuff.blocks.BlockDye;
 import com.stc.pattysmorestuff.blocks.BlockJar;
@@ -27,21 +30,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ModBlocks {
 
-    public static Block dye_black_block;
-    public static Block dye_red_block;
-    public static Block dye_green_block;
-    public static Block dye_brown_block;
-    public static Block dye_purple_block;
-    public static Block dye_cyan_block;
-    public static Block dye_silver_block;
-    public static Block dye_gray_block;
-    public static Block dye_pink_block;
-    public static Block dye_lime_block;
-    public static Block dye_yellow_block;
-    public static Block dye_light_blue_block;
-    public static Block dye_magenta_block;
-    public static Block dye_orange_block;
-    public static Block dye_white_block;
+    public static Block dye_block;
 
     public static BlockBlackSlabHalf dye_black_slab_half;
     public static BlockBlackSlabDouble dye_black_slab_double;
@@ -91,6 +80,22 @@ public class ModBlocks {
     public static BlockWhiteSlabHalf dye_white_slab_half;
     public static BlockWhiteSlabDouble dye_white_slab_double;
 
+    public static Block dye_black_fence;
+    public static Block dye_red_fence;
+    public static Block dye_green_fence;
+    public static Block dye_brown_fence;
+    public static Block dye_purple_fence;
+    public static Block dye_cyan_fence;
+    public static Block dye_silver_fence;
+    public static Block dye_gray_fence;
+    public static Block dye_pink_fence;
+    public static Block dye_lime_fence;
+    public static Block dye_yellow_fence;
+    public static Block dye_light_blue_fence;
+    public static Block dye_magenta_fence;
+    public static Block dye_orange_fence;
+    public static Block dye_white_fence;
+
     public static Block dye_black_stairs;
     public static Block dye_red_stairs;
     public static Block dye_green_stairs;
@@ -108,22 +113,8 @@ public class ModBlocks {
     public static Block dye_orange_stairs;
     public static Block dye_white_stairs;
 
-    public static Block stonebrick_white;
-    public static Block stonebrick_orange;
-    public static Block stonebrick_magenta;
-    public static Block stonebrick_light_blue;
-    public static Block stonebrick_yellow;
-    public static Block stonebrick_lime;
-    public static Block stonebrick_pink;
-    public static Block stonebrick_gray;
-    public static Block stonebrick_silver;
-    public static Block stonebrick_cyan;
-    public static Block stonebrick_purple;
-    public static Block stonebrick_blue;
-    public static Block stonebrick_brown;
-    public static Block stonebrick_green;
-    public static Block stonebrick_red;
-    public static Block stonebrick_black;
+    public static Block stonebrick;
+
 
     public static BlockBlackStonebrickSlabHalf stonebrick_black_slab_half;
     public static BlockBlackStonebrickSlabDouble stonebrick_black_slab_double;
@@ -232,21 +223,8 @@ public class ModBlocks {
     public static Block cookie_jar_black;
 
     public static void init() {
-        registerBlock(dye_white_block = new BlockDye("dye_white_block"));
-        registerBlock(dye_orange_block = new BlockDye("dye_orange_block"));
-        registerBlock(dye_magenta_block = new BlockDye("dye_magenta_block"));
-        registerBlock(dye_light_blue_block = new BlockDye("dye_light_blue_block"));
-        registerBlock(dye_yellow_block = new BlockDye("dye_yellow_block"));
-        registerBlock(dye_lime_block = new BlockDye("dye_lime_block"));
-        registerBlock(dye_pink_block = new BlockDye("dye_pink_block"));
-        registerBlock(dye_gray_block = new BlockDye("dye_gray_block"));
-        registerBlock(dye_silver_block = new BlockDye("dye_silver_block"));
-        registerBlock(dye_cyan_block = new BlockDye("dye_cyan_block"));
-        registerBlock(dye_purple_block = new BlockDye("dye_purple_block"));
-        registerBlock(dye_brown_block = new BlockDye("dye_brown_block"));
-        registerBlock(dye_green_block = new BlockDye("dye_green_block"));
-        registerBlock(dye_red_block = new BlockDye("dye_red_block"));
-        registerBlock(dye_black_block = new BlockDye("dye_black_block"));
+        dye_block = new BlockDye("dye_block");
+        registerBlock(dye_block, new ItemBlockMeta(dye_block));
 
         dye_black_slab_half = new BlockBlackSlabHalf("dye_black_slab_half");
         dye_black_slab_double = new BlockBlackSlabDouble("dye_black_slab_double");
@@ -344,39 +322,26 @@ public class ModBlocks {
         registerBlock(dye_black_slab_half, new ItemSlab(dye_black_slab_half, dye_black_slab_half, dye_black_slab_double));
         GameRegistry.register(dye_black_slab_double);
 
-        registerBlock(dye_white_stairs = new BlockDyeStairs("dye_white_stairs", dye_white_block.getDefaultState()));
-        registerBlock(dye_orange_stairs = new BlockDyeStairs("dye_orange_stairs", dye_orange_block.getDefaultState()));
-        registerBlock(dye_magenta_stairs = new BlockDyeStairs("dye_magenta_stairs", dye_magenta_block.getDefaultState()));
-        registerBlock(dye_light_blue_stairs = new BlockDyeStairs("dye_light_blue_stairs", dye_light_blue_block.getDefaultState()));
-        registerBlock(dye_yellow_stairs = new BlockDyeStairs("dye_yellow_stairs", dye_yellow_block.getDefaultState()));
-        registerBlock(dye_lime_stairs = new BlockDyeStairs("dye_lime_stairs", dye_lime_block.getDefaultState()));
-        registerBlock(dye_pink_stairs = new BlockDyeStairs("dye_pink_stairs", dye_pink_block.getDefaultState()));
-        registerBlock(dye_gray_stairs = new BlockDyeStairs("dye_gray_stairs", dye_gray_block.getDefaultState()));
-        registerBlock(dye_silver_stairs = new BlockDyeStairs("dye_silver_stairs", dye_silver_block.getDefaultState()));
-        registerBlock(dye_cyan_stairs = new BlockDyeStairs("dye_cyan_stairs", dye_cyan_block.getDefaultState()));
-        registerBlock(dye_purple_stairs = new BlockDyeStairs("dye_purple_stairs", dye_purple_block.getDefaultState()));
+        registerBlock(dye_white_stairs = new BlockDyeStairs("dye_white_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.WHITE)));
+        registerBlock(dye_orange_stairs = new BlockDyeStairs("dye_orange_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.ORANGE)));
+        registerBlock(dye_magenta_stairs = new BlockDyeStairs("dye_magenta_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.MAGENTA)));
+        registerBlock(dye_light_blue_stairs = new BlockDyeStairs("dye_light_blue_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.LIGHT_BLUE)));
+        registerBlock(dye_yellow_stairs = new BlockDyeStairs("dye_yellow_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.YELLOW)));
+        registerBlock(dye_lime_stairs = new BlockDyeStairs("dye_lime_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.LIME)));
+        registerBlock(dye_pink_stairs = new BlockDyeStairs("dye_pink_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.PINK)));
+        registerBlock(dye_gray_stairs = new BlockDyeStairs("dye_gray_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.GRAY)));
+        registerBlock(dye_silver_stairs = new BlockDyeStairs("dye_silver_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.LIGHT_GRAY)));
+        registerBlock(dye_cyan_stairs = new BlockDyeStairs("dye_cyan_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.CYAN)));
+        registerBlock(dye_purple_stairs = new BlockDyeStairs("dye_purple_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.PURPLE)));
         registerBlock(dye_blue_stairs = new BlockDyeStairs("dye_blue_stairs", Blocks.LAPIS_BLOCK.getDefaultState()));
-        registerBlock(dye_brown_stairs = new BlockDyeStairs("dye_brown_stairs", dye_brown_block.getDefaultState()));
-        registerBlock(dye_green_stairs = new BlockDyeStairs("dye_green_stairs", dye_green_block.getDefaultState()));
-        registerBlock(dye_red_stairs = new BlockDyeStairs("dye_red_stairs", dye_red_block.getDefaultState()));
-        registerBlock(dye_black_stairs = new BlockDyeStairs("dye_black_stairs", dye_black_block.getDefaultState()));
+        registerBlock(dye_brown_stairs = new BlockDyeStairs("dye_brown_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.BROWN)));
+        registerBlock(dye_green_stairs = new BlockDyeStairs("dye_green_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.GREEN)));
+        registerBlock(dye_red_stairs = new BlockDyeStairs("dye_red_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.RED)));
+        registerBlock(dye_black_stairs = new BlockDyeStairs("dye_black_stairs", dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.BLACK)));
 
-        registerBlock(stonebrick_white = new BlockDye("stonebrick_white"));
-        registerBlock(stonebrick_orange = new BlockDye("stonebrick_orange"));
-        registerBlock(stonebrick_magenta = new BlockDye("stonebrick_magenta"));
-        registerBlock(stonebrick_light_blue = new BlockDye("stonebrick_light_blue"));
-        registerBlock(stonebrick_yellow = new BlockDye("stonebrick_yellow"));
-        registerBlock(stonebrick_lime = new BlockDye("stonebrick_lime"));
-        registerBlock(stonebrick_pink = new BlockDye("stonebrick_pink"));
-        registerBlock(stonebrick_gray = new BlockDye("stonebrick_gray"));
-        registerBlock(stonebrick_silver = new BlockDye("stonebrick_silver"));
-        registerBlock(stonebrick_cyan = new BlockDye("stonebrick_cyan"));
-        registerBlock(stonebrick_purple = new BlockDye("stonebrick_purple"));
-        registerBlock(stonebrick_blue = new BlockDye("stonebrick_blue"));
-        registerBlock(stonebrick_green = new BlockDye("stonebrick_green"));
-        registerBlock(stonebrick_brown = new BlockDye("stonebrick_brown"));
-        registerBlock(stonebrick_red = new BlockDye("stonebrick_red"));
-        registerBlock(stonebrick_black = new BlockDye("stonebrick_black"));
+        stonebrick = new BlockDyeBrick("stonebrick");
+        registerBlock(stonebrick, new ItemBlockMeta(stonebrick));
+
 
         stonebrick_black_slab_half = new BlockBlackStonebrickSlabHalf("stonebrick_black_slab_half");
         stonebrick_black_slab_double = new BlockBlackStonebrickSlabDouble("stonebrick_black_slab_double");
@@ -474,22 +439,22 @@ public class ModBlocks {
         registerBlock(stonebrick_black_slab_half, new ItemSlab(stonebrick_black_slab_half, stonebrick_black_slab_half, stonebrick_black_slab_double));
         GameRegistry.register(stonebrick_black_slab_double);
 
-        registerBlock(stonebrick_white_stairs = new BlockStonebrickStairs("stonebrick_white_stairs", stonebrick_white.getDefaultState()));
-        registerBlock(stonebrick_orange_stairs = new BlockStonebrickStairs("stonebrick_orange_stairs", stonebrick_orange.getDefaultState()));
-        registerBlock(stonebrick_magenta_stairs = new BlockStonebrickStairs("stonebrick_magenta_stairs", stonebrick_magenta.getDefaultState()));
-        registerBlock(stonebrick_light_blue_stairs = new BlockStonebrickStairs("stonebrick_light_blue_stairs", stonebrick_light_blue.getDefaultState()));
-        registerBlock(stonebrick_yellow_stairs = new BlockStonebrickStairs("stonebrick_yellow_stairs", stonebrick_yellow.getDefaultState()));
-        registerBlock(stonebrick_lime_stairs = new BlockStonebrickStairs("stonebrick_lime_stairs", stonebrick_lime.getDefaultState()));
-        registerBlock(stonebrick_pink_stairs = new BlockStonebrickStairs("stonebrick_pink_stairs", stonebrick_pink.getDefaultState()));
-        registerBlock(stonebrick_gray_stairs = new BlockStonebrickStairs("stonebrick_gray_stairs", stonebrick_gray.getDefaultState()));
-        registerBlock(stonebrick_silver_stairs = new BlockStonebrickStairs("stonebrick_silver_stairs", stonebrick_silver.getDefaultState()));
-        registerBlock(stonebrick_cyan_stairs = new BlockStonebrickStairs("stonebrick_cyan_stairs", stonebrick_cyan.getDefaultState()));
-        registerBlock(stonebrick_purple_stairs = new BlockStonebrickStairs("stonebrick_purple_stairs", stonebrick_purple.getDefaultState()));
-        registerBlock(stonebrick_blue_stairs = new BlockStonebrickStairs("stonebrick_blue_stairs", stonebrick_blue.getDefaultState()));
-        registerBlock(stonebrick_brown_stairs = new BlockStonebrickStairs("stonebrick_brown_stairs", stonebrick_brown.getDefaultState()));
-        registerBlock(stonebrick_green_stairs = new BlockStonebrickStairs("stonebrick_green_stairs", stonebrick_green.getDefaultState()));
-        registerBlock(stonebrick_red_stairs = new BlockStonebrickStairs("stonebrick_red_stairs", stonebrick_red.getDefaultState()));
-        registerBlock(stonebrick_black_stairs = new BlockStonebrickStairs("stonebrick_black_stairs", stonebrick_black.getDefaultState()));
+        registerBlock(stonebrick_white_stairs = new BlockStonebrickStairs("stonebrick_white_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.WHITE)));
+        registerBlock(stonebrick_orange_stairs = new BlockStonebrickStairs("stonebrick_orange_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.ORANGE)));
+        registerBlock(stonebrick_magenta_stairs = new BlockStonebrickStairs("stonebrick_magenta_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.MAGENTA)));
+        registerBlock(stonebrick_light_blue_stairs = new BlockStonebrickStairs("stonebrick_light_blue_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.LIGHT_BLUE)));
+        registerBlock(stonebrick_yellow_stairs = new BlockStonebrickStairs("stonebrick_yellow_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.YELLOW)));
+        registerBlock(stonebrick_lime_stairs = new BlockStonebrickStairs("stonebrick_lime_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.LIME)));
+        registerBlock(stonebrick_pink_stairs = new BlockStonebrickStairs("stonebrick_pink_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.PINK)));
+        registerBlock(stonebrick_gray_stairs = new BlockStonebrickStairs("stonebrick_gray_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.GRAY)));
+        registerBlock(stonebrick_silver_stairs = new BlockStonebrickStairs("stonebrick_silver_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.SILVER)));
+        registerBlock(stonebrick_cyan_stairs = new BlockStonebrickStairs("stonebrick_cyan_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.CYAN)));
+        registerBlock(stonebrick_purple_stairs = new BlockStonebrickStairs("stonebrick_purple_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.PURPLE)));
+        registerBlock(stonebrick_blue_stairs = new BlockStonebrickStairs("stonebrick_blue_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.BLUE)));
+        registerBlock(stonebrick_brown_stairs = new BlockStonebrickStairs("stonebrick_brown_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.BROWN)));
+        registerBlock(stonebrick_green_stairs = new BlockStonebrickStairs("stonebrick_green_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.GREEN)));
+        registerBlock(stonebrick_red_stairs = new BlockStonebrickStairs("stonebrick_red_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.RED)));
+        registerBlock(stonebrick_black_stairs = new BlockStonebrickStairs("stonebrick_black_stairs", stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.BLACK)));
 
         registerBlock(oak_planks_brick = new BlockWoodBrickPlanks("oak_planks_brick"));
         registerBlock(spruce_planks_brick = new BlockWoodBrickPlanks("spruce_planks_brick"));
@@ -512,7 +477,9 @@ public class ModBlocks {
         registerBlock(acacia_storage_crate = new BlockAcaciaCrate("acacia_storage_crate"));
         registerBlock(big_oak_storage_crate = new BlockBigOakCrate("big_oak_storage_crate"));
 
-        registerBlock(dye_ore = new BlockDyeOre("dye_ore"));
+        dye_ore = new BlockDyeOre("dye_ore");
+        registerBlock(dye_ore, new ItemBlockMeta(dye_ore));
+
         registerBlock(ender_pearl_ore = new BlockEnderPearlOre("ender_pearl_ore"));
 
         registerBlock(cookie_jar_white = new BlockJar("cookie_jar_white"));
@@ -536,21 +503,9 @@ public class ModBlocks {
 
     public static void registerRenders() {
 
-        registerRender(dye_black_block);
-        registerRender(dye_red_block);
-        registerRender(dye_green_block);
-        registerRender(dye_brown_block);
-        registerRender(dye_purple_block);
-        registerRender(dye_cyan_block);
-        registerRender(dye_silver_block);
-        registerRender(dye_gray_block);
-        registerRender(dye_pink_block);
-        registerRender(dye_lime_block);
-        registerRender(dye_yellow_block);
-        registerRender(dye_light_blue_block);
-        registerRender(dye_magenta_block);
-        registerRender(dye_orange_block);
-        registerRender(dye_white_block);
+        for(int i = 0; i < EnumHandler.BlockType.values().length; i++) {
+            registerRender(dye_block, i, "dye_block_" + EnumHandler.BlockType.values()[i].getName());
+        }
 
         registerRender(dye_black_slab_half);
         registerRender(dye_red_slab_half);
@@ -586,23 +541,9 @@ public class ModBlocks {
         registerRender(dye_red_stairs);
         registerRender(dye_black_stairs);
 
-        registerRender(stonebrick_white);
-        registerRender(stonebrick_orange);
-        registerRender(stonebrick_magenta);
-        registerRender(stonebrick_light_blue);
-        registerRender(stonebrick_yellow);
-        registerRender(stonebrick_lime);
-        registerRender(stonebrick_pink);
-        registerRender(stonebrick_gray);
-        registerRender(stonebrick_silver);
-        registerRender(stonebrick_cyan);
-        registerRender(stonebrick_purple);
-        registerRender(stonebrick_blue);
-        registerRender(stonebrick_brown);
-        registerRender(stonebrick_green);
-        registerRender(stonebrick_red);
-        registerRender(stonebrick_black);
-
+        for(int i = 0; i < EnumHandler.BrickType.values().length; i++) {
+            registerRender(stonebrick, i, "stonebrick_" + EnumHandler.BrickType.values()[i].getName());
+        }
         registerRender(stonebrick_black_slab_half);
         registerRender(stonebrick_red_slab_half);
         registerRender(stonebrick_green_slab_half);
@@ -651,7 +592,10 @@ public class ModBlocks {
         registerRender(oak_planks_brick_stairs);
         registerRender(spruce_planks_brick_stairs);
 
-        registerRender(dye_ore);
+        for(int i = 0; i < EnumHandler.OreType.values().length; i++) {
+            registerRender(dye_ore, i, "dye_ore_" + EnumHandler.OreType.values()[i].getName());
+        }
+
         registerRender(ender_pearl_ore);
 
         registerRender(cookie_jar_white);
@@ -684,6 +628,7 @@ public class ModBlocks {
         GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
     }
 
+
     public static void registerBlock(Block block, ItemBlock itemBlock) {
         block.setCreativeTab(ModTabs.tabPattysBlocks);
         GameRegistry.register(block);
@@ -692,5 +637,8 @@ public class ModBlocks {
 
     private static void registerRender(Block block) {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(new ResourceLocation(Strings.MODID, block.getUnlocalizedName().substring(5)), "inventory"));
+    }
+    public static void registerRender(Block block, int meta, String fileName) {
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, new ModelResourceLocation(new ResourceLocation(Strings.MODID, fileName), "inventory"));
     }
 }

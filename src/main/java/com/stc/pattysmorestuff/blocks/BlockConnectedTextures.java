@@ -13,7 +13,7 @@ import net.minecraft.world.IBlockAccess;
 import javax.annotation.Nonnull;
 
 /**
- * Created by patrick on 29/01/2017.
+ * Created by StuffTheChicken on 29/01/2017.
  */
 public class BlockConnectedTextures extends Block {
 
@@ -37,6 +37,7 @@ public class BlockConnectedTextures extends Block {
                 .withProperty(CONNECTED_SOUTH, Boolean.FALSE)
                 .withProperty(CONNECTED_UP, Boolean.FALSE)
                 .withProperty(CONNECTED_WEST, Boolean.FALSE));
+        this.setHarvestLevel("pickaxe", 3);
     }
 
     @Override

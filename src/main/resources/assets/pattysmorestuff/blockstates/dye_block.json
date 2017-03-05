@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"type=white": { "model": "pattysmorestuff:dye_block_white" },
+		"type=orange": { "model": "pattysmorestuff:dye_block_orange" },
+		"type=magenta": { "model": "pattysmorestuff:dye_block_magenta" },
+		"type=light_blue": { "model": "pattysmorestuff:dye_block_light_blue" },
+		"type=yellow": { "model": "pattysmorestuff:dye_block_yellow" },
+		"type=lime": { "model": "pattysmorestuff:dye_block_lime" },
+		"type=pink": { "model": "pattysmorestuff:dye_block_pink" },
+		"type=gray": { "model": "pattysmorestuff:dye_block_gray" },
+		"type=light_gray": { "model": "pattysmorestuff:dye_block_light_gray" },
+		"type=cyan": { "model": "pattysmorestuff:dye_block_cyan" },
+		"type=purple": { "model": "pattysmorestuff:dye_block_purple" },
+		"type=brown": { "model": "pattysmorestuff:dye_block_brown" },
+		"type=green": { "model": "pattysmorestuff:dye_block_green" },
+		"type=red": { "model": "pattysmorestuff:dye_block_red" },
+		"type=black": { "model": "pattysmorestuff:dye_block_black" }
+	}
+}

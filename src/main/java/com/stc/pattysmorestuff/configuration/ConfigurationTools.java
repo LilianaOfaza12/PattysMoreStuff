@@ -73,10 +73,10 @@ public class ConfigurationTools {
         ConfigPreInit.emeraldFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the sapling burns for in the emerald furnace", 100).getInt();
         ConfigPreInit.emeraldFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the blaze rod burns for in the emerald furnace", 2400).getInt();
 
-        ConfigPreInit.ironFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", 180).getInt();
-        ConfigPreInit.goldFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", 160).getInt();
-        ConfigPreInit.diamondFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "Lower the number to speed up furnace cook time or higher the number to slow down cook time", 140).getInt();
-        ConfigPreInit.emeraldFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "Lower the number to speed up furnace cook time or higher the number to slow down cook time", 120).getInt();
+        ConfigPreInit.ironFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", 150).getInt();
+        ConfigPreInit.goldFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", 100).getInt();
+        ConfigPreInit.diamondFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "Lower the number to speed up furnace cook time or higher the number to slow down cook time", 75).getInt();
+        ConfigPreInit.emeraldFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "Lower the number to speed up furnace cook time or higher the number to slow down cook time", 50).getInt();
 
         if (PattysMoreStuff.Config.hasChanged()) {
             PattysMoreStuff.Config.save();

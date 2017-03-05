@@ -1,8 +1,8 @@
 {
     "parent": "block/stairs",
     "textures": {
-        "bottom": "pattysmorestuff:blocks/dye_purple_block",
-        "top": "pattysmorestuff:blocks/dye_purple_block",
-        "side": "pattysmorestuff:blocks/dye_purple_block"
+        "bottom": "pattysmorestuff:blocks/dye_block_purple",
+        "top": "pattysmorestuff:blocks/dye_block_purple",
+        "side": "pattysmorestuff:blocks/dye_block_purple"
     }
 }

@@ -13,10 +13,21 @@ import com.stc.pattysmorestuff.tools.init.ModDyeToolBattleaxe;
 import com.stc.pattysmorestuff.tools.init.ModDyeTools;
 import com.stc.pattysmorestuff.tools.init.ModToolDyePaxels;
 import com.stc.pattysmorestuff.tools.init.ModTools;
+import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.init.PotionTypes;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemPotion;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.potion.PotionType;
+import net.minecraft.potion.PotionUtils;
+import net.minecraft.util.datafix.fixes.PotionItems;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -450,40 +461,40 @@ public class ModCrafting {
         }
 
         if (ConfigPreInit.disableBlocks) {
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_black_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 0)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_red_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 1)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_green_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 2)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_brown_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 3)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_purple_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 5)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_cyan_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 6)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_silver_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 7)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_gray_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 8)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_pink_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 9)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_lime_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 10)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_yellow_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 11)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_light_blue_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 12)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_magenta_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 13)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_orange_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 14)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_white_block, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 15)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 14), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 0)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 13), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 1)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 12), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 2)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 11), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 3)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 10), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 9), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 6)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 8), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 7)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 7), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 8)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 6), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 9)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 5), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 10)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 4), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 11)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 3), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 12)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 2), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 13)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 1), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 14)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_block, 1, 0), new Object[]{"BBB", "BBB", "BBB", Character.valueOf('B'), new ItemStack(Items.DYE, 1, 15)});
 
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_black_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_black_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_red_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_red_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_green_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_green_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_brown_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_brown_block});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_black_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 14)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_red_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 13)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_green_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 12)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_brown_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 11)});
             GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_blue_slab_half, 6), new Object[]{"BBB", 'B', Blocks.LAPIS_BLOCK});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_purple_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_purple_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_cyan_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_cyan_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_gray_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_gray_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_silver_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_silver_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_pink_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_pink_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_lime_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_lime_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_yellow_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_yellow_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_light_blue_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_light_blue_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_magenta_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_magenta_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_orange_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_orange_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_white_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.dye_white_block});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_purple_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 10)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_cyan_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 9)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_gray_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 8)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_silver_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 7)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_pink_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 6)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_lime_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_yellow_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 4)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_light_blue_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 3)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_magenta_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 2)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_orange_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 1)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_white_slab_half, 6), new Object[]{"BBB", 'B', new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 0)});
 
-            /*GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_black_block, 1), new Object[]{"B  ", "B  ", Character.valueOf('B'), ModBlocks.dye_black_slab_half});
+            /*GameRegistry.addRecipe(new ItemStack(new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 14), 1), new Object[]{"B  ", "B  ", Character.valueOf('B'), ModBlocks.dye_black_slab_half});
             GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_red_block, 1), new Object[]{"B  ", "B  ", Character.valueOf('B'), ModBlocks.dye_red_slab_half});
             GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_green_block, 1), new Object[]{"B  ", "B  ", Character.valueOf('B'), ModBlocks.dye_green_slab_half});
             GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_brown_block, 1), new Object[]{"B  ", "B  ", Character.valueOf('B'), ModBlocks.dye_brown_slab_half});
@@ -500,78 +511,78 @@ public class ModCrafting {
             GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_orange_block, 1), new Object[]{"B  ", "B  ", Character.valueOf('B'), ModBlocks.dye_orange_slab_half});
             GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_white_block, 1), new Object[]{"B  ", "B  ", Character.valueOf('B'), ModBlocks.dye_white_slab_half});
             */
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_black_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_black_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_red_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_red_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_green_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_green_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_brown_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_brown_block});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_black_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 14)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_red_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 13)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_green_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 12)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_brown_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 11)});
             GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_blue_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), Blocks.LAPIS_BLOCK});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_purple_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_purple_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_cyan_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_cyan_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_silver_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_silver_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_gray_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_gray_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_pink_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_pink_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_lime_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_lime_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_yellow_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_yellow_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_light_blue_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_light_blue_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_magenta_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_magenta_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_orange_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_orange_block});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_white_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.dye_white_block});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_purple_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 10)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_cyan_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 9)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_silver_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 8)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_gray_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 7)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_pink_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 6)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_lime_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_yellow_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 4)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_light_blue_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 3)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_magenta_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 2)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_orange_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 1)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.dye_white_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), new ItemStack(Item.getItemFromBlock(ModBlocks.dye_block), 1, 0)});
 
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_black, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 0)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_red, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 1)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_green, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 2)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_brown, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 3)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_blue, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 4)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_purple, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 5)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_cyan, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 6)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_silver, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 7)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_gray, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 8)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_pink, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 9)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_lime, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 10)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_yellow, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 11)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_light_blue, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 12)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_magenta, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 13)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_orange, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 14)});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_white, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 15)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 0), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 0)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 1), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 1)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 2), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 2)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 3), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 3)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 4), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 4)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 5), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 6), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 6)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 7), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 7)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 8), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 8)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 9), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 9)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 10), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 10)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 11), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 11)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 12), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 12)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 13), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 13)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 14), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 14)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick, 8, 15), new Object[]{"BBB", "BIB", "BBB", Character.valueOf('B'), Blocks.STONEBRICK, 'I', new ItemStack(Items.DYE, 1, 15)});
 
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_black_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_black});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_red_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_red});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_green_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_green});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_brown_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_brown});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_blue_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_blue});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_purple_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_purple});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_cyan_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_cyan});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_gray_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_gray});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_silver_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_silver});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_pink_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_pink});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_lime_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_lime});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_yellow_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_yellow});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_light_blue_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_light_blue});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_magenta_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_magenta});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_orange_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_orange});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_white_slab_half, 6), new Object[]{"BBB", 'B', ModBlocks.stonebrick_white});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_black_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 15)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_red_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 14)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_green_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 13)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_brown_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 12)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_blue_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 11)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_purple_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 10)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_cyan_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 9)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_gray_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 8)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_silver_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 7)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_pink_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 6)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_lime_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_yellow_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 4)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_light_blue_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 3)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_magenta_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 2)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_orange_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 1)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_white_slab_half, 6), new Object[]{"BBB", 'B',new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 0)});
 
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_black_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_black});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_red_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_red});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_green_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_green});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_brown_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_brown});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_blue_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_blue});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_purple_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_purple});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_cyan_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_cyan});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_silver_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_silver});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_gray_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_gray});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_pink_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_pink});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_lime_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_lime});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_yellow_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_yellow});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_light_blue_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_light_blue});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_magenta_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_magenta});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_orange_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_orange});
-            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_white_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'), ModBlocks.stonebrick_white});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_black_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 15)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_red_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 14)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_green_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 13)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_brown_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 12)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_blue_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 11)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_purple_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 10)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_cyan_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 9)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_silver_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 8)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_gray_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 7)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_pink_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 6)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_lime_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_yellow_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 4)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_light_blue_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 3)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_magenta_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 2)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_orange_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 1)});
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stonebrick_white_stairs, 6), new Object[]{"B  ", "BB ", "BBB", Character.valueOf('B'),new ItemStack(Item.getItemFromBlock(ModBlocks.stonebrick), 1, 0)});
 
         }
 
         GameRegistry.addRecipe(new ItemStack(ModExtraBlocks.reinforced_obsidian, 1), new Object[]{"IBI", "BOB", "IBI", 'I', Items.IRON_INGOT, 'B', Blocks.IRON_BARS, 'O', Blocks.OBSIDIAN});
-        GameRegistry.addRecipe(new ItemStack(ModExtraBlocks.reinforced_glass, 6), new Object[]{"GOG", "GOG", "GOG", 'G', Blocks.GLASS, 'O', ModPMS.obsidian_ingot});
+        GameRegistry.addRecipe(new ItemStack(ModExtraBlocks.reinforced_glass, 6), new Object[]{"GOG", "GOG", "GOG", 'G', Blocks.GLASS, 'O', Blocks.OBSIDIAN});
 
         if (ConfigPreInit.disableMiscItems) {
 
@@ -636,8 +647,10 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.acacia_planks_brick, 4), new Object[]{"P P", "   ", "P P", Character.valueOf('P'), new ItemStack(Item.getItemFromBlock(Blocks.PLANKS), 1,4)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.dark_oak_planks_brick, 4), new Object[]{"P P", "   ", "P P", Character.valueOf('P'), new ItemStack(Item.getItemFromBlock(Blocks.PLANKS), 1,5)});
 
-        GameRegistry.addShapelessRecipe(new ItemStack(ModPMS.info_book, 1), new Object[]{Items.BOOK});
+        if(Loader.isModLoaded("baubles")) {
+            GameRegistry.addRecipe(new ItemStack(ModPMS.ring_of_flight, 1), new Object[]{"LGL", "GNG", "EGE", Character.valueOf('L'), Items.LEATHER, Character.valueOf('G'), Items.GOLD_INGOT, Character.valueOf('N'), Items.NETHER_STAR, Character.valueOf('E'), Items.EMERALD});
 
+        }
         if(ConfigPreInit.enableEndStoneRecipe) {
             GameRegistry.addRecipe(new ItemStack(Blocks.END_STONE, 1), new Object[]{" E ", "ESE", " E ", 'S', Blocks.SANDSTONE, 'E', Items.ENDER_PEARL});
         }

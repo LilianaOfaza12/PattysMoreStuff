@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 import java.util.Random;
 
 /**
- * Created by patrick on 28/01/2017.
+ * Created by StuffTheChicken on 28/01/2017.
  */
 public abstract class BlockBrownStonebrickSlab extends BlockSlab {
 

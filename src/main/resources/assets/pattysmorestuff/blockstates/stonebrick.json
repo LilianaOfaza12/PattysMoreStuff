@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"type=white": { "model": "pattysmorestuff:stonebrick_white" },
+		"type=orange": { "model": "pattysmorestuff:stonebrick_orange" },
+		"type=magenta": { "model": "pattysmorestuff:stonebrick_magenta" },
+		"type=light_blue": { "model": "pattysmorestuff:stonebrick_light_blue" },
+		"type=yellow": { "model": "pattysmorestuff:stonebrick_yellow" },
+		"type=lime": { "model": "pattysmorestuff:stonebrick_lime" },
+		"type=pink": { "model": "pattysmorestuff:stonebrick_pink" },
+		"type=gray": { "model": "pattysmorestuff:stonebrick_gray" },
+		"type=silver": { "model": "pattysmorestuff:stonebrick_silver" },
+		"type=cyan": { "model": "pattysmorestuff:stonebrick_cyan" },
+		"type=purple": { "model": "pattysmorestuff:stonebrick_purple" },
+		"type=blue": { "model": "pattysmorestuff:stonebrick_blue" },
+		"type=brown": { "model": "pattysmorestuff:stonebrick_brown" },
+		"type=green": { "model": "pattysmorestuff:stonebrick_green" },
+		"type=red": { "model": "pattysmorestuff:stonebrick_red" },
+		"type=black": { "model": "pattysmorestuff:stonebrick_black" }
+	}
+}

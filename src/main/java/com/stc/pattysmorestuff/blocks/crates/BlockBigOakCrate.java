@@ -28,7 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 
 /**
- * Created by patrick on 13/01/2017.
+ * Created by StuffTheChicken on 13/01/2017.
  */
 public class BlockBigOakCrate extends BlockContainer {
 
@@ -42,20 +42,11 @@ public class BlockBigOakCrate extends BlockContainer {
         this.setCreativeTab(ModTabs.tabPattysDecoration);
     }
 
-    @Override
-    public boolean isOpaqueCube(IBlockState state) {
-        return true;
-    }
-
-    @Override
-    public boolean isFullBlock(IBlockState state) {
-        return true;
-    }
 
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
-        return BlockRenderLayer.TRANSLUCENT;
+        return BlockRenderLayer.SOLID;
     }
 
     @Override

@@ -2,11 +2,18 @@ package com.stc.pattysmorestuff.random.items;
 
 import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.tabs.ModTabs;
+
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -22,6 +29,7 @@ public class ItemTimeWand extends Item {
         this.setRegistryName(name);
         this.setMaxDamage(ConfigPreInit.timeWandMaxDamage);
         this.setMaxStackSize(1);
+        this.setMaxDamage(250);
         this.setCreativeTab(ModTabs.tabPattysMisc);
 
     }
@@ -37,12 +45,15 @@ public class ItemTimeWand extends Item {
 
         if (worldIn.isDaytime()) {
             worldIn.setWorldTime(13000);
-            playerIn.getHeldItem(handIn).damageItem(1, playerIn);
+            if(!playerIn.capabilities.isCreativeMode) {
+                playerIn.getHeldItem(handIn).damageItem(1, playerIn);
+            }
         } else if (!worldIn.isDaytime()) {
             worldIn.setWorldTime(1000);
-            playerIn.getHeldItem(handIn).damageItem(1, playerIn);
+            if(!playerIn.capabilities.isCreativeMode) {
+                playerIn.getHeldItem(handIn).damageItem(1, playerIn);
+            }
         }
         return super.onItemRightClick(worldIn, playerIn, handIn);
     }
-
 }

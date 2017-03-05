@@ -1,7 +1,7 @@
 package com.stc.pattysmorestuff.blocks.slabs;
 
 /**
- * Created by patrick on 25/01/2017.
+ * Created by StuffTheChicken on 25/01/2017.
  */
 public class BlockCyanSlabDouble extends BlockCyanSlab {
     public BlockCyanSlabDouble(String unlocalizedName) {

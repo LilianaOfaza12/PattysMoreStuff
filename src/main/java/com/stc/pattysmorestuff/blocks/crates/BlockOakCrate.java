@@ -42,20 +42,11 @@ public class BlockOakCrate extends BlockContainer {
         this.setCreativeTab(ModTabs.tabPattysDecoration);
     }
 
-    @Override
-    public boolean isOpaqueCube(IBlockState state) {
-        return true;
-    }
-
-    @Override
-    public boolean isFullBlock(IBlockState state) {
-        return true;
-    }
 
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
-        return BlockRenderLayer.TRANSLUCENT;
+        return BlockRenderLayer.SOLID;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.stc.pattysmorestuff.blocks.init;
 
+import com.stc.pattysmorestuff.blocks.BlockCellingLight;
 import com.stc.pattysmorestuff.blocks.BlockReinforcedGlass;
 import com.stc.pattysmorestuff.blocks.BlockReinforcedObsidian;
 import com.stc.pattysmorestuff.lib.Strings;
@@ -13,7 +14,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * Created by patrick on 30/01/2017.
+ * Created by StuffTheChicken on 30/01/2017.
  */
 public class ModExtraBlocks {
 

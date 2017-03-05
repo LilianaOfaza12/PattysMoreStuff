@@ -1,16 +1,26 @@
 package com.stc.pattysmorestuff.blocks.ores;
 
+import com.stc.pattysmorestuff.blocks.item.IMetaBlockName;
+import com.stc.pattysmorestuff.handlers.EnumHandler;
+import com.stc.pattysmorestuff.lib.Strings;
 import com.stc.pattysmorestuff.tabs.ModTabs;
 import com.stc.pattysmorestuff.blocks.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -22,7 +32,12 @@ import java.util.Random;
 /**
  * Created by StuffTheChicken on 20/12/2016.
  */
-public class BlockDyeOre extends Block {
+public class BlockDyeOre extends Block implements IMetaBlockName {
+
+    /**
+     * The type property
+     */
+    public static final PropertyEnum TYPE = PropertyEnum.create("type", EnumHandler.OreType.class);
 
 
     public BlockDyeOre(String unlocalizedName) {
@@ -32,13 +47,22 @@ public class BlockDyeOre extends Block {
         this.setHardness(3.0F);
         this.setResistance(5.0F);
         this.setCreativeTab(ModTabs.tabPattysBlocks);
-
+        this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumHandler.OreType.OVERWORLD)); //Default state
     }
+
+
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced)
     {
         tooltip.add("When mined the block will drop random amounts of dye and most likely different each time!");
+    }
+
+    @Override
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
+        for(int i = 0; i < EnumHandler.OreType.values().length; i++) {
+            list.add(new ItemStack(itemIn, 1, i));
+        }
     }
 
     @Override
@@ -57,7 +81,7 @@ public class BlockDyeOre extends Block {
             }
         }
         return ret;
-}
+    }
 
     /**
      * Returns the quantity of items to drop on block destruction.
@@ -125,5 +149,24 @@ public class BlockDyeOre extends Block {
         return random.nextInt(16);
     }
 
+    @Override
+    protected BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, new IProperty[] {TYPE});
+    }
+
+    @Override
+    public int getMetaFromState(IBlockState state) {
+        EnumHandler.OreType type = (EnumHandler.OreType) state.getValue(TYPE);
+        return type.getID();
+    }
+
+    @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return this.getDefaultState().withProperty(TYPE, EnumHandler.OreType.values()[meta]);
+    }
+
+    public String getSpecialName(ItemStack stack) {
+        return EnumHandler.OreType.values()[stack.getItemDamage()].getName();
+    }
 
 }

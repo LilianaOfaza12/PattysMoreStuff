@@ -2,6 +2,8 @@ package com.stc.pattysmorestuff.random.init;
 
 import com.stc.pattysmorestuff.random.items.ItemInfWaterBucket;
 import com.stc.pattysmorestuff.random.items.ItemTimeWand;
+import com.stc.pattysmorestuff.random.items.ItemWeatherWand;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -31,7 +33,6 @@ public class ModRandomItems {
 
         registerRender(inf_water_bucket);
         registerRender(time_wand);
-
     }
     public static void register(Item item) {
         GameRegistry.register(item);

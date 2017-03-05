@@ -2,9 +2,8 @@ package com.stc.pattysmorestuff.tools.items;
 
 import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.item.Item;
-
 /**
- * Created by peeweebirch70 on 13/11/2016.
+ * Created by StuffTheChicken on 13/11/2016.
  */
 public class ItemObsidianIngot extends Item {
 

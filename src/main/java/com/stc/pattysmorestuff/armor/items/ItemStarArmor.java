@@ -7,8 +7,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+
 /**
- * Created by peeweebirch70 on 13/11/2016.
+ * Created by StuffTheChicken on 13/11/2016.
  */
 public class ItemStarArmor extends ItemArmor {
 
@@ -23,4 +24,18 @@ public class ItemStarArmor extends ItemArmor {
         return true;
     }
 
+    /*@Override
+    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
+        if (Keyboard.isKeyDown(Keyboard.KEY_R) && !Minecraft.getMinecraft().ingameGUI.getChatGUI().getChatOpen() && Minecraft.getMinecraft().currentScreen == null) {
+            List<Entity> list = player.world.getEntitiesWithinAABBExcludingEntity(player, new AxisAlignedBB(player.posX - 5, player.posY - 5, player.posZ - 5, player.posX + 5, player.posY + 5, player.posZ + 5));
+            for (int i = 0; i < list.size(); ++i)
+            {
+                Entity entity = (Entity)list.get(i);
+                entity.motionX = 0.0D;
+                entity.motionY = 0.0D;
+                entity.motionZ = 0.0D;
+            }
+
+        }
+    }*/
 }
