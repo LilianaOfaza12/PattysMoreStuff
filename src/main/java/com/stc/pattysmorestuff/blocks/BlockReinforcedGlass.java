@@ -1,9 +1,8 @@
 package com.stc.pattysmorestuff.blocks;
 
-import com.stc.pattysmorestuff.blocks.init.ModExtraBlocks;
+import com.stc.pattysmorestuff.blocks.init.ModBlocks;
 import com.stc.pattysmorestuff.tabs.ModTabs;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -42,7 +41,7 @@ public class BlockReinforcedGlass extends BlockConnectedTextures {
     
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(ModExtraBlocks.reinforced_glass);
+        return Item.getItemFromBlock(ModBlocks.reinforced_glass);
     }
     
     @SideOnly(Side.CLIENT)
@@ -66,7 +65,7 @@ public class BlockReinforcedGlass extends BlockConnectedTextures {
     @Override
     public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
 
-    	if(world.getBlockState(pos).getBlock() == ModExtraBlocks.reinforced_glass) {
+    	if(world.getBlockState(pos).getBlock() == ModBlocks.reinforced_glass) {
     		explosion.clearAffectedBlockPositions();
     	}
     }

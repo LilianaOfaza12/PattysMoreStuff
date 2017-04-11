@@ -5,6 +5,7 @@ import com.stc.pattysmorestuff.handlers.EnumHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -14,6 +15,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -39,11 +41,6 @@ public class BlockDye extends Block implements IMetaBlockName {
         this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumHandler.BlockType.WHITE)); //Default state
     }
 
-    @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced)
-    {
-        tooltip.add("When mined the block will drop random amounts of dye and most likely different each time!");
-    }
 
     @Override
     public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
@@ -62,20 +59,42 @@ public class BlockDye extends Block implements IMetaBlockName {
         return new BlockStateContainer(this, new IProperty[] {TYPE});
     }
 
-    @Override
-    public int getMetaFromState(IBlockState state) {
-        EnumHandler.BlockType type = (EnumHandler.BlockType) state.getValue(TYPE);
-        return type.getID();
-    }
-
-    @Override
-    public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(TYPE, EnumHandler.BlockType.values()[meta]);
-    }
-
     public String getSpecialName(ItemStack stack) {
         return EnumHandler.BlockType.values()[stack.getItemDamage()].getName();
     }
+
+    /**
+     * Makes sure that when you pick block you get the correct block
+     */
+    @Override
+    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+        return new ItemStack(Item.getItemFromBlock(this), 1, (int) (getMetaFromState(world.getBlockState(pos))));
+    }
+
+    /**
+     * Makes sure the block drops the correct damage. If the block has the {@link PropertyDirection} then this needs to be overridden
+     */
+    @Override
+    public int damageDropped(IBlockState state) {
+        return getMetaFromState(state);
+    }
+
+    /**
+     * Returns the meta data from the blockstate. If the block has the {@link PropertyDirection} then this needs to be overridden
+     */
+    @Override
+    public int getMetaFromState(IBlockState state) {
+        return ((EnumHandler.BlockType)state.getValue(TYPE)).getID();
+    }
+
+    /**
+     * Returns the state from the meta data. If the block has the {@link PropertyDirection} then this needs to be overridden
+     */
+    @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return this.getDefaultState().withProperty(TYPE, EnumHandler.BlockType.values()[meta % EnumHandler.BlockType.values().length]);
+    }
+
 
 
 }

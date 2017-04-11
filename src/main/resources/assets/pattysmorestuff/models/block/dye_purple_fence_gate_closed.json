@@ -1,0 +1,6 @@
+{
+    "parent": "block/fence_gate_closed",
+    "textures": {
+        "texture": "pattysmorestuff:blocks/dye_block_purple"
+    }
+}

@@ -1,6 +1,6 @@
 package com.stc.pattysmorestuff.proxy;
 
-import com.stc.pattysmorestuff.blocks.init.ModExtraBlocks;
+import com.stc.pattysmorestuff.blocks.init.ModBlockOther;
 import com.stc.pattysmorestuff.handlers.EnumHandler;
 import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.items.init.ModPMS;
@@ -33,11 +33,12 @@ public class ClientProxy extends CommonProxy {
         //Blocks
         if(ConfigPreInit.disableBlocks) {
             ModBlocks.registerRenders();
+            ModBlockOther.registerRenders();
         }
-        ModExtraBlocks.registerRenders();
-        ModFurnaces.registerRenders();
-        ModPMS.registerRenders();
 
+        if(ConfigPreInit.disableFurnaces) {
+            ModFurnaces.registerRenders();
+        }
         //Tools
         if(ConfigPreInit.disableTools) {
             ModTools.registerRenders();
@@ -58,7 +59,7 @@ public class ClientProxy extends CommonProxy {
 
             ModRandomItems.registerRenders();
         }
-
+        ModPMS.registerRenders();
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityJar.class, new RendererJar());
     }
 
@@ -77,6 +78,8 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void registerModelBakeryStuff() {
         ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.dye_ore), new ResourceLocation(Strings.MODID, "dye_ore"), new ResourceLocation(Strings.MODID, "dye_ore_nether"), new ResourceLocation(Strings.MODID, "dye_ore_end"));
+        ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.ender_pearl_ore), new ResourceLocation(Strings.MODID, "ender_pearl_ore"), new ResourceLocation(Strings.MODID, "ender_pearl_ore_nether"), new ResourceLocation(Strings.MODID, "ender_pearl_ore_end"));
+
         for (int i = 0; i < EnumHandler.BlockType.values().length; i++) {
 
             ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.dye_block), new ResourceLocation(Strings.MODID, "dye_block_" +  EnumHandler.BlockType.values()[i].getName()));
@@ -88,5 +91,6 @@ public class ClientProxy extends CommonProxy {
             ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.stonebrick), new ResourceLocation(Strings.MODID, "stonebrick_" +  EnumHandler.BrickType.values()[i].getName()));
 
         }
+
     }
 }

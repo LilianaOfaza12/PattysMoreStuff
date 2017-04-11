@@ -1,5 +1,6 @@
 package com.stc.pattysmorestuff.blocks.slabs;
 
+import com.stc.pattysmorestuff.blocks.init.ModBlockOther;
 import com.stc.pattysmorestuff.blocks.init.ModBlocks;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
@@ -72,7 +73,7 @@ public abstract class BlockOrangeStonebrickSlab extends BlockSlab {
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(ModBlocks.stonebrick_orange_slab_half);
+        return Item.getItemFromBlock(ModBlockOther.stonebrick_orange_slab_half);
     }
 
     @Override

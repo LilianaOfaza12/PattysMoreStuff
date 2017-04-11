@@ -16,7 +16,6 @@ public class ModPMS {
 
     public static Item obsidian_ingot;
     public static Item ring_of_flight;
-    public static Item bat_wings;
 
     public static Item amulet_haste;
     public static Item amulet_fire;
@@ -35,7 +34,6 @@ public class ModPMS {
         register(obsidian_ingot);
 
         if(Loader.isModLoaded("baubles")) {
-                bat_wings = new ItemBatWing("bat_wings");
                 ring_of_flight = new ItemRingOfFlight("ring_of_flight");
                 amulet_haste = new ItemAmuletHaste("amulet_haste");
                 amulet_fire = new ItemAmuletFire("amulet_fire");
@@ -46,7 +44,6 @@ public class ModPMS {
                 amulet_resist = new ItemAmuletResist("amulet_resist");
                 amulet_speed = new ItemAmuletSpeed("amulet_speed");
                 amulet_strength = new ItemAmuletStrength("amulet_strength");
-                register(bat_wings);
                 register(ring_of_flight);
                 register(amulet_haste);
                 register(amulet_fire);
@@ -65,7 +62,6 @@ public class ModPMS {
         registerRender(obsidian_ingot);
 
         if(Loader.isModLoaded("baubles")) {
-            registerRender(bat_wings);
             registerRender(ring_of_flight);
             registerRender(amulet_haste);
             registerRender(amulet_fire);

@@ -44,18 +44,4 @@ public class PlayerEventHandler {
             }
         }
     }*/
-    public static double rand;
-    public Random r = new Random();
-
-    @SubscribeEvent
-    public void onDrop(LivingDropsEvent event) {
-        if(event.getEntity() instanceof EntityBat) {
-            event.getDrops().clear();
-
-            ItemStack stack = new ItemStack(ModPMS.bat_wings);
-            EntityItem drop = new EntityItem(event.getEntity().getEntityWorld(), event.getEntity().posX, event.getEntity().posY, event.getEntity().posZ, stack);
-
-            event.getDrops().add(drop);
-        }
-    }
 }

@@ -1,7 +1,6 @@
 package com.stc.pattysmorestuff.blocks;
 
 import com.stc.pattysmorestuff.blocks.init.ModBlocks;
-import com.stc.pattysmorestuff.blocks.init.ModExtraBlocks;
 import com.stc.pattysmorestuff.tabs.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
@@ -9,6 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -45,7 +45,8 @@ public class BlockReinforcedObsidian extends Block {
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(ModExtraBlocks.reinforced_obsidian);
+
+        return Item.getItemFromBlock(ModBlocks.reinforced_obsidian);
     }
     
     @Override
@@ -60,7 +61,7 @@ public class BlockReinforcedObsidian extends Block {
     @Override
     public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
 
-    	if(world.getBlockState(pos).getBlock() == ModExtraBlocks.reinforced_obsidian) {
+    	if(world.getBlockState(pos).getBlock() == ModBlocks.reinforced_obsidian) {
     		explosion.clearAffectedBlockPositions();
     	}
     }

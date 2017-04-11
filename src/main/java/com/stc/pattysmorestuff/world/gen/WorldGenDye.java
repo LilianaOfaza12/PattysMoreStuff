@@ -8,10 +8,13 @@ import com.sun.javafx.event.EventHandlerManager;
 import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
@@ -26,10 +29,19 @@ public class WorldGenDye implements IWorldGenerator{
     private WorldGenerator nether_dye_ore;
     private WorldGenerator end_dye_ore;
 
+    private WorldGenerator ender_pearl_ore;
+    private WorldGenerator nether_ender_pearl_ore;
+    private WorldGenerator end_ender_pearl_ore;
+
     public WorldGenDye() {
         dye_ore = new WorldGenMinable(ModBlocks.dye_ore.getDefaultState().withProperty(BlockDyeOre.TYPE, EnumHandler.OreType.OVERWORLD), 6);
         nether_dye_ore = new WorldGenMinable(ModBlocks.dye_ore.getDefaultState().withProperty(BlockDyeOre.TYPE,EnumHandler.OreType.NETHER), 6, new NetherGenPredicate());
         end_dye_ore = new WorldGenMinable(ModBlocks.dye_ore.getDefaultState().withProperty(BlockDyeOre.TYPE, EnumHandler.OreType.END), 6, new EndGenPredicate());
+
+        ender_pearl_ore = new WorldGenMinable(ModBlocks.ender_pearl_ore.getDefaultState().withProperty(BlockDyeOre.TYPE, EnumHandler.OreType.OVERWORLD), 3);
+        nether_ender_pearl_ore = new WorldGenMinable(ModBlocks.ender_pearl_ore.getDefaultState().withProperty(BlockDyeOre.TYPE,EnumHandler.OreType.NETHER), 3, new NetherGenPredicate());
+        end_ender_pearl_ore = new WorldGenMinable(ModBlocks.ender_pearl_ore.getDefaultState().withProperty(BlockDyeOre.TYPE, EnumHandler.OreType.END), 6, new EndGenPredicate());
+
     }
 
     private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {
@@ -51,12 +63,15 @@ public class WorldGenDye implements IWorldGenerator{
         switch (world.provider.getDimension()) {
             case 0: // Overworld
                 this.runGenerator(dye_ore, world, random, chunkX, chunkZ, 15, 14, 33);
+                this.runGenerator(ender_pearl_ore, world, random, chunkX, chunkZ, 8, 5, 29);
                 break;
             case 1: // End
-                this.runGenerator(end_dye_ore, world, random, chunkX, chunkZ, 15, 14, 33);
+                this.runGenerator(end_dye_ore, world, random, chunkX, chunkZ, 15, 14, 70);
+                this.runGenerator(end_ender_pearl_ore, world, random, chunkX, chunkZ, 15, 5, 70);
                 break;
             case -1: // Nether
-                this.runGenerator(nether_dye_ore, world, random, chunkX, chunkZ, 15, 14, 33);
+                this.runGenerator(nether_dye_ore, world, random, chunkX, chunkZ, 15, 14, 48);
+                this.runGenerator(nether_ender_pearl_ore, world, random, chunkX, chunkZ, 10, 5, 48);
                 break;
         }
     }

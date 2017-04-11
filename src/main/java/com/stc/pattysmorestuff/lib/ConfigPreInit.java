@@ -1,7 +1,10 @@
 package com.stc.pattysmorestuff.lib;
 
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemStack;
 
 /**
  * Created by StuffTheChicken on 11/11/2016.
@@ -126,7 +129,6 @@ public class ConfigPreInit {
     public static ArmorMaterial DYE_ARMOR_ORANGE;
     public static ArmorMaterial DYE_ARMOR_WHITE;
 
-    public static int timeWandMaxDamage;
     public static int ironFurnaceCookSpeed;
     public static int goldFurnaceCookSpeed;
     public static int diamondFurnaceCookSpeed;
@@ -183,6 +185,7 @@ public class ConfigPreInit {
     public static boolean disableTools;
     public static boolean disableArmor;
     public static boolean disableBlocks;
+    public static boolean disableFurnaces;
     public static boolean disableFood;
     public static boolean disableMiscItems;
 
@@ -191,5 +194,9 @@ public class ConfigPreInit {
 
     public static boolean canDisplay = true;
     public static boolean hasDisplayedOnce = false;
+
+    public static boolean enableCreativeAir;
+    public static int lightlevel;
+    public static int lightWandMaxDamage;
 
 }

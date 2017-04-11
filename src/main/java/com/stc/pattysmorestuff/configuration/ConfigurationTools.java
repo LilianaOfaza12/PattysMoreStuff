@@ -12,15 +12,18 @@ public class ConfigurationTools {
 
     public static void syncConfig() {
 
-        ConfigPreInit.disableTools = PattysMoreStuff.Config.get("PattysMoreStuff.Other.tools", "disableTools", true).getBoolean(true);
-        ConfigPreInit.disableArmor = PattysMoreStuff.Config.get("PattysMoreStuff.Other.armor", "disableArmor", true).getBoolean(true);
-        ConfigPreInit.disableBlocks = PattysMoreStuff.Config.get("PattysMoreStuff.Other.blocks", "disableBlocks", true).getBoolean(true);
-        ConfigPreInit.disableFood = PattysMoreStuff.Config.get("PattysMoreStuff.Other.food", "disableFood", true).getBoolean(true);
-        ConfigPreInit.disableMiscItems = PattysMoreStuff.Config.get("PattysMoreStuff.Other.miscItems", "disableMiscItems", true).getBoolean(true);
+        ConfigPreInit.disableTools = PattysMoreStuff.Config.get("PattysMoreStuff.Other.tools", "enableTools", true).getBoolean(true);
+        ConfigPreInit.disableArmor = PattysMoreStuff.Config.get("PattysMoreStuff.Other.armor", "enableArmor", true).getBoolean(true);
+        ConfigPreInit.disableBlocks = PattysMoreStuff.Config.get("PattysMoreStuff.Other.blocks", "enableBlocks", true).getBoolean(true);
+        ConfigPreInit.disableFurnaces = PattysMoreStuff.Config.get("PattysMoreStuff.Other.furnaces", "enableFurnaces", true).getBoolean(true);
+        ConfigPreInit.disableFood = PattysMoreStuff.Config.get("PattysMoreStuff.Other.food", "enableFood", true).getBoolean(true);
+        ConfigPreInit.disableMiscItems = PattysMoreStuff.Config.get("PattysMoreStuff.Other.miscItems", "enableMiscItems", true).getBoolean(true);
         ConfigPreInit.enableEndStoneRecipe = PattysMoreStuff.Config.get("PattysMoreStuff.Other.recipes", "enableEndStoneRecipe", false).getBoolean(false);
         ConfigPreInit.enableEndPortalFrameRecipe = PattysMoreStuff.Config.get("PattysMoreStuff.Other.recipes", "enableEndPortalFrameRecipe", false).getBoolean(false);
-        ConfigPreInit.canDisplay = PattysMoreStuff.Config.getBoolean("welcome_message", "PattysMoreStuff.Other.message", ConfigPreInit.canDisplay, "Enabled or disable the welcome message");
-        ConfigPreInit.timeWandMaxDamage = PattysMoreStuff.Config.get("PattysMoreStuff.Other.miscItems", "Time Wand Max Uses", 250).getInt();
+
+        ConfigPreInit.enableCreativeAir = PattysMoreStuff.Config.get("PattysMoreStuff.Other.miscItems", "Enable Glowing Air in Creative Tab", false).getBoolean(false);
+        ConfigPreInit.lightlevel = PattysMoreStuff.Config.get("PattysMoreStuff.Other.miscItems", "Light Level for Glowing Air (1-10)", 10).getInt();
+        ConfigPreInit.lightWandMaxDamage = PattysMoreStuff.Config.get("PattysMoreStuff.Other.miscItems", "Illumination Wand Max Uses", 250).getInt();
 
         ConfigPreInit.ironFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden slab burns for in the iron furnace", 150).getInt();
         ConfigPreInit.ironFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long wood material burns for in the iron furnace", 300).getInt();

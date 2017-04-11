@@ -4,13 +4,13 @@ import java.io.File;
 
 import com.stc.pattysmorestuff.armor.init.ModArmor;
 import com.stc.pattysmorestuff.armor.init.ModDyeArmor;
+import com.stc.pattysmorestuff.blocks.init.ModBlockOther;
 import com.stc.pattysmorestuff.blocks.init.ModBlocks;
-import com.stc.pattysmorestuff.blocks.init.ModExtraBlocks;
 import com.stc.pattysmorestuff.configuration.ConfigurationTools;
 import com.stc.pattysmorestuff.crafting.ModCrafting;
 import com.stc.pattysmorestuff.food.init.ModFood;
 import com.stc.pattysmorestuff.furnaces.init.ModFurnaces;
-import com.stc.pattysmorestuff.handlers.PlayerEventHandler;
+import com.stc.pattysmorestuff.gui.GuiTimeWand;
 import com.stc.pattysmorestuff.items.init.ModPMS;
 import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import com.stc.pattysmorestuff.lib.Loot;
@@ -45,6 +45,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.network.internal.FMLNetworkHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
@@ -65,15 +67,16 @@ public class PattysMoreStuff
     public void preInit(FMLPreInitializationEvent event)
     {
         Config = new Configuration(new File("config/PattysMoreStuff/PattysMoreStuff.cfg"));
-
         ConfigurationTools.syncConfig();
 
         ModTabs.registerTabs();
         if(ConfigPreInit.disableBlocks) {
             ModBlocks.init();
+            ModBlockOther.init();
         }
-        ModExtraBlocks.init();
-        ModFurnaces.init();
+        if(ConfigPreInit.disableFurnaces) {
+            ModFurnaces.init();
+        }
 
         if(ConfigPreInit.disableTools) {
             ModTools.init();
@@ -97,7 +100,6 @@ public class PattysMoreStuff
         ModPMS.init();
         ModCrafting.recipes();
         GameRegistry.registerWorldGenerator(new WorldGenDye(), 0);
-        MinecraftForge.EVENT_BUS.register(new PlayerEventHandler());
 
         if(Loader.isModLoaded("baubles")) {
             MinecraftForge.EVENT_BUS.register(new Loot());

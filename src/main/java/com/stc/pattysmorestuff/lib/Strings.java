@@ -7,6 +7,6 @@ public class Strings {
 
     public static final String MODID = "pattysmorestuff";
     public static final String NAME = "Pattys More Stuff";
-    public static final String VERSION = "stable-1.0.3";
+    public static final String VERSION = "stable-1.0.4";
 
 }
