@@ -501,7 +501,6 @@ item.diamond_paxel.name=Diamond Paxel
 
 item.time_wand.name=Time Wand
 item.light_wand.name=Illumination Wand
-item.info_book.name=PattysMoreStuff Information Book
 
 item.fried_egg.name=Fried Egg
 item.bacon_raw.name=Raw Bacon
@@ -522,18 +521,6 @@ item.iron_apple.name=Iron Apple
 item.diamond_apple.name=Diamond Apple
 item.emerald_apple.name=Emerald Apple
 
-item.amulet_haste.name=Amulet Of Haste
-item.amulet_speed.name=Amulet Of Speed
-item.amulet_fire.name=Amulet Of Fire
-item.amulet_resist.name=Amulet Of Resistance
-item.amulet_jump.name=Amulet Of Jump
-item.amulet_regen.name=Amulet Of Regeneration
-item.amulet_night.name=Amulet Of Night
-item.amulet_breath.name=Amulet Of Water
-item.amulet_strength.name=Amulet Of Strength
-
-item.ring_of_flight.name=Ring Of Flight
-
 tile.dye_block.black.name=Black Dye Block
 tile.dye_block.red.name=Red Dye Block
 tile.dye_block.green.name=Green Dye Block
@@ -549,7 +536,6 @@ tile.dye_block.light_blue.name=Light Blue Dye Block
 tile.dye_block.magenta.name=Magenta Dye Block
 tile.dye_block.orange.name=Orange Dye Block
 tile.dye_block.white.name=White Dye Block
-
 
 tile.dye_black_slab_half.name=Black Dye Slab
 tile.dye_red_slab_half.name=Red Dye Slab
@@ -636,22 +622,23 @@ tile.dye_magenta_fence_gate.name=Magenta Dye Fence Gate
 tile.dye_orange_fence_gate.name=Orange Dye Fence Gate
 tile.dye_white_fence_gate.name=White Dye Fence Gate
 
-tile.stonebrick.black.name=Black Stone Brick Block
-tile.stonebrick.red.name=Red Stone Brick Block
-tile.stonebrick.green.name=Green Stone Brick Block
-tile.stonebrick.brown.name=Brown Stone Brick Block
-tile.stonebrick.blue.name=Lapis Lazuli Stone Brick Block
-tile.stonebrick.purple.name=Purple Stone Brick Block
-tile.stonebrick.cyan.name=Cyan Stone Brick Block
-tile.stonebrick.light_gray.name=Light Gray Stone Brick Block
-tile.stonebrick.gray.name=Gray Stone Brick Block
-tile.stonebrick.pink.name=Pink Stone Brick Block
-tile.stonebrick.lime.name=Lime Stone Brick Block
-tile.stonebrick.yellow.name=Yellow Stone Brick Block
-tile.stonebrick.light_blue.name=Light Blue Stone Brick Block
-tile.stonebrick.magenta.name=Magenta Stone Brick Block
-tile.stonebrick.orange.name=Orange Stone Brick Block
-tile.stonebrick.white.name=White Stone Brick Block
+tile.stonebrick.black.name=Black Stone Brick
+tile.stonebrick.red.name=Red Stone Brick
+tile.stonebrick.green.name=Green Stone Brick
+tile.stonebrick.brown.name=Brown Stone Brick
+tile.stonebrick.blue.name=Lapis Lazuli Stone Brick
+tile.stonebrick.purple.name=Purple Stone Brick
+tile.stonebrick.cyan.name=Cyan Stone Brick
+tile.stonebrick.light_gray.name=Light Gray Stone Brick
+tile.stonebrick.silver.name=Light Gray Stone Brick
+tile.stonebrick.gray.name=Gray Stone Brick
+tile.stonebrick.pink.name=Pink Stone Brick
+tile.stonebrick.lime.name=Lime Stone Brick
+tile.stonebrick.yellow.name=Yellow Stone Brick
+tile.stonebrick.light_blue.name=Light Blue Stone Brick
+tile.stonebrick.magenta.name=Magenta Stone Brick
+tile.stonebrick.orange.name=Orange Stone Brick
+tile.stonebrick.white.name=White Stone Brick
 
 tile.stonebrick_black_slab_half.name=Black Stone Brick Slab
 tile.stonebrick_red_slab_half.name=Red Stone Brick Slab
@@ -754,20 +741,6 @@ tile.cookie_jar_brown.name=Brown Cookie Jar
 tile.cookie_jar_green.name=Green Cookie Jar
 tile.cookie_jar_red.name=Red Cookie Jar
 tile.cookie_jar_black.name=Black Cookie Jar
-
-tile.oak_planks_brick.name=Oak Brick Planks
-tile.spruce_planks_brick.name=Spruce Brick Planks
-tile.birch_planks_brick.name=Birch Brick Planks
-tile.jungle_planks_brick.name=Jungle Brick Planks
-tile.acacia_planks_brick.name=Oak Brick Planks
-tile.dark_oak_planks_brick.name=Dark Oak Brick Planks
-
-tile.oak_planks_brick_stairs.name=Oak Brick Plank Stairs
-tile.spruce_planks_brick_stairs.name=Spruce Brick Plank Stairs
-tile.birch_planks_brick_stairs.name=Birch Brick Plank Stairs
-tile.jungle_planks_brick_stairs.name=Jungle Brick Plank Stairs
-tile.acacia_planks_brick_stairs.name=Oak Brick Plank Stairs
-tile.dark_oak_planks_brick_stairs.name=Dark Oak Brick Plank Stairs
 
 tile.oak_storage_crate.name=Oak Storage Crate
 tile.spruce_storage_crate.name=Spruce Storage Crate

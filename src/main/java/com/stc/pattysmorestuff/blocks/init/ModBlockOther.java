@@ -1,7 +1,7 @@
 package com.stc.pattysmorestuff.blocks.init;
 
 import com.stc.pattysmorestuff.blocks.BlockDye;
-import com.stc.pattysmorestuff.blocks.BlockDyeBrick;
+import com.stc.pattysmorestuff.blocks.BlockDyeStonebrick;
 import com.stc.pattysmorestuff.blocks.BlockDyeFence;
 import com.stc.pattysmorestuff.blocks.BlockDyeFenceGate;
 import com.stc.pattysmorestuff.blocks.slabs.*;
@@ -59,101 +59,101 @@ public class ModBlockOther {
     public static Block stonebrick_orange_stairs;
     public static Block stonebrick_white_stairs;
 
-    public static BlockBlackSlabHalf dye_black_slab_half;
-    public static BlockBlackSlabDouble dye_black_slab_double;
+    public static BlockDyeSlabHalf dye_black_slab_half;
+    public static BlockDyeSlabDouble dye_black_slab_double;
 
-    public static BlockRedSlabHalf dye_red_slab_half;
-    public static BlockRedSlabDouble dye_red_slab_double;
+    public static BlockDyeSlabHalf dye_red_slab_half;
+    public static BlockDyeSlabDouble dye_red_slab_double;
 
-    public static BlockGreenSlabHalf dye_green_slab_half;
-    public static BlockGreenSlabDouble dye_green_slab_double;
+    public static BlockDyeSlabHalf dye_green_slab_half;
+    public static BlockDyeSlabDouble dye_green_slab_double;
 
-    public static BlockBrownSlabHalf dye_brown_slab_half;
-    public static BlockBrownSlabDouble dye_brown_slab_double;
+    public static BlockDyeSlabHalf dye_brown_slab_half;
+    public static BlockDyeSlabDouble dye_brown_slab_double;
 
-    public static BlockBlueSlabHalf dye_blue_slab_half;
-    public static BlockBlueSlabDouble dye_blue_slab_double;
+    public static BlockDyeSlabHalf dye_blue_slab_half;
+    public static BlockDyeSlabDouble dye_blue_slab_double;
 
-    public static BlockPurpleSlabHalf dye_purple_slab_half;
-    public static BlockPurpleSlabDouble dye_purple_slab_double;
+    public static BlockDyeSlabHalf dye_purple_slab_half;
+    public static BlockDyeSlabDouble dye_purple_slab_double;
 
-    public static BlockCyanSlabHalf dye_cyan_slab_half;
-    public static BlockCyanSlabDouble dye_cyan_slab_double;
+    public static BlockDyeSlabHalf dye_cyan_slab_half;
+    public static BlockDyeSlabDouble dye_cyan_slab_double;
 
-    public static BlockSilverSlabHalf dye_silver_slab_half;
-    public static BlockSilverSlabDouble dye_silver_slab_double;
+    public static BlockDyeSlabHalf dye_silver_slab_half;
+    public static BlockDyeSlabDouble dye_silver_slab_double;
 
-    public static BlockGraySlabHalf dye_gray_slab_half;
-    public static BlockGraySlabDouble dye_gray_slab_double;
+    public static BlockDyeSlabHalf dye_gray_slab_half;
+    public static BlockDyeSlabDouble dye_gray_slab_double;
 
-    public static BlockPinkSlabHalf dye_pink_slab_half;
-    public static BlockPinkSlabDouble dye_pink_slab_double;
+    public static BlockDyeSlabHalf dye_pink_slab_half;
+    public static BlockDyeSlabDouble dye_pink_slab_double;
 
-    public static BlockLimeSlabHalf dye_lime_slab_half;
-    public static BlockLimeSlabDouble dye_lime_slab_double;
+    public static BlockDyeSlabHalf dye_lime_slab_half;
+    public static BlockDyeSlabDouble dye_lime_slab_double;
 
-    public static BlockYellowSlabHalf dye_yellow_slab_half;
-    public static BlockYellowSlabDouble dye_yellow_slab_double;
+    public static BlockDyeSlabHalf dye_yellow_slab_half;
+    public static BlockDyeSlabDouble dye_yellow_slab_double;
 
-    public static BlockLightBlueSlabHalf dye_light_blue_slab_half;
-    public static BlockLightBlueSlabDouble dye_light_blue_slab_double;
+    public static BlockDyeSlabHalf dye_light_blue_slab_half;
+    public static BlockDyeSlabDouble dye_light_blue_slab_double;
 
-    public static BlockMagentaSlabHalf dye_magenta_slab_half;
-    public static BlockMagentaSlabDouble dye_magenta_slab_double;
+    public static BlockDyeSlabHalf dye_magenta_slab_half;
+    public static BlockDyeSlabDouble dye_magenta_slab_double;
 
-    public static BlockOrangeSlabHalf dye_orange_slab_half;
-    public static BlockOrangeSlabDouble dye_orange_slab_double;
+    public static BlockDyeSlabHalf dye_orange_slab_half;
+    public static BlockDyeSlabDouble dye_orange_slab_double;
 
-    public static BlockWhiteSlabHalf dye_white_slab_half;
-    public static BlockWhiteSlabDouble dye_white_slab_double;
+    public static BlockDyeSlabHalf dye_white_slab_half;
+    public static BlockDyeSlabDouble dye_white_slab_double;
 
-    public static BlockBlackStonebrickSlabHalf stonebrick_black_slab_half;
-    public static BlockBlackStonebrickSlabDouble stonebrick_black_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_black_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_black_slab_double;
 
-    public static BlockRedStonebrickSlabHalf stonebrick_red_slab_half;
-    public static BlockRedStonebrickSlabDouble stonebrick_red_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_red_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_red_slab_double;
 
-    public static BlockGreenStonebrickSlabHalf stonebrick_green_slab_half;
-    public static BlockGreenStonebrickSlabDouble stonebrick_green_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_green_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_green_slab_double;
 
-    public static BlockBrownStonebrickSlabHalf stonebrick_brown_slab_half;
-    public static BlockBrownStonebrickSlabDouble stonebrick_brown_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_brown_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_brown_slab_double;
 
-    public static BlockBlueStonebrickSlabHalf stonebrick_blue_slab_half;
-    public static BlockBlueStonebrickSlabDouble stonebrick_blue_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_blue_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_blue_slab_double;
 
-    public static BlockPurpleStonebrickSlabHalf stonebrick_purple_slab_half;
-    public static BlockPurpleStonebrickSlabDouble stonebrick_purple_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_purple_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_purple_slab_double;
 
-    public static BlockCyanStonebrickSlabHalf stonebrick_cyan_slab_half;
-    public static BlockCyanStonebrickSlabDouble stonebrick_cyan_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_cyan_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_cyan_slab_double;
 
-    public static BlockSilverStonebrickSlabHalf stonebrick_silver_slab_half;
-    public static BlockSilverStonebrickSlabDouble stonebrick_silver_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_silver_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_silver_slab_double;
 
-    public static BlockGrayStonebrickSlabHalf stonebrick_gray_slab_half;
-    public static BlockGrayStonebrickSlabDouble stonebrick_gray_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_gray_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_gray_slab_double;
 
-    public static BlockPinkStonebrickSlabHalf stonebrick_pink_slab_half;
-    public static BlockPinkStonebrickSlabDouble stonebrick_pink_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_pink_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_pink_slab_double;
 
-    public static BlockLimeStonebrickSlabHalf stonebrick_lime_slab_half;
-    public static BlockLimeStonebrickSlabDouble stonebrick_lime_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_lime_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_lime_slab_double;
 
-    public static BlockYellowStonebrickSlabHalf stonebrick_yellow_slab_half;
-    public static BlockYellowStonebrickSlabDouble stonebrick_yellow_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_yellow_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_yellow_slab_double;
 
-    public static BlockLightBlueStonebrickSlabHalf stonebrick_light_blue_slab_half;
-    public static BlockLightBlueStonebrickSlabDouble stonebrick_light_blue_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_light_blue_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_light_blue_slab_double;
 
-    public static BlockMagentaStonebrickSlabHalf stonebrick_magenta_slab_half;
-    public static BlockMagentaStonebrickSlabDouble stonebrick_magenta_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_magenta_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_magenta_slab_double;
 
-    public static BlockOrangeStonebrickSlabHalf stonebrick_orange_slab_half;
-    public static BlockOrangeStonebrickSlabDouble stonebrick_orange_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_orange_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_orange_slab_double;
 
-    public static BlockWhiteStonebrickSlabHalf stonebrick_white_slab_half;
-    public static BlockWhiteStonebrickSlabDouble stonebrick_white_slab_double;
+    public static BlockStonebrickSlabHalf stonebrick_white_slab_half;
+    public static BlockStonebrickSlabDouble stonebrick_white_slab_double;
 
     public static Block dye_black_fence;
     public static Block dye_red_fence;
@@ -244,70 +244,70 @@ public class ModBlockOther {
         registerBlock(dye_red_stairs = new BlockDyeStairs("dye_red_stairs", ModBlocks.dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.RED)));
         registerBlock(dye_black_stairs = new BlockDyeStairs("dye_black_stairs", ModBlocks.dye_block.getDefaultState().withProperty(BlockDye.TYPE, EnumHandler.BlockType.BLACK)));
 
-        registerBlock(stonebrick_white_stairs = new BlockStonebrickStairs("stonebrick_white_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.WHITE)));
-        registerBlock(stonebrick_orange_stairs = new BlockStonebrickStairs("stonebrick_orange_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.ORANGE)));
-        registerBlock(stonebrick_magenta_stairs = new BlockStonebrickStairs("stonebrick_magenta_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.MAGENTA)));
-        registerBlock(stonebrick_light_blue_stairs = new BlockStonebrickStairs("stonebrick_light_blue_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.LIGHT_BLUE)));
-        registerBlock(stonebrick_yellow_stairs = new BlockStonebrickStairs("stonebrick_yellow_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.YELLOW)));
-        registerBlock(stonebrick_lime_stairs = new BlockStonebrickStairs("stonebrick_lime_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.LIME)));
-        registerBlock(stonebrick_pink_stairs = new BlockStonebrickStairs("stonebrick_pink_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.PINK)));
-        registerBlock(stonebrick_gray_stairs = new BlockStonebrickStairs("stonebrick_gray_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.GRAY)));
-        registerBlock(stonebrick_silver_stairs = new BlockStonebrickStairs("stonebrick_silver_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.SILVER)));
-        registerBlock(stonebrick_cyan_stairs = new BlockStonebrickStairs("stonebrick_cyan_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.CYAN)));
-        registerBlock(stonebrick_purple_stairs = new BlockStonebrickStairs("stonebrick_purple_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.PURPLE)));
-        registerBlock(stonebrick_blue_stairs = new BlockStonebrickStairs("stonebrick_blue_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.BLUE)));
-        registerBlock(stonebrick_brown_stairs = new BlockStonebrickStairs("stonebrick_brown_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.BROWN)));
-        registerBlock(stonebrick_green_stairs = new BlockStonebrickStairs("stonebrick_green_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.GREEN)));
-        registerBlock(stonebrick_red_stairs = new BlockStonebrickStairs("stonebrick_red_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.RED)));
-        registerBlock(stonebrick_black_stairs = new BlockStonebrickStairs("stonebrick_black_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeBrick.TYPE, EnumHandler.BrickType.BLACK)));
+        registerBlock(stonebrick_white_stairs = new BlockStonebrickStairs("stonebrick_white_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.WHITE)));
+        registerBlock(stonebrick_orange_stairs = new BlockStonebrickStairs("stonebrick_orange_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.ORANGE)));
+        registerBlock(stonebrick_magenta_stairs = new BlockStonebrickStairs("stonebrick_magenta_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.MAGENTA)));
+        registerBlock(stonebrick_light_blue_stairs = new BlockStonebrickStairs("stonebrick_light_blue_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.LIGHT_BLUE)));
+        registerBlock(stonebrick_yellow_stairs = new BlockStonebrickStairs("stonebrick_yellow_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.YELLOW)));
+        registerBlock(stonebrick_lime_stairs = new BlockStonebrickStairs("stonebrick_lime_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.LIME)));
+        registerBlock(stonebrick_pink_stairs = new BlockStonebrickStairs("stonebrick_pink_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.PINK)));
+        registerBlock(stonebrick_gray_stairs = new BlockStonebrickStairs("stonebrick_gray_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.GRAY)));
+        registerBlock(stonebrick_silver_stairs = new BlockStonebrickStairs("stonebrick_silver_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.SILVER)));
+        registerBlock(stonebrick_cyan_stairs = new BlockStonebrickStairs("stonebrick_cyan_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.CYAN)));
+        registerBlock(stonebrick_purple_stairs = new BlockStonebrickStairs("stonebrick_purple_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.PURPLE)));
+        registerBlock(stonebrick_blue_stairs = new BlockStonebrickStairs("stonebrick_blue_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.BLUE)));
+        registerBlock(stonebrick_brown_stairs = new BlockStonebrickStairs("stonebrick_brown_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.BROWN)));
+        registerBlock(stonebrick_green_stairs = new BlockStonebrickStairs("stonebrick_green_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.GREEN)));
+        registerBlock(stonebrick_red_stairs = new BlockStonebrickStairs("stonebrick_red_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.RED)));
+        registerBlock(stonebrick_black_stairs = new BlockStonebrickStairs("stonebrick_black_stairs", ModBlocks.stonebrick.getDefaultState().withProperty(BlockDyeStonebrick.TYPE, EnumHandler.BrickType.BLACK)));
 
-        dye_black_slab_half = new BlockBlackSlabHalf("dye_black_slab_half");
-        dye_black_slab_double = new BlockBlackSlabDouble("dye_black_slab_double");
+        dye_black_slab_half = new BlockDyeSlabHalf("dye_black_slab_half");
+        dye_black_slab_double = new BlockDyeSlabDouble("dye_black_slab_double");
 
-        dye_red_slab_half = new BlockRedSlabHalf("dye_red_slab_half");
-        dye_red_slab_double = new BlockRedSlabDouble("dye_red_slab_double");
+        dye_red_slab_half = new BlockDyeSlabHalf("dye_red_slab_half");
+        dye_red_slab_double = new BlockDyeSlabDouble("dye_red_slab_double");
 
-        dye_green_slab_half = new BlockGreenSlabHalf("dye_green_slab_half");
-        dye_green_slab_double = new BlockGreenSlabDouble("dye_green_slab_double");
+        dye_green_slab_half = new BlockDyeSlabHalf("dye_green_slab_half");
+        dye_green_slab_double = new BlockDyeSlabDouble("dye_green_slab_double");
 
-        dye_brown_slab_half = new BlockBrownSlabHalf("dye_brown_slab_half");
-        dye_brown_slab_double = new BlockBrownSlabDouble("dye_brown_slab_double");
+        dye_brown_slab_half = new BlockDyeSlabHalf("dye_brown_slab_half");
+        dye_brown_slab_double = new BlockDyeSlabDouble("dye_brown_slab_double");
 
-        dye_blue_slab_half = new BlockBlueSlabHalf("dye_blue_slab_half");
-        dye_blue_slab_double = new BlockBlueSlabDouble("dye_blue_slab_double");
+        dye_blue_slab_half = new BlockDyeSlabHalf("dye_blue_slab_half");
+        dye_blue_slab_double = new BlockDyeSlabDouble("dye_blue_slab_double");
 
-        dye_purple_slab_half = new BlockPurpleSlabHalf("dye_purple_slab_half");
-        dye_purple_slab_double = new BlockPurpleSlabDouble("dye_purple_slab_double");
+        dye_purple_slab_half = new BlockDyeSlabHalf("dye_purple_slab_half");
+        dye_purple_slab_double = new BlockDyeSlabDouble("dye_purple_slab_double");
 
-        dye_cyan_slab_half = new BlockCyanSlabHalf("dye_cyan_slab_half");
-        dye_cyan_slab_double = new BlockCyanSlabDouble("dye_cyan_slab_double");
+        dye_cyan_slab_half = new BlockDyeSlabHalf("dye_cyan_slab_half");
+        dye_cyan_slab_double = new BlockDyeSlabDouble("dye_cyan_slab_double");
 
-        dye_gray_slab_half = new BlockGraySlabHalf("dye_gray_slab_half");
-        dye_gray_slab_double = new BlockGraySlabDouble("dye_gray_slab_double");
+        dye_gray_slab_half = new BlockDyeSlabHalf("dye_gray_slab_half");
+        dye_gray_slab_double = new BlockDyeSlabDouble("dye_gray_slab_double");
 
-        dye_silver_slab_half = new BlockSilverSlabHalf("dye_silver_slab_half");
-        dye_silver_slab_double = new BlockSilverSlabDouble("dye_silver_slab_double");
+        dye_silver_slab_half = new BlockDyeSlabHalf("dye_silver_slab_half");
+        dye_silver_slab_double = new BlockDyeSlabDouble("dye_silver_slab_double");
 
-        dye_pink_slab_half = new BlockPinkSlabHalf("dye_pink_slab_half");
-        dye_pink_slab_double = new BlockPinkSlabDouble("dye_pink_slab_double");
+        dye_pink_slab_half = new BlockDyeSlabHalf("dye_pink_slab_half");
+        dye_pink_slab_double = new BlockDyeSlabDouble("dye_pink_slab_double");
 
-        dye_lime_slab_half = new BlockLimeSlabHalf("dye_lime_slab_half");
-        dye_lime_slab_double = new BlockLimeSlabDouble("dye_lime_slab_double");
+        dye_lime_slab_half = new BlockDyeSlabHalf("dye_lime_slab_half");
+        dye_lime_slab_double = new BlockDyeSlabDouble("dye_lime_slab_double");
 
-        dye_yellow_slab_half = new BlockYellowSlabHalf("dye_yellow_slab_half");
-        dye_yellow_slab_double = new BlockYellowSlabDouble("dye_yellow_slab_double");
+        dye_yellow_slab_half = new BlockDyeSlabHalf("dye_yellow_slab_half");
+        dye_yellow_slab_double = new BlockDyeSlabDouble("dye_yellow_slab_double");
 
-        dye_light_blue_slab_half = new BlockLightBlueSlabHalf("dye_light_blue_slab_half");
-        dye_light_blue_slab_double = new BlockLightBlueSlabDouble("dye_light_blue_slab_double");
+        dye_light_blue_slab_half = new BlockDyeSlabHalf("dye_light_blue_slab_half");
+        dye_light_blue_slab_double = new BlockDyeSlabDouble("dye_light_blue_slab_double");
 
-        dye_magenta_slab_half = new BlockMagentaSlabHalf("dye_magenta_slab_half");
-        dye_magenta_slab_double = new BlockMagentaSlabDouble("dye_magenta_slab_double");
+        dye_magenta_slab_half = new BlockDyeSlabHalf("dye_magenta_slab_half");
+        dye_magenta_slab_double = new BlockDyeSlabDouble("dye_magenta_slab_double");
 
-        dye_orange_slab_half = new BlockOrangeSlabHalf("dye_orange_slab_half");
-        dye_orange_slab_double = new BlockOrangeSlabDouble("dye_orange_slab_double");
+        dye_orange_slab_half = new BlockDyeSlabHalf("dye_orange_slab_half");
+        dye_orange_slab_double = new BlockDyeSlabDouble("dye_orange_slab_double");
 
-        dye_white_slab_half = new BlockWhiteSlabHalf("dye_white_slab_half");
-        dye_white_slab_double = new BlockWhiteSlabDouble("dye_white_slab_double");
+        dye_white_slab_half = new BlockDyeSlabHalf("dye_white_slab_half");
+        dye_white_slab_double = new BlockDyeSlabDouble("dye_white_slab_double");
 
         registerBlock(dye_white_slab_half, new ItemSlab(dye_white_slab_half, dye_white_slab_half, dye_white_slab_double));
         GameRegistry.register(dye_white_slab_double);
@@ -357,53 +357,53 @@ public class ModBlockOther {
         registerBlock(dye_black_slab_half, new ItemSlab(dye_black_slab_half, dye_black_slab_half, dye_black_slab_double));
         GameRegistry.register(dye_black_slab_double);
 
-        stonebrick_black_slab_half = new BlockBlackStonebrickSlabHalf("stonebrick_black_slab_half");
-        stonebrick_black_slab_double = new BlockBlackStonebrickSlabDouble("stonebrick_black_slab_double");
+        stonebrick_black_slab_half = new BlockStonebrickSlabHalf("stonebrick_black_slab_half");
+        stonebrick_black_slab_double = new BlockStonebrickSlabDouble("stonebrick_black_slab_double");
 
-        stonebrick_red_slab_half = new BlockRedStonebrickSlabHalf("stonebrick_red_slab_half");
-        stonebrick_red_slab_double = new BlockRedStonebrickSlabDouble("stonebrick_red_slab_double");
+        stonebrick_red_slab_half = new BlockStonebrickSlabHalf("stonebrick_red_slab_half");
+        stonebrick_red_slab_double = new BlockStonebrickSlabDouble("stonebrick_red_slab_double");
 
-        stonebrick_green_slab_half = new BlockGreenStonebrickSlabHalf("stonebrick_green_slab_half");
-        stonebrick_green_slab_double = new BlockGreenStonebrickSlabDouble("stonebrick_green_slab_double");
+        stonebrick_green_slab_half = new BlockStonebrickSlabHalf("stonebrick_green_slab_half");
+        stonebrick_green_slab_double = new BlockStonebrickSlabDouble("stonebrick_green_slab_double");
 
-        stonebrick_brown_slab_half = new BlockBrownStonebrickSlabHalf("stonebrick_brown_slab_half");
-        stonebrick_brown_slab_double = new BlockBrownStonebrickSlabDouble("stonebrick_brown_slab_double");
+        stonebrick_brown_slab_half = new BlockStonebrickSlabHalf("stonebrick_brown_slab_half");
+        stonebrick_brown_slab_double = new BlockStonebrickSlabDouble("stonebrick_brown_slab_double");
 
-        stonebrick_blue_slab_half = new BlockBlueStonebrickSlabHalf("stonebrick_blue_slab_half");
-        stonebrick_blue_slab_double = new BlockBlueStonebrickSlabDouble("stonebrick_blue_slab_double");
+        stonebrick_blue_slab_half = new BlockStonebrickSlabHalf("stonebrick_blue_slab_half");
+        stonebrick_blue_slab_double = new BlockStonebrickSlabDouble("stonebrick_blue_slab_double");
 
-        stonebrick_purple_slab_half = new BlockPurpleStonebrickSlabHalf("stonebrick_purple_slab_half");
-        stonebrick_purple_slab_double = new BlockPurpleStonebrickSlabDouble("stonebrick_purple_slab_double");
+        stonebrick_purple_slab_half = new BlockStonebrickSlabHalf("stonebrick_purple_slab_half");
+        stonebrick_purple_slab_double = new BlockStonebrickSlabDouble("stonebrick_purple_slab_double");
 
-        stonebrick_cyan_slab_half = new BlockCyanStonebrickSlabHalf("stonebrick_cyan_slab_half");
-        stonebrick_cyan_slab_double = new BlockCyanStonebrickSlabDouble("stonebrick_cyan_slab_double");
+        stonebrick_cyan_slab_half = new BlockStonebrickSlabHalf("stonebrick_cyan_slab_half");
+        stonebrick_cyan_slab_double = new BlockStonebrickSlabDouble("stonebrick_cyan_slab_double");
 
-        stonebrick_gray_slab_half = new BlockGrayStonebrickSlabHalf("stonebrick_gray_slab_half");
-        stonebrick_gray_slab_double = new BlockGrayStonebrickSlabDouble("stonebrick_gray_slab_double");
+        stonebrick_gray_slab_half = new BlockStonebrickSlabHalf("stonebrick_gray_slab_half");
+        stonebrick_gray_slab_double = new BlockStonebrickSlabDouble("stonebrick_gray_slab_double");
 
-        stonebrick_silver_slab_half = new BlockSilverStonebrickSlabHalf("stonebrick_silver_slab_half");
-        stonebrick_silver_slab_double = new BlockSilverStonebrickSlabDouble("stonebrick_silver_slab_double");
+        stonebrick_silver_slab_half = new BlockStonebrickSlabHalf("stonebrick_silver_slab_half");
+        stonebrick_silver_slab_double = new BlockStonebrickSlabDouble("stonebrick_silver_slab_double");
 
-        stonebrick_pink_slab_half = new BlockPinkStonebrickSlabHalf("stonebrick_pink_slab_half");
-        stonebrick_pink_slab_double = new BlockPinkStonebrickSlabDouble("stonebrick_pink_slab_double");
+        stonebrick_pink_slab_half = new BlockStonebrickSlabHalf("stonebrick_pink_slab_half");
+        stonebrick_pink_slab_double = new BlockStonebrickSlabDouble("stonebrick_pink_slab_double");
 
-        stonebrick_lime_slab_half = new BlockLimeStonebrickSlabHalf("stonebrick_lime_slab_half");
-        stonebrick_lime_slab_double = new BlockLimeStonebrickSlabDouble("stonebrick_lime_slab_double");
+        stonebrick_lime_slab_half = new BlockStonebrickSlabHalf("stonebrick_lime_slab_half");
+        stonebrick_lime_slab_double = new BlockStonebrickSlabDouble("stonebrick_lime_slab_double");
 
-        stonebrick_yellow_slab_half = new BlockYellowStonebrickSlabHalf("stonebrick_yellow_slab_half");
-        stonebrick_yellow_slab_double = new BlockYellowStonebrickSlabDouble("stonebrick_yellow_slab_double");
+        stonebrick_yellow_slab_half = new BlockStonebrickSlabHalf("stonebrick_yellow_slab_half");
+        stonebrick_yellow_slab_double = new BlockStonebrickSlabDouble("stonebrick_yellow_slab_double");
 
-        stonebrick_light_blue_slab_half = new BlockLightBlueStonebrickSlabHalf("stonebrick_light_blue_slab_half");
-        stonebrick_light_blue_slab_double = new BlockLightBlueStonebrickSlabDouble("stonebrick_light_blue_slab_double");
+        stonebrick_light_blue_slab_half = new BlockStonebrickSlabHalf("stonebrick_light_blue_slab_half");
+        stonebrick_light_blue_slab_double = new BlockStonebrickSlabDouble("stonebrick_light_blue_slab_double");
 
-        stonebrick_magenta_slab_half = new BlockMagentaStonebrickSlabHalf("stonebrick_magenta_slab_half");
-        stonebrick_magenta_slab_double = new BlockMagentaStonebrickSlabDouble("stonebrick_magenta_slab_double");
+        stonebrick_magenta_slab_half = new BlockStonebrickSlabHalf("stonebrick_magenta_slab_half");
+        stonebrick_magenta_slab_double = new BlockStonebrickSlabDouble("stonebrick_magenta_slab_double");
 
-        stonebrick_orange_slab_half = new BlockOrangeStonebrickSlabHalf("stonebrick_orange_slab_half");
-        stonebrick_orange_slab_double = new BlockOrangeStonebrickSlabDouble("stonebrick_orange_slab_double");
+        stonebrick_orange_slab_half = new BlockStonebrickSlabHalf("stonebrick_orange_slab_half");
+        stonebrick_orange_slab_double = new BlockStonebrickSlabDouble("stonebrick_orange_slab_double");
 
-        stonebrick_white_slab_half = new BlockWhiteStonebrickSlabHalf("stonebrick_white_slab_half");
-        stonebrick_white_slab_double = new BlockWhiteStonebrickSlabDouble("stonebrick_white_slab_double");
+        stonebrick_white_slab_half = new BlockStonebrickSlabHalf("stonebrick_white_slab_half");
+        stonebrick_white_slab_double = new BlockStonebrickSlabDouble("stonebrick_white_slab_double");
 
         registerBlock(stonebrick_white_slab_half, new ItemSlab(stonebrick_white_slab_half, stonebrick_white_slab_half, stonebrick_white_slab_double));
         GameRegistry.register(stonebrick_white_slab_double);

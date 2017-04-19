@@ -3,7 +3,7 @@ package com.stc.pattysmorestuff.crafting;
 import com.stc.pattysmorestuff.blocks.init.ModBlockOther;
 import com.stc.pattysmorestuff.handlers.EnumHandler;
 import com.stc.pattysmorestuff.lib.ConfigPreInit;
-import com.stc.pattysmorestuff.items.init.ModPMS;
+import com.stc.pattysmorestuff.ModPMS;
 import com.stc.pattysmorestuff.armor.init.ModArmor;
 import com.stc.pattysmorestuff.armor.init.ModDyeArmor;
 import com.stc.pattysmorestuff.blocks.init.ModBlocks;
@@ -14,13 +14,10 @@ import com.stc.pattysmorestuff.tools.init.ModDyeToolBattleaxe;
 import com.stc.pattysmorestuff.tools.init.ModDyeTools;
 import com.stc.pattysmorestuff.tools.init.ModToolDyePaxels;
 import com.stc.pattysmorestuff.tools.init.ModTools;
-import net.minecraft.block.BlockPlanks;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.init.PotionTypes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionType;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -693,10 +690,6 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.acacia_storage_crate, 1), new Object[]{"OOO", "OCO", "OOO", Character.valueOf('C'), new ItemStack(Item.getItemFromBlock(Blocks.CHEST),1,0), Character.valueOf('O'), new ItemStack(Item.getItemFromBlock(Blocks.PLANKS), 1, 4)});
         GameRegistry.addRecipe(new ItemStack(ModBlocks.big_oak_storage_crate, 1), new Object[]{"OOO", "OCO", "OOO", Character.valueOf('C'), new ItemStack(Item.getItemFromBlock(Blocks.CHEST),1,0), Character.valueOf('O'), new ItemStack(Item.getItemFromBlock(Blocks.PLANKS), 1, 5)});
 
-        if(Loader.isModLoaded("baubles")) {
-            GameRegistry.addRecipe(new ItemStack(ModPMS.ring_of_flight, 1), new Object[]{"LGL", "GNG", "EGE", Character.valueOf('L'), Items.LEATHER, Character.valueOf('G'), Items.GOLD_INGOT, Character.valueOf('N'), Items.NETHER_STAR, Character.valueOf('E'), Items.EMERALD});
-            //GameRegistry.addRecipe(new ItemStack(ModPMS.amulet_speed, 1), new Object[]{"  S", " S ", "P, ", 'S', Items.STRING, new ItemStack(Items.POTIONITEM, PotionTypes.SWIFTNESS.getRegistryName().getResourceDomain().compareTo("swiftness"))});
-        }
         if(ConfigPreInit.enableEndStoneRecipe) {
             GameRegistry.addRecipe(new ItemStack(Blocks.END_STONE, 1), new Object[]{" E ", "ESE", " E ", 'S', Blocks.SANDSTONE, 'E', Items.ENDER_PEARL});
         }

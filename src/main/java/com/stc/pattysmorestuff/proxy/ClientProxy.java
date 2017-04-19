@@ -3,7 +3,7 @@ package com.stc.pattysmorestuff.proxy;
 import com.stc.pattysmorestuff.blocks.init.ModBlockOther;
 import com.stc.pattysmorestuff.handlers.EnumHandler;
 import com.stc.pattysmorestuff.lib.ConfigPreInit;
-import com.stc.pattysmorestuff.items.init.ModPMS;
+import com.stc.pattysmorestuff.ModPMS;
 import com.stc.pattysmorestuff.armor.init.ModArmor;
 import com.stc.pattysmorestuff.armor.init.ModDyeArmor;
 import com.stc.pattysmorestuff.blocks.init.ModBlocks;

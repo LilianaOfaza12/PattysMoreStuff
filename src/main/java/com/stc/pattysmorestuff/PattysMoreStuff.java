@@ -10,10 +10,7 @@ import com.stc.pattysmorestuff.configuration.ConfigurationTools;
 import com.stc.pattysmorestuff.crafting.ModCrafting;
 import com.stc.pattysmorestuff.food.init.ModFood;
 import com.stc.pattysmorestuff.furnaces.init.ModFurnaces;
-import com.stc.pattysmorestuff.gui.GuiTimeWand;
-import com.stc.pattysmorestuff.items.init.ModPMS;
 import com.stc.pattysmorestuff.lib.ConfigPreInit;
-import com.stc.pattysmorestuff.lib.Loot;
 import com.stc.pattysmorestuff.lib.Strings;
 import com.stc.pattysmorestuff.proxy.CommonProxy;
 import com.stc.pattysmorestuff.random.init.ModRandomItems;
@@ -34,19 +31,15 @@ import com.stc.pattysmorestuff.tools.init.ModDyeTools;
 import com.stc.pattysmorestuff.tools.init.ModToolDyePaxels;
 import com.stc.pattysmorestuff.tools.init.ModTools;
 import com.stc.pattysmorestuff.world.gen.WorldGenDye;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.network.internal.FMLNetworkHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
@@ -101,9 +94,7 @@ public class PattysMoreStuff
         ModCrafting.recipes();
         GameRegistry.registerWorldGenerator(new WorldGenDye(), 0);
 
-        if(Loader.isModLoaded("baubles")) {
-            MinecraftForge.EVENT_BUS.register(new Loot());
-        }
+
         proxy.registerRenders();
 
     }

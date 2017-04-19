@@ -2,22 +2,16 @@ package com.stc.pattysmorestuff.blocks.init;
 
 import com.stc.pattysmorestuff.blocks.*;
 import com.stc.pattysmorestuff.blocks.item.ItemBlockMeta;
-import com.stc.pattysmorestuff.blocks.stairs.BlockStonebrickStairs;
-import com.stc.pattysmorestuff.blocks.stairs.BlockWoodBrickPlankStairs;
 import com.stc.pattysmorestuff.handlers.EnumHandler;
 import com.stc.pattysmorestuff.tabs.ModTabs;
 import com.stc.pattysmorestuff.blocks.crates.*;
 import com.stc.pattysmorestuff.blocks.ores.BlockDyeOre;
 import com.stc.pattysmorestuff.blocks.ores.BlockEnderPearlOre;
-import com.stc.pattysmorestuff.blocks.slabs.*;
-import com.stc.pattysmorestuff.blocks.stairs.BlockDyeStairs;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemSlab;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -72,7 +66,7 @@ public class ModBlocks {
         dye_block = new BlockDye("dye_block");
         registerBlock(dye_block, new ItemBlockMeta(dye_block));
 
-        stonebrick = new BlockDyeBrick("stonebrick");
+        stonebrick = new BlockDyeStonebrick("stonebrick");
         registerBlock(stonebrick, new ItemBlockMeta(stonebrick));
 
         registerBlock(oak_storage_crate = new BlockOakCrate("oak_storage_crate"));
