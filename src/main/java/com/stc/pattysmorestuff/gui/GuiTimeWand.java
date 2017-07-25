@@ -7,7 +7,7 @@ import net.minecraft.client.resources.I18n;
 import java.io.IOException;
 
 /**
- * Created by twiist on 11/04/2017.
+ * Created by patrick on 21/07/2017.
  */
 public class GuiTimeWand extends GuiScreen {
 
@@ -32,7 +32,7 @@ public class GuiTimeWand extends GuiScreen {
     public void drawScreen(int x, int y, float partialTicks) {
 
         this.drawDefaultBackground();
-        this.drawCenteredString(this.fontRendererObj, this.title, this.width / 2, 15, 16777215);
+        this.drawCenteredString(this.fontRenderer, this.title, this.width / 2, 15, 16777215);
         super.drawScreen(x, y, partialTicks);
     }
 
@@ -52,5 +52,4 @@ public class GuiTimeWand extends GuiScreen {
                 break;
         }
     }
-
 }

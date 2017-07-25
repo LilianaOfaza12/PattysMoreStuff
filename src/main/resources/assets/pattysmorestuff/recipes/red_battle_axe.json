@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X#X",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+    "item": "minecraft:dye",
+	"data": 1
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:red_battle_axe"
+  }
+}

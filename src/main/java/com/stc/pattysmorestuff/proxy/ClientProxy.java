@@ -1,27 +1,14 @@
 package com.stc.pattysmorestuff.proxy;
 
-import com.stc.pattysmorestuff.blocks.init.ModBlockOther;
-import com.stc.pattysmorestuff.handlers.EnumHandler;
-import com.stc.pattysmorestuff.lib.ConfigPreInit;
-import com.stc.pattysmorestuff.ModPMS;
-import com.stc.pattysmorestuff.armor.init.ModArmor;
-import com.stc.pattysmorestuff.armor.init.ModDyeArmor;
-import com.stc.pattysmorestuff.blocks.init.ModBlocks;
-import com.stc.pattysmorestuff.food.init.ModFood;
-import com.stc.pattysmorestuff.furnaces.init.ModFurnaces;
-import com.stc.pattysmorestuff.lib.Strings;
-import com.stc.pattysmorestuff.random.init.ModRandomItems;
+import com.stc.pattysmorestuff.init.*;
 import com.stc.pattysmorestuff.tileentity.TileEntityJar;
-import com.stc.pattysmorestuff.tileentity.render.RendererJar;
-import com.stc.pattysmorestuff.tools.init.ModDyeToolBattleaxe;
-import com.stc.pattysmorestuff.tools.init.ModDyeTools;
-import com.stc.pattysmorestuff.tools.init.ModToolDyePaxels;
-import com.stc.pattysmorestuff.tools.init.ModTools;
+import com.stc.pattysmorestuff.tileentity.render.RenderJar;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelBakery;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
+
+import java.awt.*;
+
 
 /**
  * Created by StuffTheChicken on 10/11/2016.
@@ -31,36 +18,34 @@ public class ClientProxy extends CommonProxy {
     public void registerRenders() {
 
         //Blocks
-        if(ConfigPreInit.disableBlocks) {
-            ModBlocks.registerRenders();
-            ModBlockOther.registerRenders();
-        }
+        ModBlocks.registerModels();
+        ModFurnaces.registerModels();
 
-        if(ConfigPreInit.disableFurnaces) {
-            ModFurnaces.registerRenders();
-        }
-        //Tools
-        if(ConfigPreInit.disableTools) {
-            ModTools.registerRenders();
-            ModDyeTools.registerRenders();
-            ModToolDyePaxels.registerRenders();
-            ModDyeToolBattleaxe.registerRenders();
-        }
+        //Items
+        ModItems.registerModels();
+
         //Armor
-        if(ConfigPreInit.disableArmor) {
+        ModArmor.registerModels();
+        ModColoredArmor.registerModels();
 
-            ModArmor.registerRender();
-            ModDyeArmor.registerRender();
-        }
-        if(ConfigPreInit.disableFood) {
-            ModFood.registerRenders();
-        }
-        if(ConfigPreInit.disableMiscItems) {
+        //Tools
+        ModTools.registerModels();
+        ModColoredTools.registerModels();
+        ModColoredPaxels.registerModels();
+        ModColoredBattleaxe.registerModels();
 
-            ModRandomItems.registerRenders();
-        }
-        ModPMS.registerRenders();
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityJar.class, new RendererJar());
+        //Food
+        ModFood.registerModels();
+
+        //Jar
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityJar.class, new RenderJar());
+
+    }
+
+    @Override
+    public EntityPlayer getClientPlayer()
+    {
+        return Minecraft.getMinecraft().player;
     }
 
     @Override
@@ -75,22 +60,6 @@ public class ClientProxy extends CommonProxy {
         return false;
     }
 
-    @Override
-    public void registerModelBakeryStuff() {
-        ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.dye_ore), new ResourceLocation(Strings.MODID, "dye_ore"), new ResourceLocation(Strings.MODID, "dye_ore_nether"), new ResourceLocation(Strings.MODID, "dye_ore_end"));
-        ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.ender_pearl_ore), new ResourceLocation(Strings.MODID, "ender_pearl_ore"), new ResourceLocation(Strings.MODID, "ender_pearl_ore_nether"), new ResourceLocation(Strings.MODID, "ender_pearl_ore_end"));
 
-        for (int i = 0; i < EnumHandler.BlockType.values().length; i++) {
 
-            ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.dye_block), new ResourceLocation(Strings.MODID, "dye_block_" +  EnumHandler.BlockType.values()[i].getName()));
-
-        }
-
-        for (int i = 0; i < EnumHandler.BrickType.values().length; i++) {
-
-            ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.stonebrick), new ResourceLocation(Strings.MODID, "stonebrick_" +  EnumHandler.BrickType.values()[i].getName()));
-
-        }
-
-    }
 }

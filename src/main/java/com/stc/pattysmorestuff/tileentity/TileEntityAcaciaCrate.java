@@ -13,7 +13,7 @@ import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 
 /**
- * Created by StuffTheChicken on 13/01/2017.
+ * Created by patrick on 21/07/2017.
  */
 public class TileEntityAcaciaCrate extends TileEntityLockableLoot implements ITickable {
 

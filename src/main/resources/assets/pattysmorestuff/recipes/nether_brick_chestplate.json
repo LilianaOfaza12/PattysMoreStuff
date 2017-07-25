@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:netherbrick"
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:nether_brick_chestplate"
+  }
+}

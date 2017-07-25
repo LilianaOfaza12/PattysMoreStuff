@@ -1,7 +1,5 @@
 {
 	"variants": {
-		"type=overworld": { "model": "pattysmorestuff:ender_pearl_ore_overworld" },
-		"type=nether": { "model": "pattysmorestuff:ender_pearl_ore_nether" },
-		"type=end": { "model": "pattysmorestuff:ender_pearl_ore_end" }
+		"normal": { "model": "pattysmorestuff:ender_pearl_ore" }
 	}
 }

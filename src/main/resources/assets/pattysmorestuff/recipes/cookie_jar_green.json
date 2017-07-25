@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+	"G G",
+	"CCC"
+  ],
+  "key": {
+    "C": {
+    "item": "minecraft:stained_hardened_clay",
+    "data": 13
+    },
+	"G": {
+	"item": "minecraft:stained_glass_pane",
+    "data": 13
+	}
+  },
+  "result": {
+    "item": "pattysmorestuff:cookie_jar_green"
+  }
+}

@@ -1,5 +1,6 @@
 package com.stc.pattysmorestuff.tileentity;
 
+import jline.internal.Nullable;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Items;
@@ -9,33 +10,31 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
-import javax.annotation.Nullable;
-
 /**
- * Created by StuffTheChicken on 12/01/2017.
+ * Created by patrick on 21/07/2017.
  */
 public class TileEntityJar extends TileEntity
 {
     public int cookieCount = 0;
 
     public boolean addCookie() {
-            if (cookieCount < 8) {
-                cookieCount++;
-                markDirty();
-                IBlockState state = world.getBlockState(pos);
-                world.notifyBlockUpdate(pos, state, state, 3);
-                return true;
-            }
+        if (cookieCount < 8) {
+            cookieCount++;
+            markDirty();
+            IBlockState state = world.getBlockState(pos);
+            world.notifyBlockUpdate(pos, state, state, 3);
+            return true;
+        }
         return false;
     }
 
     public void removeCookie() {
-            if (cookieCount > 0) {
-                world.spawnEntity(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, new ItemStack(Items.COOKIE)));
-                cookieCount--;
-                markDirty();
-                IBlockState state = world.getBlockState(pos);
-                world.notifyBlockUpdate(pos, state, state, 3);
+        if (cookieCount > 0) {
+            world.spawnEntity(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, new ItemStack(Items.COOKIE)));
+            cookieCount--;
+            markDirty();
+            IBlockState state = world.getBlockState(pos);
+            world.notifyBlockUpdate(pos, state, state, 3);
         }
     }
 

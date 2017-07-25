@@ -12,9 +12,8 @@ import net.minecraft.tileentity.TileEntityLockableLoot;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 
-
 /**
- * Created by StuffTheChicken on 09/01/2017.
+ * Created by patrick on 21/07/2017.
  */
 public class TileEntityOakCrate extends TileEntityLockableLoot implements ITickable {
 

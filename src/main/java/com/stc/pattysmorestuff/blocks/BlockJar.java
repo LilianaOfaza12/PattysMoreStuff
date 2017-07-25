@@ -1,6 +1,6 @@
 package com.stc.pattysmorestuff.blocks;
 
-import com.stc.pattysmorestuff.tabs.ModTabs;
+import com.stc.pattysmorestuff.init.ModTabs;
 import com.stc.pattysmorestuff.tileentity.TileEntityJar;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -13,6 +13,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
@@ -27,7 +29,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 /**
- * Created by StuffTheChicken on 12/01/2017.
+ * Created by patrick on 21/07/2017.
  */
 public class BlockJar extends Block implements ITileEntityProvider {
 
@@ -63,6 +65,7 @@ public class BlockJar extends Block implements ITileEntityProvider {
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
         return BOUNDING_BOX;
     }
+
 
     @Override
     public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean p_185477_7_) {
@@ -103,9 +106,9 @@ public class BlockJar extends Block implements ITileEntityProvider {
             TileEntityJar jar = (TileEntityJar) tileEntity;
             if(!worldIn.isRemote) {
                 if (playerIn.getHeldItem(hand).getItem() == Items.COOKIE) {
-                   if(jar.addCookie()) {
-                       playerIn.getHeldItem(hand).splitStack(1);
-                   }
+                    if(jar.addCookie()) {
+                        playerIn.getHeldItem(hand).splitStack(1);
+                    }
                 }else if(playerIn.isSneaking()) {
                     jar.removeCookie();
                 }
@@ -114,7 +117,6 @@ public class BlockJar extends Block implements ITileEntityProvider {
         return true;
     }
 
-    @Nullable
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TileEntityJar();
@@ -125,5 +127,9 @@ public class BlockJar extends Block implements ITileEntityProvider {
     {
         TileEntityJar jar = (TileEntityJar) world.getTileEntity(pos);
         return jar.getSize();
+    }
+
+    public Item createItemBlock() {
+        return new ItemBlock(this).setRegistryName(getRegistryName());
     }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X#X",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+    "item": "pattysmorestuff:lime_axe"
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:lime_paxel"
+  }
+}

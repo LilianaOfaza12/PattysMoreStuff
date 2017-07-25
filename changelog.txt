@@ -1,0 +1,17 @@
+Change Log 1.0.7
+================
+--Updated too 1.12
+--Removed dye blocks and colored stonebrick + all matching slabs, fences, fence gates & stairs
+--Removed Polished stone
+--Removed Milk bottle, Chocolate milk bottle
+--Removed Flour
+--Removed Disabled default bread recipe. You now need to smelt flour to obtain bread
+--Removed Infinite lave bucket (creative only)
+--Removed Blender
+--Removed Apple, Melon, Beetroot, Pumpkin & Carrot juice
+--Removed Knife
+--Removed Fruit Salad
+--Removed Toast
+--Removed Illumination wand & glow block
+--Removed Iron, Gold, Diamond apples
+--Added concrete stairs

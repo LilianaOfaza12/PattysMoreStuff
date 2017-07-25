@@ -1,8 +1,0 @@
-{
-    "parent": "block/stairs",
-    "textures": {
-        "bottom": "pattysmorestuff:blocks/oak_planks_brick",
-        "top": "pattysmorestuff:blocks/oak_planks_brick",
-        "side": "pattysmorestuff:blocks/oak_planks_brick"
-    }
-}

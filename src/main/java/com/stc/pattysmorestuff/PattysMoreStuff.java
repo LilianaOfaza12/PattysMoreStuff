@@ -1,39 +1,23 @@
 package com.stc.pattysmorestuff;
 
-import java.io.File;
-
-import com.stc.pattysmorestuff.armor.init.ModArmor;
-import com.stc.pattysmorestuff.armor.init.ModDyeArmor;
-import com.stc.pattysmorestuff.blocks.init.ModBlockOther;
-import com.stc.pattysmorestuff.blocks.init.ModBlocks;
-import com.stc.pattysmorestuff.configuration.ConfigurationTools;
-import com.stc.pattysmorestuff.crafting.ModCrafting;
-import com.stc.pattysmorestuff.food.init.ModFood;
-import com.stc.pattysmorestuff.furnaces.init.ModFurnaces;
-import com.stc.pattysmorestuff.lib.ConfigPreInit;
+import com.stc.pattysmorestuff.configuration.ConfigurationPMS;
+import com.stc.pattysmorestuff.entitys.EntityRedBullSlurpie;
+import com.stc.pattysmorestuff.entitys.EntityTwiistsGaming;
+import com.stc.pattysmorestuff.entitys.model.EntityRedBullSlurpieModel;
+import com.stc.pattysmorestuff.entitys.model.EntityTwiistsGamingModel;
+import com.stc.pattysmorestuff.entitys.render.EntityRedBullSlurpieRender;
+import com.stc.pattysmorestuff.entitys.render.EntityTwiistsGamingRender;
+import com.stc.pattysmorestuff.init.ModCrafting;
+import com.stc.pattysmorestuff.init.ModEntitys;
+import com.stc.pattysmorestuff.init.ModTabs;
 import com.stc.pattysmorestuff.lib.Strings;
 import com.stc.pattysmorestuff.proxy.CommonProxy;
-import com.stc.pattysmorestuff.random.init.ModRandomItems;
-import com.stc.pattysmorestuff.tabs.ModTabs;
-import com.stc.pattysmorestuff.tileentity.TileEntityAcaciaCrate;
-import com.stc.pattysmorestuff.tileentity.TileEntityBigOakCrate;
-import com.stc.pattysmorestuff.tileentity.TileEntityBirchCrate;
-import com.stc.pattysmorestuff.tileentity.TileEntityDiamondFurnace;
-import com.stc.pattysmorestuff.tileentity.TileEntityEmeraldFurnace;
-import com.stc.pattysmorestuff.tileentity.TileEntityGoldFurnace;
-import com.stc.pattysmorestuff.tileentity.TileEntityIronFurnace;
-import com.stc.pattysmorestuff.tileentity.TileEntityJar;
-import com.stc.pattysmorestuff.tileentity.TileEntityJungleCrate;
-import com.stc.pattysmorestuff.tileentity.TileEntityOakCrate;
-import com.stc.pattysmorestuff.tileentity.TileEntitySpruceCrate;
-import com.stc.pattysmorestuff.tools.init.ModDyeToolBattleaxe;
-import com.stc.pattysmorestuff.tools.init.ModDyeTools;
-import com.stc.pattysmorestuff.tools.init.ModToolDyePaxels;
-import com.stc.pattysmorestuff.tools.init.ModTools;
-import com.stc.pattysmorestuff.world.gen.WorldGenDye;
+import com.stc.pattysmorestuff.tileentity.*;
+import com.stc.pattysmorestuff.world.gen.WorldGenColored;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -41,6 +25,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import java.io.File;
+
 
 @Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
 public class PattysMoreStuff
@@ -60,49 +47,17 @@ public class PattysMoreStuff
     public void preInit(FMLPreInitializationEvent event)
     {
         Config = new Configuration(new File("config/PattysMoreStuff/PattysMoreStuff.cfg"));
-        ConfigurationTools.syncConfig();
-
+        ConfigurationPMS.syncConfig();
         ModTabs.registerTabs();
-        if(ConfigPreInit.disableBlocks) {
-            ModBlocks.init();
-            ModBlockOther.init();
-        }
-        if(ConfigPreInit.disableFurnaces) {
-            ModFurnaces.init();
-        }
-
-        if(ConfigPreInit.disableTools) {
-            ModTools.init();
-            ModDyeTools.init();
-            ModToolDyePaxels.init();
-            ModDyeToolBattleaxe.init();
-        }
-        if(ConfigPreInit.disableArmor) {
-            ModArmor.init();
-            ModDyeArmor.init();
-        }
-
-        if(ConfigPreInit.disableFood) {
-            ModFood.init();
-        }
-
-        if(ConfigPreInit.disableMiscItems) {
-            ModRandomItems.init();
-        }
-
-        ModPMS.init();
-        ModCrafting.recipes();
-        GameRegistry.registerWorldGenerator(new WorldGenDye(), 0);
-
-
-        proxy.registerRenders();
-
+        ModCrafting.furnaceRecipes();
+        ModEntitys.registerEntities();
     }
    
     @EventHandler
     public void init(FMLInitializationEvent event) {
 
-        FMLCommonHandler.instance().bus().register(instance);
+        proxy.registerRenders();
+        MinecraftForge.EVENT_BUS.register(instance);
         GameRegistry.registerTileEntity(TileEntityIronFurnace.class, Strings.MODID + "TileEntityIronFurnace");
         GameRegistry.registerTileEntity(TileEntityGoldFurnace.class, Strings.MODID +"TileEntityGoldFurnace");
         GameRegistry.registerTileEntity(TileEntityDiamondFurnace.class, Strings.MODID +"TileEntityDiamondFurnace");
@@ -115,13 +70,20 @@ public class PattysMoreStuff
         GameRegistry.registerTileEntity(TileEntityBigOakCrate.class, Strings.MODID + "TileEntityBigOakCrate");
         GameRegistry.registerTileEntity(TileEntityAcaciaCrate.class, Strings.MODID + "TileEntityAcaciaCrate");
 
+        GameRegistry.registerWorldGenerator(new WorldGenColored(), 0);
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityTwiistsGaming.class, new EntityTwiistsGamingRender(new EntityTwiistsGamingModel(), 0.5F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityRedBullSlurpie.class, new EntityRedBullSlurpieRender(new EntityRedBullSlurpieModel(), 0.5F));
+
+
 
     }
 
     @SubscribeEvent
     public void onConfigChange(ConfigChangedEvent.OnConfigChangedEvent event) {
         if (event.getModID().equals(Strings.MODID)) {
-            ConfigurationTools.syncConfig();
+            ConfigurationPMS.syncConfig();
         }
     }
+
 }

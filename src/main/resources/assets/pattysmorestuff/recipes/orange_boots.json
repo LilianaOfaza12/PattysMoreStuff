@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+    "item": "minecraft:dye",
+    "data": 14
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:orange_boots"
+  }
+}

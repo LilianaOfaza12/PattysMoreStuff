@@ -2,9 +2,11 @@ package com.stc.pattysmorestuff.lib;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
 
 /**
  * Created by StuffTheChicken on 11/11/2016.
@@ -129,74 +131,86 @@ public class ConfigPreInit {
     public static ArmorMaterial DYE_ARMOR_ORANGE;
     public static ArmorMaterial DYE_ARMOR_WHITE;
 
-    public static int ironFurnaceCookSpeed;
-    public static int goldFurnaceCookSpeed;
-    public static int diamondFurnaceCookSpeed;
-    public static int emeraldFurnaceCookSpeed;
+    public static int ironFurnaceCookSpeed = 150;
+    public static int goldFurnaceCookSpeed = 100;
+    public static int diamondFurnaceCookSpeed = 75;
+    public static int emeraldFurnaceCookSpeed = 50;
 
-    public static int ironFWoodenSlabBurnTime;
-    public static int ironFWoodMaterialBurnTime;
-    public static int ironFCoalBlockBurnTime;
-    public static int ironFToolWoodBurnTime;
-    public static int ironFSwordWoodBurnTime;
-    public static int ironFHoeWoodBurnTime;
-    public static int ironFStickBurnTime;
-    public static int ironFCoalBurnTime;
-    public static int ironFLavaBucketBurnTime;
-    public static int ironFSaplingBurnTime;
-    public static int ironFBlazeRodBurnTime;
+    public static int ironFWoodenSlabBurnTime = 150;
+    public static int ironFWoodMaterialBurnTime = 300;
+    public static int ironFCoalBlockBurnTime = 16000;
+    public static int ironFToolWoodBurnTime = 200;
+    public static int ironFSwordWoodBurnTime = 200;
+    public static int ironFHoeWoodBurnTime = 200;
+    public static int ironFStickBurnTime = 100;
+    public static int ironFCoalBurnTime = 1600;
+    public static int ironFLavaBucketBurnTime = 20000;
+    public static int ironFSaplingBurnTime = 100;
+    public static int ironFBlazeRodBurnTime = 2400;
 
-    public static int goldFWoodenSlabBurnTime;
-    public static int goldFWoodMaterialBurnTime;
-    public static int goldFCoalBlockBurnTime;
-    public static int goldFToolWoodBurnTime;
-    public static int goldFSwordWoodBurnTime;
-    public static int goldFHoeWoodBurnTime;
-    public static int goldFStickBurnTime;
-    public static int goldFCoalBurnTime;
-    public static int goldFLavaBucketBurnTime;
-    public static int goldFSaplingBurnTime;
-    public static int goldFBlazeRodBurnTime;
+    public static int goldFWoodenSlabBurnTime = 150;
+    public static int goldFWoodMaterialBurnTime = 300;
+    public static int goldFCoalBlockBurnTime = 16000;
+    public static int goldFToolWoodBurnTime = 200;
+    public static int goldFSwordWoodBurnTime = 200;
+    public static int goldFHoeWoodBurnTime = 200;
+    public static int goldFStickBurnTime = 100;
+    public static int goldFCoalBurnTime = 1600;
+    public static int goldFLavaBucketBurnTime = 20000;
+    public static int goldFSaplingBurnTime = 100;
+    public static int goldFBlazeRodBurnTime = 2400;
 
-    public static int diamondFWoodenSlabBurnTime;
-    public static int diamondFWoodMaterialBurnTime;
-    public static int diamondFCoalBlockBurnTime;
-    public static int diamondFToolWoodBurnTime;
-    public static int diamondFSwordWoodBurnTime;
-    public static int diamondFHoeWoodBurnTime;
-    public static int diamondFStickBurnTime;
-    public static int diamondFCoalBurnTime;
-    public static int diamondFLavaBucketBurnTime;
-    public static int diamondFSaplingBurnTime;
-    public static int diamondFBlazeRodBurnTime;
+    public static int diamondFWoodenSlabBurnTime = 150;
+    public static int diamondFWoodMaterialBurnTime = 300;
+    public static int diamondFCoalBlockBurnTime = 16000;
+    public static int diamondFToolWoodBurnTime = 200;
+    public static int diamondFSwordWoodBurnTime = 200;
+    public static int diamondFHoeWoodBurnTime = 200;
+    public static int diamondFStickBurnTime = 100;
+    public static int diamondFCoalBurnTime = 1600;
+    public static int diamondFLavaBucketBurnTime = 20000;
+    public static int diamondFSaplingBurnTime = 100;
+    public static int diamondFBlazeRodBurnTime = 2400;
 
-    public static int emeraldFWoodenSlabBurnTime;
-    public static int emeraldFWoodMaterialBurnTime;
-    public static int emeraldFCoalBlockBurnTime;
-    public static int emeraldFToolWoodBurnTime;
-    public static int emeraldFSwordWoodBurnTime;
-    public static int emeraldFHoeWoodBurnTime;
-    public static int emeraldFStickBurnTime;
-    public static int emeraldFCoalBurnTime;
-    public static int emeraldFLavaBucketBurnTime;
-    public static int emeraldFSaplingBurnTime;
-    public static int emeraldFBlazeRodBurnTime;
+    public static int emeraldFWoodenSlabBurnTime = 150;
+    public static int emeraldFWoodMaterialBurnTime = 300;
+    public static int emeraldFCoalBlockBurnTime = 16000;
+    public static int emeraldFToolWoodBurnTime = 200;
+    public static int emeraldFSwordWoodBurnTime = 200;
+    public static int emeraldFHoeWoodBurnTime = 200;
+    public static int emeraldFStickBurnTime = 100;
+    public static int emeraldFCoalBurnTime = 1600;
+    public static int emeraldFLavaBucketBurnTime = 20000;
+    public static int emeraldFSaplingBurnTime = 100;
+    public static int emeraldFBlazeRodBurnTime = 2400;
 
-    public static boolean disableTools;
-    public static boolean disableArmor;
-    public static boolean disableBlocks;
-    public static boolean disableFurnaces;
-    public static boolean disableFood;
-    public static boolean disableMiscItems;
+    public static boolean disableTools = true;
+    public static boolean disableArmor = true;
+    public static boolean disableBlocks = true;
+    public static boolean disableFurnaces = true;
+    public static boolean disableFood = true;
+    public static boolean disableMiscItems = true;
 
-    public static boolean enableEndPortalFrameRecipe;
-    public static boolean enableEndStoneRecipe;
+    public static int lightlevel = 10;
+    public static int lightWandMaxDamage = 250;
+    public static int milkBottleStackSize = 16;
+    public static int chocolateMilkBottleStackSize = 16;
+
+    public static boolean enableEndPortalFrameRecipe = false;
+    public static boolean enableEndStoneRecipe = false;
+    public static boolean enableElytraRecipe = false;
 
     public static boolean canDisplay = true;
     public static boolean hasDisplayedOnce = false;
+    public static boolean enableCreativeAir = false;
 
-    public static boolean enableCreativeAir;
-    public static int lightlevel;
-    public static int lightWandMaxDamage;
+    public static int oreBlockCount = 6;
+    public static int oreChanceToSpawn = 15;
+    public static int oreMinY = 14;
+    public static int oreMaxY = 33;
 
+    public static int oreEnderBlockCount = 3;
+    public static int oreEnderChanceToSpawn = 8;
+    public static int oreEnderMinY = 5;
+    public static int oreEnderMaxY = 29;
 }

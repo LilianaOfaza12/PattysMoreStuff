@@ -6,7 +6,7 @@ import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.fml.client.config.GuiConfig;
 
 /**
- * Created by StuffTheChicken on 11/11/2016.
+ * Created by patrick on 20/07/2017.
  */
 public class ConfigGui extends GuiConfig {
 

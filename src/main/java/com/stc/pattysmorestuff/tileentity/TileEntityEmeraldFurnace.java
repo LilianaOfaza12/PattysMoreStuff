@@ -1,8 +1,9 @@
 package com.stc.pattysmorestuff.tileentity;
 
+import com.stc.pattysmorestuff.blocks.BlockEmeraldFurnace;
 import com.stc.pattysmorestuff.lib.ConfigPreInit;
-import com.stc.pattysmorestuff.furnaces.blocks.BlockEmeraldFurnace;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -25,13 +26,14 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by StuffTheChicken on 08/01/2017.
+ * Created by patrick on 21/07/2017.
  */
 public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITickable, ISidedInventory {
 
     private static final int[] SLOTS_TOP = new int[] {0};
     private static final int[] SLOTS_BOTTOM = new int[] {2, 1};
     private static final int[] SLOTS_SIDES = new int[] {1};
+    /** The ItemStacks that hold the items currently being used in the furnace */
     private NonNullList<ItemStack> furnaceItemStacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
     /** The number of ticks that the furnace will keep burning */
     private int furnaceBurnTime;
@@ -40,6 +42,7 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
     private int cookTime;
     private int totalCookTime;
     private String furnaceCustomName;
+
 
     /**
      * Returns the number of slots in the inventory.
@@ -67,7 +70,7 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
      */
     public ItemStack getStackInSlot(int index)
     {
-        return (ItemStack)this.furnaceItemStacks.get(index);
+        return this.furnaceItemStacks.get(index);
     }
 
     /**
@@ -131,7 +134,7 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
 
     public static void registerFixesFurnace(DataFixer fixer)
     {
-        fixer.registerWalker(FixTypes.BLOCK_ENTITY, new ItemStackDataLists(TileEntityFurnace.class, new String[] {"Items"}));
+        fixer.registerWalker(FixTypes.BLOCK_ENTITY, new ItemStackDataLists(TileEntityEmeraldFurnace.class, new String[] {"Items"}));
     }
 
     public void readFromNBT(NBTTagCompound compound)
@@ -142,7 +145,7 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
         this.furnaceBurnTime = compound.getInteger("BurnTime");
         this.cookTime = compound.getInteger("CookTime");
         this.totalCookTime = compound.getInteger("CookTimeTotal");
-        this.currentItemBurnTime = getItemBurnTime((ItemStack)this.furnaceItemStacks.get(1));
+        this.currentItemBurnTime = getItemBurnTime(this.furnaceItemStacks.get(1));
 
         if (compound.hasKey("CustomName", 8))
         {
@@ -203,7 +206,7 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
 
         if (!this.world.isRemote)
         {
-            ItemStack itemstack = (ItemStack)this.furnaceItemStacks.get(1);
+            ItemStack itemstack = this.furnaceItemStacks.get(1);
 
             if (this.isBurning() || !itemstack.isEmpty() && !((ItemStack)this.furnaceItemStacks.get(0)).isEmpty())
             {
@@ -237,7 +240,7 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
                     if (this.cookTime == this.totalCookTime)
                     {
                         this.cookTime = 0;
-                        this.totalCookTime = this.getCookTime((ItemStack)this.furnaceItemStacks.get(0));
+                        this.totalCookTime = this.getCookTime(this.furnaceItemStacks.get(0));
                         this.smeltItem();
                         flag1 = true;
                     }
@@ -282,7 +285,7 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
         }
         else
         {
-            ItemStack itemstack = FurnaceRecipes.instance().getSmeltingResult((ItemStack)this.furnaceItemStacks.get(0));
+            ItemStack itemstack = FurnaceRecipes.instance().getSmeltingResult(this.furnaceItemStacks.get(0));
 
             if (itemstack.isEmpty())
             {
@@ -290,11 +293,24 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
             }
             else
             {
-                ItemStack itemstack1 = (ItemStack)this.furnaceItemStacks.get(2);
-                if (itemstack1.isEmpty()) return true;
-                if (!itemstack1.isItemEqual(itemstack)) return false;
-                int result = itemstack1.getCount() + itemstack.getCount();
-                return result <= getInventoryStackLimit() && result <= itemstack1.getMaxStackSize(); // Forge fix: make furnace respect stack sizes in furnace recipes
+                ItemStack itemstack1 = this.furnaceItemStacks.get(2);
+
+                if (itemstack1.isEmpty())
+                {
+                    return true;
+                }
+                else if (!itemstack1.isItemEqual(itemstack))
+                {
+                    return false;
+                }
+                else if (itemstack1.getCount() + itemstack.getCount() <= this.getInventoryStackLimit() && itemstack1.getCount() + itemstack.getCount() <= itemstack1.getMaxStackSize())  // Forge fix: make furnace respect stack sizes in furnace recipes
+                {
+                    return true;
+                }
+                else
+                {
+                    return itemstack1.getCount() + itemstack.getCount() <= itemstack.getMaxStackSize(); // Forge fix: make furnace respect stack sizes in furnace recipes
+                }
             }
         }
     }
@@ -388,7 +404,14 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
      */
     public boolean isUsableByPlayer(EntityPlayer player)
     {
-        return this.world.getTileEntity(this.pos) != this ? false : player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
+        if (this.world.getTileEntity(this.pos) != this)
+        {
+            return false;
+        }
+        else
+        {
+            return player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
+        }
     }
 
     public void openInventory(EntityPlayer player)
@@ -422,7 +445,14 @@ public class TileEntityEmeraldFurnace extends TileEntityLockable implements ITic
 
     public int[] getSlotsForFace(EnumFacing side)
     {
-        return side == EnumFacing.DOWN ? SLOTS_BOTTOM : (side == EnumFacing.UP ? SLOTS_TOP : SLOTS_SIDES);
+        if (side == EnumFacing.DOWN)
+        {
+            return SLOTS_BOTTOM;
+        }
+        else
+        {
+            return side == EnumFacing.UP ? SLOTS_TOP : SLOTS_SIDES;
+        }
     }
 
     /**

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+    "item": "minecraft:dye",
+    "data": 12
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:lightblue_sword"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IBI",
+    "BOB",
+    "IBI"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+	"B": {
+		"item": "minecraft:iron_bars"
+	}
+  },
+  "result": {
+    "item": "pattysmorestuff:reinforced_obsidian",
+	"count": 1
+  }
+}

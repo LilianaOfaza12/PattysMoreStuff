@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ASP",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+    "item": "pattysmorestuff:gunpowder_axe"
+    },
+    "S": {
+    "item": "pattysmorestuff:gunpowder_shovel"
+    },
+    "P": {
+    "item": "pattysmorestuff:gunpowder_pickaxe"
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:gunpowder_paxel"
+  }
+}

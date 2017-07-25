@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "pattysmorestuff:blocks/birch_planks_brick"
-    }
-}
