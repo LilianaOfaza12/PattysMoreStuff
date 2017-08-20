@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+	"B#B",
+	"BBB"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:dye",
+	"data": 0
+    },
+	"B": {
+	"item": "minecraft:stonebrick",
+	"data": 0
+		
+	}
+  },
+  "result": {
+    "item": "pattysmorestuff:stonebrick_black"
+  }
+}

@@ -1,7 +1,7 @@
 package com.stc.pattysmorestuff.world.gen;
 
 import com.stc.pattysmorestuff.init.ModBlocks;
-import com.stc.pattysmorestuff.lib.ConfigPreInit;
+import com.stc.pattysmorestuff.configuration.ConfigPreInit;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;

@@ -1,102 +1,92 @@
 package com.stc.pattysmorestuff.entitys;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityCreature;
-import net.minecraft.entity.IEntityLivingData;
-import net.minecraft.entity.SharedMonsterAttributes;
+import com.stc.pattysmorestuff.init.ModFood;
+import com.stc.pattysmorestuff.init.ModTools;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.ai.attributes.RangedAttribute;
-import net.minecraft.entity.monster.EntityIronGolem;
-import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.monster.EntityPigZombie;
-import net.minecraft.entity.monster.EntityZombie;
+import net.minecraft.entity.monster.*;
+import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathNavigateGround;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
 
 /**
  * Created by patrick on 24/07/2017.
  */
-public class EntityRedBullSlurpie extends EntityMob {
+public class EntityRedBullSlurpie extends EntityCreature {
 
     boolean alwaysRenderNameTag = true;
     private String name = "RedBullSlurpie";
 
+    private float TGWidth = -1.0F;
+
+    private float TGHeight;
+
     public EntityRedBullSlurpie(World worldIn) {
         super(worldIn);
         this.setSize(0.6F, 1.95F);
-        ((PathNavigateGround) this.getNavigator()).setBreakDoors(true);
+        this.setAlwaysRenderNameTag(alwaysRenderNameTag);
+        this.setCustomNameTag(name + " (Helper)");
+
+    }
+
+    @Override
+    protected void initEntityAI() {
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
         this.tasks.addTask(7, new EntityAIWander(this, 1.0D));
-        this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));
         this.applyEntityAI();
-        this.setAlwaysRenderNameTag(alwaysRenderNameTag);
-        this.setCustomNameTag(name);
-
     }
 
     protected void applyEntityAI() {
         this.tasks.addTask(2, new EntityAIAttackMelee(this, 1.0D, false));
 
-        this.tasks.addTask(6, new EntityAIMoveThroughVillage(this, 1.0D, false));
-        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true, EntityPigZombie.class));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
-        this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityVillager.class, false));
-        this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityIronGolem.class, true));
-    }
-
-    protected void applyEntityAttributes() {
-        super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(20.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3D);
-        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(10.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(50D);
-        this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(0D);
     }
 
-
-
     @Override
-    public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata) {
+    public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty,
+                                            IEntityLivingData livingdata) {
 
 
         return livingdata;
     }
 
+
+    public static void registerFixesRedBullSlurpie(DataFixer fixer)
+    {
+        EntityLiving.registerFixesMob(fixer, EntityRedBullSlurpie.class);
+    }
+
     @Override
     protected void setSize(float width, float height) {
-        super.setSize(width, height);
+        boolean flag = this.TGWidth > 0.0F && this.TGHeight > 0.0F;
+        this.TGWidth = width;
+        this.TGHeight = height;
+
+        if (!flag)
+        {
+            this.multiplySize(1.0F);
+        }
     }
 
-
-    @Override
-    public void onLivingUpdate() {
-        super.onLivingUpdate();
+    protected final void multiplySize(float size)
+    {
+        super.setSize(this.TGWidth * size, this.TGHeight * size);
     }
-
-    @Override
-    public void onUpdate() {
-        super.onUpdate();
-
-    }
-
-    @Override
-    public boolean attackEntityFrom(DamageSource source, float amount) {
-        return super.attackEntityFrom(source, amount);
-    }
-
-    @Override
-    public boolean attackEntityAsMob(Entity entityIn) {
-        return super.attackEntityAsMob(entityIn);
-    }
-
-
 
     @Override
     public boolean getCanSpawnHere() {
@@ -108,5 +98,19 @@ public class EntityRedBullSlurpie extends EntityMob {
     public void setAlwaysRenderNameTag(boolean alwaysRenderNameTag) {
         super.setAlwaysRenderNameTag(true);
     }
+
+    @Nullable
+    @Override
+    protected Item getDropItem() {
+        return ModFood.redbull;
+    }
+
+    @Override
+    public ItemStack getHeldItemMainhand() {
+        return heldItem;
+
+    }
+
+    private ItemStack heldItem = new ItemStack(ModTools.glowstone_sword);
 
 }

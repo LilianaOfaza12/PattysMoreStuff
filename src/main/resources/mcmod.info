@@ -1,16 +1,17 @@
 [
 {
   "modid": "pattysmorestuff",
-  "name": "Pattys More Stuff",
-  "description": "Adds more stuff using vanilla resources.",
-  "version": "",
-  "mcversion": "${mcversion}",
-  "url": "",
+  "name": "PattysMoreStuff",
+  "description": "Adds more Blocks/Items/Food/Tools/Armor and other useful stuff to minecraft.",
+  "version": "1.0.8",
+  "mcversion": "1.12",
+  "url": "https://github.com/StuffTheChickenMC/PattysMoreStuff",
   "updateUrl": "",
   "authorList": ["StuffTheChickien"],
-  "credits": "Redbullslurpie, for helping me with stuff and things!",
-  "logoFile": "",
+  "credits": "Redbullslurpie",
+  "logoFile": "logo.png",
   "screenshots": [],
+  "parent":"",
   "dependencies": []
 }
 ]

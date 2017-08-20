@@ -1,0 +1,8 @@
+{
+	"variants": {
+        "facing=north": { "model": "pattysmorestuff:blender_brown" },
+        "facing=south": { "model": "pattysmorestuff:blender_brown", "y": 180 },
+        "facing=west":  { "model": "pattysmorestuff:blender_brown", "y": 270 },
+        "facing=east":  { "model": "pattysmorestuff:blender_brown", "y": 90 }
+    }
+}

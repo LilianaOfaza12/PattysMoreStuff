@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "half=top": { "model": "lapis_block" },
-		"half=bottom": { "model": "lapis_block" }
-    }
-}

@@ -1,13 +1,12 @@
 package com.stc.pattysmorestuff.init;
 
-import com.stc.pattysmorestuff.items.ItemMoreArmor;
-import com.stc.pattysmorestuff.lib.ConfigPreInit;
+import com.stc.pattysmorestuff.items.armor.ItemMoreArmor;
+import com.stc.pattysmorestuff.configuration.ConfigPreInit;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**

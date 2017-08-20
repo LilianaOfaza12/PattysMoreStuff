@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+	"# #",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:dye",
+	"data": 5
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:dye_block_purple"
+  }
+}

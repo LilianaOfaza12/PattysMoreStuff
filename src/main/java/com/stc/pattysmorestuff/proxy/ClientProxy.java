@@ -1,10 +1,11 @@
 package com.stc.pattysmorestuff.proxy;
 
 import com.stc.pattysmorestuff.init.*;
-import com.stc.pattysmorestuff.tileentity.TileEntityJar;
+import com.stc.pattysmorestuff.tileentity.jar.TileEntityJar;
 import com.stc.pattysmorestuff.tileentity.render.RenderJar;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
 import java.awt.*;
@@ -20,6 +21,7 @@ public class ClientProxy extends CommonProxy {
         //Blocks
         ModBlocks.registerModels();
         ModFurnaces.registerModels();
+        ModColoredBlocks.registerModels();
 
         //Items
         ModItems.registerModels();
@@ -43,23 +45,18 @@ public class ClientProxy extends CommonProxy {
     }
 
     @Override
-    public EntityPlayer getClientPlayer()
-    {
+    public EntityPlayer getClientPlayer() {
         return Minecraft.getMinecraft().player;
     }
 
     @Override
-    public boolean isSinglePlayer()
-    {
+    public boolean isSinglePlayer() {
         return Minecraft.getMinecraft().isSingleplayer();
     }
 
     @Override
-    public boolean isDedicatedServer()
-    {
+    public boolean isDedicatedServer() {
         return false;
     }
-
-
 
 }

@@ -1,19 +1,20 @@
 package com.stc.pattysmorestuff.init;
 
-import com.stc.pattysmorestuff.items.ItemAppleIron;
-import com.stc.pattysmorestuff.items.ItemCustomFood;
+import com.stc.pattysmorestuff.items.*;
+import com.stc.pattysmorestuff.items.drinks.ItemChocolateMilk;
+import com.stc.pattysmorestuff.items.drinks.ItemDrinkable;
+import com.stc.pattysmorestuff.items.drinks.ItemMilkBottle;
+import com.stc.pattysmorestuff.items.drinks.ItemRedBull;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**
  * Created by patrick on 21/07/2017.
  */
 public class ModFood {
-
 
     public static Item fried_egg = new ItemCustomFood("fried_egg", 4, 0.4F,false);
     public static Item bacon_raw = new ItemCustomFood("bacon_raw", 3, 0.3F,true);
@@ -29,15 +30,30 @@ public class ModFood {
     public static Item baguette_eggsausage = new ItemCustomFood("baguette_eggsausage", 6, 0.7F, false);
     public static Item baguette_eggbaconsausage = new ItemCustomFood("baguette_eggbaconsausage", 9, 1.0F, false);
     public static Item apple_pie = new ItemCustomFood("apple_pie", 8, 0.3F, false);
-
+    public static Item toast = new ItemCustomFood("toast", 7, 1.2F, false);
+    public static Item flour = new ItemBase("flour").setCreativeTab(ModTabs.tabPattysFood);
+    public static Item fruit_salad = new ItemCustomFood("fruit_salad", 6, 1.6F, false);
+    public static Item apple_juice = new ItemDrinkable("apple_juice", 4, 0.3F, false);
+    public static Item melon_juice = new ItemDrinkable("melon_juice", 2, 0.3F, false);
+    public static Item carrot_juice = new ItemDrinkable("carrot_juice", 3, 0.6F, false);
+    public static Item beetroot_juice = new ItemDrinkable("beetroot_juice", 1, 0.6F, false);
+    public static Item pumpkin_juice = new ItemDrinkable("pumpkin_juice", 5, 0.3F, false);
+    public static Item bottle_milk = new ItemMilkBottle("bottle_milk", 1, 0.6F, false);
+    public static Item bottle_chocolate_milk = new ItemChocolateMilk("bottle_chocolate_milk", 1, 0.6F, false);
+    public static Item redbull = new ItemRedBull("redbull", 1, 0.3F, false);
+    public static Item raw_chicken_wing = new ItemCustomFood("raw_chicken_wing", 1, 0.5F, false);
+    public static Item cooked_chicken_wing = new ItemCustomFood("cooked_chicken_wing", 1, 0.8F, false);
 
     public static void register(IForgeRegistry<Item> registry) {
 
         registry.registerAll(
             fried_egg, bacon_raw, bacon_cooked, sausage_raw, sausage_cooked, baguette_roll, baguette_bacon,
             baguette_egg, baguette_eggbacon, baguette_sausage, baguette_baconsausage, baguette_eggsausage,
-                baguette_eggbaconsausage, apple_pie
+                baguette_eggbaconsausage, apple_pie, toast, fruit_salad, apple_juice, melon_juice, carrot_juice,
+                beetroot_juice, pumpkin_juice, bottle_milk, bottle_chocolate_milk, flour, redbull, raw_chicken_wing,
+                cooked_chicken_wing
         );
+
     }
 
     public static void registerModels() {
@@ -57,7 +73,19 @@ public class ModFood {
             registerItemRender(baguette_eggsausage);
             registerItemRender(baguette_eggbaconsausage);
             registerItemRender(apple_pie);
-
+            registerItemRender(toast);
+            registerItemRender(fruit_salad);
+            registerItemRender(apple_juice);
+            registerItemRender(melon_juice);
+            registerItemRender(carrot_juice);
+            registerItemRender(beetroot_juice);
+            registerItemRender(pumpkin_juice);
+            registerItemRender(bottle_milk);
+            registerItemRender(bottle_chocolate_milk);
+            registerItemRender(flour);
+            registerItemRender(redbull);
+            registerItemRender(raw_chicken_wing);
+            registerItemRender(cooked_chicken_wing);
 
     }
 

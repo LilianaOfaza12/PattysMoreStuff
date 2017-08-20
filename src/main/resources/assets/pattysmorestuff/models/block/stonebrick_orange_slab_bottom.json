@@ -1,8 +1,0 @@
-{
-    "parent": "block/half_slab",
-    "textures": {
-        "bottom": "pattysmorestuff:blocks/stonebrick_orange",
-        "top": "pattysmorestuff:blocks/stonebrick_orange",
-        "side": "pattysmorestuff:blocks/stonebrick_orange"
-    }
-}

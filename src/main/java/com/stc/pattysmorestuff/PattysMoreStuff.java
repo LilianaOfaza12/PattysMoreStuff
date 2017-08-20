@@ -2,18 +2,26 @@ package com.stc.pattysmorestuff;
 
 import com.stc.pattysmorestuff.configuration.ConfigurationPMS;
 import com.stc.pattysmorestuff.entitys.EntityRedBullSlurpie;
-import com.stc.pattysmorestuff.entitys.EntityTwiistsGaming;
+import com.stc.pattysmorestuff.entitys.EntityStuffTheChicken;
 import com.stc.pattysmorestuff.entitys.model.EntityRedBullSlurpieModel;
-import com.stc.pattysmorestuff.entitys.model.EntityTwiistsGamingModel;
+import com.stc.pattysmorestuff.entitys.model.EntityStuffTheChickenModel;
 import com.stc.pattysmorestuff.entitys.render.EntityRedBullSlurpieRender;
-import com.stc.pattysmorestuff.entitys.render.EntityTwiistsGamingRender;
+import com.stc.pattysmorestuff.entitys.render.EntityStuffTheChickenRender;
+import com.stc.pattysmorestuff.gui.GuiHandler;
 import com.stc.pattysmorestuff.init.ModCrafting;
 import com.stc.pattysmorestuff.init.ModEntitys;
 import com.stc.pattysmorestuff.init.ModTabs;
 import com.stc.pattysmorestuff.lib.Strings;
 import com.stc.pattysmorestuff.proxy.CommonProxy;
-import com.stc.pattysmorestuff.tileentity.*;
+import com.stc.pattysmorestuff.tileentity.crates.*;
+import com.stc.pattysmorestuff.tileentity.furnaces.TileEntityDiamondFurnace;
+import com.stc.pattysmorestuff.tileentity.furnaces.TileEntityEmeraldFurnace;
+import com.stc.pattysmorestuff.tileentity.furnaces.TileEntityGoldFurnace;
+import com.stc.pattysmorestuff.tileentity.furnaces.TileEntityIronFurnace;
+import com.stc.pattysmorestuff.tileentity.jar.TileEntityJar;
 import com.stc.pattysmorestuff.world.gen.WorldGenColored;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.init.Biomes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
@@ -24,12 +32,14 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.io.File;
 
 
-@Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
+@Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION, acceptedMinecraftVersions = Strings.MC_VERSION)
 public class PattysMoreStuff
 {
 
@@ -48,9 +58,12 @@ public class PattysMoreStuff
     {
         Config = new Configuration(new File("config/PattysMoreStuff/PattysMoreStuff.cfg"));
         ConfigurationPMS.syncConfig();
+
         ModTabs.registerTabs();
         ModCrafting.furnaceRecipes();
         ModEntitys.registerEntities();
+
+
     }
    
     @EventHandler
@@ -58,10 +71,11 @@ public class PattysMoreStuff
 
         proxy.registerRenders();
         MinecraftForge.EVENT_BUS.register(instance);
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
         GameRegistry.registerTileEntity(TileEntityIronFurnace.class, Strings.MODID + "TileEntityIronFurnace");
-        GameRegistry.registerTileEntity(TileEntityGoldFurnace.class, Strings.MODID +"TileEntityGoldFurnace");
-        GameRegistry.registerTileEntity(TileEntityDiamondFurnace.class, Strings.MODID +"TileEntityDiamondFurnace");
-        GameRegistry.registerTileEntity(TileEntityEmeraldFurnace.class, Strings.MODID +"TileEntityEmeraldFurnace");
+        GameRegistry.registerTileEntity(TileEntityGoldFurnace.class, Strings.MODID + "TileEntityGoldFurnace");
+        GameRegistry.registerTileEntity(TileEntityDiamondFurnace.class, Strings.MODID + "TileEntityDiamondFurnace");
+        GameRegistry.registerTileEntity(TileEntityEmeraldFurnace.class, Strings.MODID + "TileEntityEmeraldFurnace");
         GameRegistry.registerTileEntity(TileEntityJar.class, Strings.MODID + "TileEntityJar");
         GameRegistry.registerTileEntity(TileEntityOakCrate.class, Strings.MODID + "TileEntityOakCrate");
         GameRegistry.registerTileEntity(TileEntitySpruceCrate.class, Strings.MODID + "TileEntitySpruceCrate");
@@ -72,12 +86,13 @@ public class PattysMoreStuff
 
         GameRegistry.registerWorldGenerator(new WorldGenColored(), 0);
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityTwiistsGaming.class, new EntityTwiistsGamingRender(new EntityTwiistsGamingModel(), 0.5F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityStuffTheChicken.class, new EntityStuffTheChickenRender(new EntityStuffTheChickenModel(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityRedBullSlurpie.class, new EntityRedBullSlurpieRender(new EntityRedBullSlurpieModel(), 0.5F));
 
-
-
+        EntityRegistry.addSpawn(EntityStuffTheChicken.class, 5, 1, 3, EnumCreatureType.CREATURE, Biomes.PLAINS);
+        EntityRegistry.addSpawn(EntityRedBullSlurpie.class, 5, 1, 3, EnumCreatureType.CREATURE, Biomes.PLAINS);
     }
+
 
     @SubscribeEvent
     public void onConfigChange(ConfigChangedEvent.OnConfigChangedEvent event) {
@@ -85,5 +100,6 @@ public class PattysMoreStuff
             ConfigurationPMS.syncConfig();
         }
     }
+
 
 }
