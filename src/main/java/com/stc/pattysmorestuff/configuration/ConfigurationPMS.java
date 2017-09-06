@@ -11,9 +11,8 @@ public class ConfigurationPMS {
 
     public static void syncConfig() {
 
-
-        ConfigPreInit.enableCreativeAir = PattysMoreStuff.Config.getBoolean("Enables Or Disables Glowing Air In Creative Tab", "PattysMoreStuff.Other.miscItems", ConfigPreInit.enableCreativeAir, "Enables Or Disables Glowing Air In Creative Tab 'Set This To True To Enable");
-        ConfigPreInit.canDisplay = PattysMoreStuff.Config.getBoolean("Enables Or Disables The Thank You Message", "PattysMoreStuff.Other.miscItems", ConfigPreInit.canDisplay, "Enables Or Disables The Thank You Message 'Set This To False To Disable");
+        ConfigPreInit.enableCreativeAir = PattysMoreStuff.Config.getBoolean("Enables Or Disables Glowing Air In Creative Tab", "PattysMoreStuff.Other.miscItems", ConfigPreInit.enableCreativeAir, "Enables Or Disables Glowing Air In Creative Tab 'Set This To True To Enable'");
+        ConfigPreInit.canDisplay = PattysMoreStuff.Config.getBoolean("Enables Or Disables The Thank You Message", "PattysMoreStuff.Other.miscItems", ConfigPreInit.canDisplay, "Enables Or Disables The Thank You Message 'Set This To False To Disable'");
 
         ConfigPreInit.lightlevel = PattysMoreStuff.Config.getInt("Light Level for Glowing Air", "PattysMoreStuff.Other.IlluminationWand", ConfigPreInit.lightlevel, 1, 10, "Light Level for Glowing Air");
         ConfigPreInit.lightWandMaxDamage = PattysMoreStuff.Config.getInt("Illumination Wand Max Uses", "PattysMoreStuff.Other.IlluminationWand", ConfigPreInit.lightWandMaxDamage, 250, 999999999, "Illumination Wand Max Uses");
@@ -31,85 +30,61 @@ public class ConfigurationPMS {
         ConfigPreInit.oreEnderMinY = PattysMoreStuff.Config.get("PattysMoreStuff.Ore.ender_pearl", "The minimum height the ore will spawn at", ConfigPreInit.oreEnderMinY).getInt();
         ConfigPreInit.oreEnderMaxY = PattysMoreStuff.Config.get("PattysMoreStuff.Ore.ender_pearl", "The maximum height the ore will spawn at", ConfigPreInit.oreEnderMaxY).getInt();
 
-            ConfigPreInit.ironFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden slab burns for in the iron furnace", ConfigPreInit.ironFWoodenSlabBurnTime).getInt();
-            ConfigPreInit.ironFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long wood material burns for in the iron furnace", ConfigPreInit.ironFWoodMaterialBurnTime).getInt();
-            ConfigPreInit.ironFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the coal block burns for in the iron furnace", ConfigPreInit.ironFCoalBlockBurnTime).getInt();
-            ConfigPreInit.ironFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden tool burns for in the iron furnace", ConfigPreInit.ironFToolWoodBurnTime).getInt();
-            ConfigPreInit.ironFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden sword burns for in the iron furnace", ConfigPreInit.ironFSwordWoodBurnTime).getInt();
-            ConfigPreInit.ironFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden hoe burns for in the iron furnace", ConfigPreInit.ironFHoeWoodBurnTime).getInt();
-            ConfigPreInit.ironFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the stick burns for in the iron furnace", ConfigPreInit.ironFStickBurnTime).getInt();
-            ConfigPreInit.ironFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the coal burns for in the iron furnace", ConfigPreInit.ironFCoalBurnTime).getInt();
-            ConfigPreInit.ironFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the lave bucket burns for in the iron furnace", ConfigPreInit.ironFLavaBucketBurnTime).getInt();
-            ConfigPreInit.ironFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the sapling burns for in the iron furnace", ConfigPreInit.ironFSaplingBurnTime).getInt();
-            ConfigPreInit.ironFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the blaze rod burns for in the iron furnace", ConfigPreInit.ironFBlazeRodBurnTime).getInt();
+        ConfigPreInit.ironFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden slab burns for in the iron furnace", 150).getInt();
+        ConfigPreInit.ironFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long wood material burns for in the iron furnace", 300).getInt();
+        ConfigPreInit.ironFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the coal block burns for in the iron furnace", 16000).getInt();
+        ConfigPreInit.ironFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden tool burns for in the iron furnace", 200).getInt();
+        ConfigPreInit.ironFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden sword burns for in the iron furnace", 200).getInt();
+        ConfigPreInit.ironFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the wooden hoe burns for in the iron furnace", 200).getInt();
+        ConfigPreInit.ironFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the stick burns for in the iron furnace", 100).getInt();
+        ConfigPreInit.ironFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the coal burns for in the iron furnace", 1600).getInt();
+        ConfigPreInit.ironFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the lave bucket burns for in the iron furnace", 20000).getInt();
+        ConfigPreInit.ironFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the sapling burns for in the iron furnace", 100).getInt();
+        ConfigPreInit.ironFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "How long the blaze rod burns for in the iron furnace", 2400).getInt();
 
-            ConfigPreInit.goldFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden slab burns for in the gold furnace", ConfigPreInit.goldFWoodenSlabBurnTime).getInt();
-            ConfigPreInit.goldFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long wood material burns for in the gold furnace", ConfigPreInit.goldFWoodMaterialBurnTime).getInt();
-            ConfigPreInit.goldFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the coal block burns for in the gold furnace", ConfigPreInit.goldFCoalBlockBurnTime).getInt();
-            ConfigPreInit.goldFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden tool burns for in the gold furnace", ConfigPreInit.goldFToolWoodBurnTime).getInt();
-            ConfigPreInit.goldFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden sword burns for in the gold furnace", ConfigPreInit.goldFSwordWoodBurnTime).getInt();
-            ConfigPreInit.goldFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden hoe burns for in the gold furnace", ConfigPreInit.goldFHoeWoodBurnTime).getInt();
-            ConfigPreInit.goldFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the stick burns for in the gold furnace", ConfigPreInit.goldFStickBurnTime).getInt();
-            ConfigPreInit.goldFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the coal burns for in the gold furnace", ConfigPreInit.goldFCoalBurnTime).getInt();
-            ConfigPreInit.goldFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the lave bucket burns for in the gold furnace", ConfigPreInit.goldFLavaBucketBurnTime).getInt();
-            ConfigPreInit.goldFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the sapling burns for in the gold furnace", ConfigPreInit.goldFSaplingBurnTime).getInt();
-            ConfigPreInit.goldFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the blaze rod burns for in the gold furnace", ConfigPreInit.goldFBlazeRodBurnTime).getInt();
+        ConfigPreInit.goldFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden slab burns for in the gold furnace", 150).getInt();
+        ConfigPreInit.goldFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden slab burns for in the gold furnace", 150).getInt();
+        ConfigPreInit.goldFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long wood material burns for in the gold furnace", 300).getInt();
+        ConfigPreInit.goldFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the coal block burns for in the gold furnace", 16000).getInt();
+        ConfigPreInit.goldFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden tool burns for in the gold furnace", 200).getInt();
+        ConfigPreInit.goldFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden sword burns for in the gold furnace", 200).getInt();
+        ConfigPreInit.goldFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the wooden hoe burns for in the gold furnace", 200).getInt();
+        ConfigPreInit.goldFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the stick burns for in the gold furnace", 100).getInt();
+        ConfigPreInit.goldFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the coal burns for in the gold furnace", 1600).getInt();
+        ConfigPreInit.goldFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the lave bucket burns for in the gold furnace", 20000).getInt();
+        ConfigPreInit.goldFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the sapling burns for in the gold furnace", 100).getInt();
+        ConfigPreInit.goldFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "How long the blaze rod burns for in the gold furnace", 2400).getInt();
 
-            ConfigPreInit.diamondFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden slab burns for in the diamond furnace", ConfigPreInit.diamondFWoodenSlabBurnTime).getInt();
-            ConfigPreInit.diamondFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long wood material burns for in the diamond furnace", ConfigPreInit.diamondFWoodMaterialBurnTime).getInt();
-            ConfigPreInit.diamondFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the coal block burns for in the diamond furnace", ConfigPreInit.diamondFCoalBlockBurnTime).getInt();
-            ConfigPreInit.diamondFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden tool burns for in the diamond furnace", ConfigPreInit.diamondFToolWoodBurnTime).getInt();
-            ConfigPreInit.diamondFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden sword burns for in the diamond furnace", ConfigPreInit.diamondFSwordWoodBurnTime).getInt();
-            ConfigPreInit.diamondFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden hoe burns for in the diamond furnace", ConfigPreInit.diamondFHoeWoodBurnTime).getInt();
-            ConfigPreInit.diamondFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the stick burns for in the diamond furnace", ConfigPreInit.diamondFStickBurnTime).getInt();
-            ConfigPreInit.diamondFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the coal burns for in the diamond furnace", ConfigPreInit.diamondFCoalBurnTime).getInt();
-            ConfigPreInit.diamondFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the lave bucket burns for in the diamond furnace", ConfigPreInit.diamondFLavaBucketBurnTime).getInt();
-            ConfigPreInit.diamondFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the sapling burns for in the diamond furnace", ConfigPreInit.diamondFSaplingBurnTime).getInt();
-            ConfigPreInit.diamondFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the blaze rod burns for in the diamond furnace", ConfigPreInit.diamondFBlazeRodBurnTime).getInt();
+        ConfigPreInit.diamondFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden slab burns for in the diamond furnace", 150).getInt();
+        ConfigPreInit.diamondFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden slab burns for in the diamond furnace", 150).getInt();
+        ConfigPreInit.diamondFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long wood material burns for in the diamond furnace", 300).getInt();
+        ConfigPreInit.diamondFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the coal block burns for in the diamond furnace", 16000).getInt();
+        ConfigPreInit.diamondFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden tool burns for in the diamond furnace", 200).getInt();
+        ConfigPreInit.diamondFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden sword burns for in the diamond furnace", 200).getInt();
+        ConfigPreInit.diamondFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the wooden hoe burns for in the diamond furnace", 200).getInt();
+        ConfigPreInit.diamondFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the stick burns for in the diamond furnace", 100).getInt();
+        ConfigPreInit.diamondFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the coal burns for in the diamond furnace", 1600).getInt();
+        ConfigPreInit.diamondFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the lave bucket burns for in the diamond furnace", 20000).getInt();
+        ConfigPreInit.diamondFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the sapling burns for in the diamond furnace", 100).getInt();
+        ConfigPreInit.diamondFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "How long the blaze rod burns for in the diamond furnace", 2400).getInt();
 
-            ConfigPreInit.emeraldFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden slab burns for in the emerald furnace", ConfigPreInit.obsidianFWoodenSlabBurnTime).getInt();
-            ConfigPreInit.emeraldFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long wood material burns for in the emerald furnace", ConfigPreInit.emeraldFWoodMaterialBurnTime).getInt();
-            ConfigPreInit.emeraldFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the coal block burns for in the emerald furnace", ConfigPreInit.emeraldFCoalBlockBurnTime).getInt();
-            ConfigPreInit.emeraldFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden tool burns for in the emerald furnace", ConfigPreInit.emeraldFToolWoodBurnTime).getInt();
-            ConfigPreInit.emeraldFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden sword burns for in the emerald furnace", ConfigPreInit.emeraldFSwordWoodBurnTime).getInt();
-            ConfigPreInit.emeraldFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden hoe burns for in the emerald furnace", ConfigPreInit.emeraldFHoeWoodBurnTime).getInt();
-            ConfigPreInit.emeraldFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the stick burns for in the emerald furnace", ConfigPreInit.emeraldFStickBurnTime).getInt();
-            ConfigPreInit.emeraldFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the coal burns for in the emerald furnace", ConfigPreInit.emeraldFCoalBurnTime).getInt();
-            ConfigPreInit.emeraldFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the lave bucket burns for in the emerald furnace", ConfigPreInit.emeraldFLavaBucketBurnTime).getInt();
-            ConfigPreInit.emeraldFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the sapling burns for in the emerald furnace", ConfigPreInit.emeraldFSaplingBurnTime).getInt();
-            ConfigPreInit.emeraldFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the blaze rod burns for in the emerald furnace", ConfigPreInit.emeraldFBlazeRodBurnTime).getInt();
+        ConfigPreInit.emeraldFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden slab burns for in the emerald furnace", 150).getInt();
+        ConfigPreInit.emeraldFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden slab burns for in the emerald furnace", 150).getInt();
+        ConfigPreInit.emeraldFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long wood material burns for in the emerald furnace", 300).getInt();
+        ConfigPreInit.emeraldFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the coal block burns for in the emerald furnace", 16000).getInt();
+        ConfigPreInit.emeraldFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden tool burns for in the emerald furnace", 200).getInt();
+        ConfigPreInit.emeraldFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden sword burns for in the emerald furnace", 200).getInt();
+        ConfigPreInit.emeraldFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the wooden hoe burns for in the emerald furnace", 200).getInt();
+        ConfigPreInit.emeraldFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the stick burns for in the emerald furnace", 100).getInt();
+        ConfigPreInit.emeraldFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the coal burns for in the emerald furnace", 1600).getInt();
+        ConfigPreInit.emeraldFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the lave bucket burns for in the emerald furnace", 20000).getInt();
+        ConfigPreInit.emeraldFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the sapling burns for in the emerald furnace", 100).getInt();
+        ConfigPreInit.emeraldFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "How long the blaze rod burns for in the emerald furnace", 2400).getInt();
 
-        ConfigPreInit.obsidianFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the wooden slab burns for in the obsidian furnace", ConfigPreInit.obsidianFWoodenSlabBurnTime).getInt();
-        ConfigPreInit.obsidianFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long wood material burns for in the obsidian furnace", ConfigPreInit.obsidianFWoodMaterialBurnTime).getInt();
-        ConfigPreInit.obsidianFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the coal block burns for in the obsidian furnace", ConfigPreInit.obsidianFCoalBlockBurnTime).getInt();
-        ConfigPreInit.obsidianFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the wooden tool burns for in the obsidian furnace", ConfigPreInit.obsidianFToolWoodBurnTime).getInt();
-        ConfigPreInit.obsidianFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the wooden sword burns for in the obsidian furnace", ConfigPreInit.obsidianFSwordWoodBurnTime).getInt();
-        ConfigPreInit.obsidianFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the wooden hoe burns for in the obsidian furnace", ConfigPreInit.obsidianFHoeWoodBurnTime).getInt();
-        ConfigPreInit.obsidianFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the stick burns for in the obsidian furnace", ConfigPreInit.obsidianFStickBurnTime).getInt();
-        ConfigPreInit.obsidianFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the coal burns for in the obsidian furnace", ConfigPreInit.obsidianFCoalBurnTime).getInt();
-        ConfigPreInit.obsidianFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the lave bucket burns for in the obsidian furnace", ConfigPreInit.obsidianFLavaBucketBurnTime).getInt();
-        ConfigPreInit.obsidianFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the sapling burns for in the obsidian furnace", ConfigPreInit.obsidianFSaplingBurnTime).getInt();
-        ConfigPreInit.obsidianFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "How long the blaze rod burns for in the obsidian furnace", ConfigPreInit.obsidianFBlazeRodBurnTime).getInt();
-
-        ConfigPreInit.ultimateFWoodenSlabBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the wooden slab burns for in the ultimate furnace", ConfigPreInit.ultimateFWoodenSlabBurnTime).getInt();
-        ConfigPreInit.ultimateFWoodMaterialBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long wood material burns for in the ultimate furnace", ConfigPreInit.ultimateFWoodMaterialBurnTime).getInt();
-        ConfigPreInit.ultimateFCoalBlockBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the coal block burns for in the ultimate furnace", ConfigPreInit.ultimateFCoalBlockBurnTime).getInt();
-        ConfigPreInit.ultimateFToolWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the wooden tool burns for in the ultimate furnace", ConfigPreInit.ultimateFToolWoodBurnTime).getInt();
-        ConfigPreInit.ultimateFSwordWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the wooden sword burns for in the ultimate furnace", ConfigPreInit.ultimateFSwordWoodBurnTime).getInt();
-        ConfigPreInit.ultimateFHoeWoodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the wooden hoe burns for in the ultimate furnace", ConfigPreInit.ultimateFHoeWoodBurnTime).getInt();
-        ConfigPreInit.ultimateFStickBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the stick burns for in the ultimate furnace", ConfigPreInit.ultimateFStickBurnTime).getInt();
-        ConfigPreInit.ultimateFCoalBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the coal burns for in the ultimate furnace", ConfigPreInit.ultimateFCoalBurnTime).getInt();
-        ConfigPreInit.ultimateFLavaBucketBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the lave bucket burns for in the ultimate furnace", ConfigPreInit.ultimateFLavaBucketBurnTime).getInt();
-        ConfigPreInit.ultimateFSaplingBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the sapling burns for in the ultimate furnace", ConfigPreInit.ultimateFSaplingBurnTime).getInt();
-        ConfigPreInit.ultimateFBlazeRodBurnTime = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "How long the blaze rod burns for in the ultimate furnace", ConfigPreInit.ultimateFBlazeRodBurnTime).getInt();
-
-
-        ConfigPreInit.ironFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", ConfigPreInit.ironFurnaceCookSpeed).getInt();
-        ConfigPreInit.goldFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", ConfigPreInit.goldFurnaceCookSpeed).getInt();
-        ConfigPreInit.diamondFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "Lower the number to speed up furnace cook time or higher the number to slow down cook time", ConfigPreInit.diamondFurnaceCookSpeed).getInt();
-        ConfigPreInit.emeraldFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "Lower the number to speed up furnace cook time or higher the number to slow down cook time", ConfigPreInit.emeraldFurnaceCookSpeed).getInt();
-        ConfigPreInit.obsidianFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.obsidian", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", ConfigPreInit.obsidianFurnaceCookSpeed).getInt();
-        ConfigPreInit.ultimateFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.ultimate", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", ConfigPreInit.ultimateFurnaceCookSpeed).getInt();
+        ConfigPreInit.ironFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.iron", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", 150).getInt();
+        ConfigPreInit.goldFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.gold", "Lower the number to speed up the furnace cook time or higher the number to slow down cook time", 100).getInt();
+        ConfigPreInit.diamondFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.diamond", "Lower the number to speed up furnace cook time or higher the number to slow down cook time", 75).getInt();
+        ConfigPreInit.emeraldFurnaceCookSpeed = PattysMoreStuff.Config.get("PattysMoreStuff.Furnaces.emerald", "Lower the number to speed up furnace cook time or higher the number to slow down cook time", 50).getInt();
 
         if (PattysMoreStuff.Config.hasChanged()) {
             PattysMoreStuff.Config.save();

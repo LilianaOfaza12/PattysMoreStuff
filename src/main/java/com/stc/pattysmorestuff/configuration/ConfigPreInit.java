@@ -131,12 +131,10 @@ public class ConfigPreInit {
     public static ArmorMaterial DYE_ARMOR_ORANGE;
     public static ArmorMaterial DYE_ARMOR_WHITE;
 
-    public static int ironFurnaceCookSpeed = 167;
-    public static int goldFurnaceCookSpeed = 134;
-    public static int diamondFurnaceCookSpeed = 101;
-    public static int emeraldFurnaceCookSpeed = 68;
-    public static int obsidianFurnaceCookSpeed = 35;
-    public static int ultimateFurnaceCookSpeed = 2;
+    public static int ironFurnaceCookSpeed = 150;
+    public static int goldFurnaceCookSpeed = 100;
+    public static int diamondFurnaceCookSpeed = 75;
+    public static int emeraldFurnaceCookSpeed = 50;
 
     public static int ironFWoodenSlabBurnTime = 150;
     public static int ironFWoodMaterialBurnTime = 300;
@@ -186,30 +184,6 @@ public class ConfigPreInit {
     public static int emeraldFSaplingBurnTime = 100;
     public static int emeraldFBlazeRodBurnTime = 2400;
 
-    public static int obsidianFWoodenSlabBurnTime = 150;
-    public static int obsidianFWoodMaterialBurnTime = 300;
-    public static int obsidianFCoalBlockBurnTime = 16000;
-    public static int obsidianFToolWoodBurnTime = 200;
-    public static int obsidianFSwordWoodBurnTime = 200;
-    public static int obsidianFHoeWoodBurnTime = 200;
-    public static int obsidianFStickBurnTime = 100;
-    public static int obsidianFCoalBurnTime = 1600;
-    public static int obsidianFLavaBucketBurnTime = 20000;
-    public static int obsidianFSaplingBurnTime = 100;
-    public static int obsidianFBlazeRodBurnTime = 2400;
-
-    public static int ultimateFWoodenSlabBurnTime = 150;
-    public static int ultimateFWoodMaterialBurnTime = 300;
-    public static int ultimateFCoalBlockBurnTime = 16000;
-    public static int ultimateFToolWoodBurnTime = 200;
-    public static int ultimateFSwordWoodBurnTime = 200;
-    public static int ultimateFHoeWoodBurnTime = 200;
-    public static int ultimateFStickBurnTime = 100;
-    public static int ultimateFCoalBurnTime = 1600;
-    public static int ultimateFLavaBucketBurnTime = 20000;
-    public static int ultimateFSaplingBurnTime = 100;
-    public static int ultimateFBlazeRodBurnTime = 2400;
-
     public static int lightlevel = 10;
     public static int lightWandMaxDamage = 250;
     public static int milkBottleStackSize = 16;
@@ -227,5 +201,4 @@ public class ConfigPreInit {
     public static int oreEnderChanceToSpawn = 8;
     public static int oreEnderMinY = 5;
     public static int oreEnderMaxY = 29;
-
 }

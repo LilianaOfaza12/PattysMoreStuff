@@ -16,7 +16,6 @@ public class ModCrafting {
         GameRegistry.addSmelting(new ItemStack(ModFood.sausage_raw, 1), new ItemStack(ModFood.sausage_cooked),0.35F);
         GameRegistry.addSmelting(new ItemStack(ModFood.flour, 1), new ItemStack(Items.BREAD),0.35F);
         GameRegistry.addSmelting(new ItemStack(ModFood.raw_chicken_wing, 1), new ItemStack(ModFood.cooked_chicken_wing),0.35F);
-        GameRegistry.addSmelting(new ItemStack(Items.BREAD, 1), new ItemStack(ModFood.toast),0.35F);
 
     }
 }
