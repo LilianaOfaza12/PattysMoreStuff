@@ -536,16 +536,6 @@ item.stone_stick.name=Stone Stick
 item.raw_chicken_wing.name=Chicken Wing
 item.cooked_chicken_wing.name=Cooked Chicken Wing
 item.redbull.name=Redbull
-item.apple_slushie.name=Apple Slushie
-item.melon_slushie.name=Melon Slushie
-item.carrot_slushie.name=Carrot Slushie
-item.pumpkin_slushie.name=Pumpkin Slushie
-item.beetroot_slushie.name=Beetroot Slushie
-item.apple_smoothie.name=Apple Smoothie
-item.melon_smoothie.name=Melon Smoothie
-item.carrot_smoothie.name=Carrot Smoothie
-item.pumpkin_smoothie.name=Pumpkin Smoothie
-item.beetroot_smoothie.name=Beetroot Smoothie
 
 tile.dye_block_black.name=Black Dye Block
 tile.dye_block_red.name=Red Dye Block
@@ -754,16 +744,10 @@ tile.diamond_furnace.name=Diamond Furnace
 tile.diamond_furnace_active.name=Diamond Furnace Active
 tile.emerald_furnace.name=Emerald Furnace
 tile.emerald_furnace_active.name=Emerald Furnace Active
-tile.obsidian_furnace.name=Obsidian Furnace
-tile.obsidian_furnace_active.name=Obsidian Furnace Active
-tile.ultimate_furnace.name=Ultimate Furnace
-tile.ultimate_furnace_active.name=Ultimate Furnace Active
 
 tile.reinforced_obsidian.name=Reinforced Obsidian
 tile.reinforced_glass.name=Reinforced Glass
-
-tile.ender_pearl_block.name=Ender Pearl Block
-tile.ender_brick.name=Ender Pearl Brick
+tile.souldsand_glass.name=Soul Sand Glass
 
 entity.stuffthechicken.name=StuffTheChicken
 entity.redbullslurpie.name=RedBullSlurpie

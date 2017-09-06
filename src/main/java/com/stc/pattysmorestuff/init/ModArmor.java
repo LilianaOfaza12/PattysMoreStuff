@@ -42,8 +42,8 @@ public class ModArmor {
 
     public static Item slime_helmet = new ItemMoreArmor("slime_helmet", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.HEAD);
     public static Item slime_chestplate = new ItemMoreArmor("slime_chestplate", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.CHEST);
-    public static Item slime_leggings = new ItemMoreArmor("slime_leggings", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.LEGS);
-    public static Item slime_boots = new ItemMoreArmor("slime_boots", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.FEET);
+    public static Item slime_leggings = new ItemMoreArmor("slime_leggings", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.CHEST);
+    public static Item slime_boots = new ItemMoreArmor("slime_boots", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.CHEST);
 
     public static Item coal_helmet = new ItemMoreArmor("coal_helmet", ConfigPreInit.COAL_ARMOR, "coal", EntityEquipmentSlot.HEAD);
     public static Item coal_chestplate = new ItemMoreArmor("coal_chestplate", ConfigPreInit.COAL_ARMOR, "coal", EntityEquipmentSlot.CHEST);

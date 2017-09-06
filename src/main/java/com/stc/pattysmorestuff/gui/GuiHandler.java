@@ -15,20 +15,15 @@ public class GuiHandler implements IGuiHandler {
 
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-
         return null;
     }
 
-
-
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        if (ID == TIME_WAND){
+        if (ID == TIME_WAND)
             return new GuiTimeWand();
-        }
-        if(ID == WEATHER_WAND) {
+        if(ID == WEATHER_WAND)
             return new GuiWeatherWand();
-        }
         return null;
     }
 }
