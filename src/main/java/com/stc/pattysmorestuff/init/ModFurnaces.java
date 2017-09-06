@@ -1,9 +1,6 @@
 package com.stc.pattysmorestuff.init;
 
-import com.stc.pattysmorestuff.blocks.furnaces.BlockDiamondFurnace;
-import com.stc.pattysmorestuff.blocks.furnaces.BlockEmeraldFurnace;
-import com.stc.pattysmorestuff.blocks.furnaces.BlockGoldFurnace;
-import com.stc.pattysmorestuff.blocks.furnaces.BlockIronFurnace;
+import com.stc.pattysmorestuff.blocks.furnaces.*;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -30,6 +27,12 @@ public class ModFurnaces {
     public static BlockEmeraldFurnace emerald_furnace = new BlockEmeraldFurnace("emerald_furnace", false);
     public static BlockEmeraldFurnace emerald_furnace_active = new BlockEmeraldFurnace("emerald_furnace_active", true);
 
+    public static BlockObsidianFurnace obsidian_furnace = new BlockObsidianFurnace("obsidian_furnace", false);
+    public static BlockObsidianFurnace obsidian_furnace_active = new BlockObsidianFurnace("obsidian_furnace_active", true);
+
+    public static BlockUltimateFurnace ultimate_furnace = new BlockUltimateFurnace("ultimate_furnace", false);
+    public static BlockUltimateFurnace ultimate_furnace_active = new BlockUltimateFurnace("ultimate_furnace_active", true);
+
     public static void registerBlocks(final IForgeRegistry<Block> event) {
         final Block[] blocks = {
                 iron_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
@@ -39,7 +42,11 @@ public class ModFurnaces {
                 diamond_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
                 diamond_furnace_active,
                 emerald_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
-                emerald_furnace_active
+                emerald_furnace_active,
+                obsidian_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
+                obsidian_furnace_active,
+                ultimate_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
+                ultimate_furnace_active
         };
 
         event.registerAll(blocks);
@@ -54,7 +61,11 @@ public class ModFurnaces {
                 diamond_furnace.createItemBlock(),
                 diamond_furnace_active.createItemBlock(),
                 emerald_furnace.createItemBlock(),
-                emerald_furnace_active.createItemBlock()
+                emerald_furnace_active.createItemBlock(),
+                obsidian_furnace.createItemBlock(),
+                obsidian_furnace_active.createItemBlock(),
+                ultimate_furnace.createItemBlock(),
+                ultimate_furnace_active.createItemBlock()
         );
     }
 
@@ -68,6 +79,10 @@ public class ModFurnaces {
         registerBlockRender(diamond_furnace_active);
         registerBlockRender(emerald_furnace);
         registerBlockRender(emerald_furnace_active);
+        registerBlockRender(obsidian_furnace);
+        registerBlockRender(obsidian_furnace_active);
+        registerBlockRender(ultimate_furnace);
+        registerBlockRender(ultimate_furnace_active);
     }
 
     public static void registerBlockRender(Block block) {
