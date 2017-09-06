@@ -1,5 +1,6 @@
 package com.stc.pattysmorestuff.handlers;
 
+import com.stc.pattysmorestuff.configuration.ConfigPreInit;
 import com.stc.pattysmorestuff.init.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

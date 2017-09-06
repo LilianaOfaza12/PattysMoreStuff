@@ -1,20 +1,10 @@
-Change Log 1.0.8
+Change Log 1.0.9
 ================
---Updated too 1.12.1
---Added too entitys (StuffTheChicken & RedBullSlurpie)
---Added Rebull
---Added Chicken Wing
---Added Chicken Wing Cooked
---Re-Added dye blocks and colored stonebrick + all matching stairs
---Re-Added Polished stone
---Re-Added Flour
---Re-Added Infinite lave bucket (creative only)
---Re-Added Blender
---Re-Added Milk bottle, Chocolate milk bottle
---Re-Added Apple, Melon, Beetroot, Pumpkin & Carrot juice. Requires you to right click the blender with the item i.e apple in your hand to get apple juice
---Re-Added Knife
---Re-Added Fruit Salad
---Re-Added Toast
---Re-Added Illumination wand & glow block
---Removed Bread Recipe. Now requires you to smelt flour to obtain bread
-
+--Added Ender Pearl Block
+--Added Ender Brick
+--Added Apple, Melon, Beetroot, Pumpkin & Carrot Slushie
+--Added Apple, Melon, Beetroot, Pumpkin & Carrot Smoothie
+--Added Obsidian Furnace
+--Added Ultimate Furnace
+--Changed Armor Textures
+--Changed Diamond Furnace Recipe

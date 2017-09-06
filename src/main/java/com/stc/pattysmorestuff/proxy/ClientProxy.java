@@ -1,5 +1,6 @@
 package com.stc.pattysmorestuff.proxy;
 
+import com.stc.pattysmorestuff.configuration.ConfigPreInit;
 import com.stc.pattysmorestuff.init.*;
 import com.stc.pattysmorestuff.tileentity.jar.TileEntityJar;
 import com.stc.pattysmorestuff.tileentity.render.RenderJar;

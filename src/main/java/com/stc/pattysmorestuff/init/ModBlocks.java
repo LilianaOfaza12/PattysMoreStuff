@@ -71,6 +71,9 @@ public class ModBlocks {
     public static BlockPolishedStone polished_stone = new BlockPolishedStone("polished_stone");
     public static BlockGlowstoneBrick glowstone_brick = new BlockGlowstoneBrick("glowstone_brick");
     public static BlockIllumination glowair = new BlockIllumination("glowair");
+    public static BlockEnder ender_pearl_block = new BlockEnder("ender_pearl_block");
+    public static BlockEnder ender_brick = new BlockEnder("ender_brick");
+
 
     public static void registerBlocks(final IForgeRegistry<Block> event) {
         final Block[] blocks = {
@@ -118,12 +121,17 @@ public class ModBlocks {
                 blender_black,
                 polished_stone,
                 glowstone_brick,
-                glowair
+                glowair,
+                ender_pearl_block,
+                ender_brick
+
         };
 
 
 
         event.registerAll(blocks);
+
+
     }
 
     public static void registerItemBlocks(IForgeRegistry<Item> registry) {
@@ -172,8 +180,11 @@ public class ModBlocks {
                 blender_black.createItemBlock(),
                 polished_stone.createItemBlock(),
                 glowstone_brick.createItemBlock(),
-                glowair.createItemBlock()
+                glowair.createItemBlock(),
+                ender_pearl_block.createItemBlock(),
+                ender_brick.createItemBlock()
         );
+
     }
 
     public static void registerModels() {
@@ -222,7 +233,8 @@ public class ModBlocks {
         registerBlockRender(polished_stone);
         registerBlockRender(glowstone_brick);
         registerBlockRender(glowair);
-
+        registerBlockRender(ender_pearl_block);
+        registerBlockRender(ender_brick);
 
     }
 
