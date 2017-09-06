@@ -1,5 +1,4 @@
 #[PattysMoreStuff](http://minecraft.curseforge.com/projects/PattysMoreStuff)
-Adds more Blocks/Items/Food/Tools/Armor and other useful stuff to minecraft.
 
 ##Issue reporting
 Please include the following:
