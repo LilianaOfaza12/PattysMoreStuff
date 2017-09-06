@@ -2,7 +2,7 @@ package com.stc.pattysmorestuff.init;
 
 import com.stc.pattysmorestuff.PattysMoreStuff;
 import com.stc.pattysmorestuff.entitys.EntityRedBullSlurpie;
-import com.stc.pattysmorestuff.entitys.EntityTwiistsGaming;
+import com.stc.pattysmorestuff.entitys.EntityStuffTheChicken;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
@@ -17,7 +17,7 @@ public class ModEntitys {
 
     public static void registerEntities() {
 
-        registerModEntityWithEgg(EntityTwiistsGaming.class, "twiistsgaming", 0x66ffff, 0xffffff);
+        registerModEntityWithEgg(EntityStuffTheChicken.class, "stuffthechicken", 0x66ffff, 0xffffff);
         registerModEntityWithEgg(EntityRedBullSlurpie.class, "redbullslurpie", 0xffcc00, 0xff9933);
 
 

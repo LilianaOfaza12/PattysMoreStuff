@@ -1,9 +1,9 @@
 package com.stc.pattysmorestuff.init;
 
-import com.stc.pattysmorestuff.blocks.BlockDiamondFurnace;
-import com.stc.pattysmorestuff.blocks.BlockEmeraldFurnace;
-import com.stc.pattysmorestuff.blocks.BlockGoldFurnace;
-import com.stc.pattysmorestuff.blocks.BlockIronFurnace;
+import com.stc.pattysmorestuff.blocks.furnaces.BlockDiamondFurnace;
+import com.stc.pattysmorestuff.blocks.furnaces.BlockEmeraldFurnace;
+import com.stc.pattysmorestuff.blocks.furnaces.BlockGoldFurnace;
+import com.stc.pattysmorestuff.blocks.furnaces.BlockIronFurnace;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -32,13 +32,13 @@ public class ModFurnaces {
 
     public static void registerBlocks(final IForgeRegistry<Block> event) {
         final Block[] blocks = {
-                iron_furnace,
+                iron_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
                 iron_furnace_active,
-                gold_furnace,
+                gold_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
                 gold_furnace_active,
-                diamond_furnace,
+                diamond_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
                 diamond_furnace_active,
-                emerald_furnace,
+                emerald_furnace.setCreativeTab(ModTabs.tabPattysDecoration),
                 emerald_furnace_active
         };
 

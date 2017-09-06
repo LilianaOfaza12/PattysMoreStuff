@@ -1,17 +1,20 @@
-Change Log 1.0.7
+Change Log 1.0.8
 ================
---Updated too 1.12
---Removed dye blocks and colored stonebrick + all matching slabs, fences, fence gates & stairs
---Removed Polished stone
---Removed Milk bottle, Chocolate milk bottle
---Removed Flour
---Removed Disabled default bread recipe. You now need to smelt flour to obtain bread
---Removed Infinite lave bucket (creative only)
---Removed Blender
---Removed Apple, Melon, Beetroot, Pumpkin & Carrot juice
---Removed Knife
---Removed Fruit Salad
---Removed Toast
---Removed Illumination wand & glow block
---Removed Iron, Gold, Diamond apples
---Added concrete stairs
+--Updated too 1.12.1
+--Added too entitys (StuffTheChicken & RedBullSlurpie)
+--Added Rebull
+--Added Chicken Wing
+--Added Chicken Wing Cooked
+--Re-Added dye blocks and colored stonebrick + all matching stairs
+--Re-Added Polished stone
+--Re-Added Flour
+--Re-Added Infinite lave bucket (creative only)
+--Re-Added Blender
+--Re-Added Milk bottle, Chocolate milk bottle
+--Re-Added Apple, Melon, Beetroot, Pumpkin & Carrot juice. Requires you to right click the blender with the item i.e apple in your hand to get apple juice
+--Re-Added Knife
+--Re-Added Fruit Salad
+--Re-Added Toast
+--Re-Added Illumination wand & glow block
+--Removed Bread Recipe. Now requires you to smelt flour to obtain bread
+

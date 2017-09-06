@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+	"## ",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "pattysmorestuff:stonebrick_silver"
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:stonebrick_silver_stairs"
+  }
+}

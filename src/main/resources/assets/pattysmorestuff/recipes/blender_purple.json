@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+	"GRG",
+	"CCC"
+  ],
+  "key": {
+    "C": {
+    "item": "minecraft:stained_hardened_clay",
+    "data": 10
+    },
+	"G": {
+	"item": "minecraft:stained_glass_pane",
+    "data": 10
+	},
+	"R": {
+	"item": "minecraft:redstone_block"
+	}
+  },
+  "result": {
+    "item": "pattysmorestuff:blender_purple"
+  }
+}
