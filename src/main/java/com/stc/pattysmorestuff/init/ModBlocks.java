@@ -1,13 +1,17 @@
 package com.stc.pattysmorestuff.init;
 
 import com.stc.pattysmorestuff.blocks.*;
+import com.stc.pattysmorestuff.blocks.blender.BlockBlender;
+import com.stc.pattysmorestuff.blocks.crates.*;
+import com.stc.pattysmorestuff.blocks.jar.BlockJar;
+import com.stc.pattysmorestuff.blocks.ores.BlockColoredOre;
+import com.stc.pattysmorestuff.blocks.ores.BlockEnderPearlOre;
+import com.stc.pattysmorestuff.blocks.reinforced.BlockReinforcedGlass;
+import com.stc.pattysmorestuff.blocks.reinforced.BlockReinforcedObsidian;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockColored;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
@@ -20,23 +24,6 @@ public class ModBlocks {
 
     public static BlockColoredOre dye_ore = new BlockColoredOre("dye_ore");
     public static BlockEnderPearlOre ender_pearl_ore = new BlockEnderPearlOre("ender_pearl_ore");
-
-    public static BlockColoredStairs dye_white_stairs  = new BlockColoredStairs("dye_white_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.WHITE));
-    public static BlockColoredStairs dye_orange_stairs  = new BlockColoredStairs("dye_orange_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.ORANGE));
-    public static BlockColoredStairs dye_magenta_stairs  = new BlockColoredStairs("dye_magenta_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.MAGENTA));
-    public static BlockColoredStairs dye_light_blue_stairs  = new BlockColoredStairs("dye_light_blue_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.LIGHT_BLUE));
-    public static BlockColoredStairs dye_yellow_stairs  = new BlockColoredStairs("dye_yellow_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.YELLOW));
-    public static BlockColoredStairs dye_lime_stairs  = new BlockColoredStairs("dye_lime_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.LIME));
-    public static BlockColoredStairs dye_pink_stairs  = new BlockColoredStairs("dye_pink_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.PINK));
-    public static BlockColoredStairs dye_gray_stairs  = new BlockColoredStairs("dye_gray_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GRAY));
-    public static BlockColoredStairs dye_silver_stairs  = new BlockColoredStairs("dye_silver_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.SILVER));
-    public static BlockColoredStairs dye_cyan_stairs  = new BlockColoredStairs("dye_cyan_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.CYAN));
-    public static BlockColoredStairs dye_purple_stairs  = new BlockColoredStairs("dye_purple_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.PURPLE));
-    public static BlockColoredStairs dye_blue_stairs  = new BlockColoredStairs("dye_blue_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BLUE));
-    public static BlockColoredStairs dye_brown_stairs  = new BlockColoredStairs("dye_brown_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BROWN));
-    public static BlockColoredStairs dye_green_stairs  = new BlockColoredStairs("dye_green_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GREEN));
-    public static BlockColoredStairs dye_red_stairs  = new BlockColoredStairs("dye_red_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.RED));
-    public static BlockColoredStairs dye_black_stairs  = new BlockColoredStairs("dye_black_stairs", Blocks.CONCRETE.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BLACK));
 
     public static BlockOakCrate oak_storage_crate = new BlockOakCrate("oak_storage_crate");
     public static BlockSpruceCrate spruce_storage_crate = new BlockSpruceCrate("spruce_storage_crate");
@@ -64,6 +51,26 @@ public class ModBlocks {
 
     public static BlockReinforcedObsidian reinforced_obsidian = new BlockReinforcedObsidian("reinforced_obsidian");
     public static BlockReinforcedGlass reinforced_glass = new BlockReinforcedGlass("reinforced_glass", false);
+
+    public static BlockBlender blender_white = new BlockBlender("blender_white");
+    public static BlockBlender blender_orange = new BlockBlender("blender_orange");
+    public static BlockBlender blender_magenta = new BlockBlender("blender_magenta");
+    public static BlockBlender blender_light_blue = new BlockBlender("blender_light_blue");
+    public static BlockBlender blender_yellow = new BlockBlender("blender_yellow");
+    public static BlockBlender blender_lime = new BlockBlender("blender_lime");
+    public static BlockBlender blender_pink = new BlockBlender("blender_pink");
+    public static BlockBlender blender_gray = new BlockBlender("blender_gray");
+    public static BlockBlender blender_silver = new BlockBlender("blender_silver");
+    public static BlockBlender blender_cyan = new BlockBlender("blender_cyan");
+    public static BlockBlender blender_purple = new BlockBlender("blender_purple");
+    public static BlockBlender blender_blue = new BlockBlender("blender_blue");
+    public static BlockBlender blender_brown = new BlockBlender("blender_brown");
+    public static BlockBlender blender_green = new BlockBlender("blender_green");
+    public static BlockBlender blender_red = new BlockBlender("blender_red");
+    public static BlockBlender blender_black = new BlockBlender("blender_black");
+    public static BlockPolishedStone polished_stone = new BlockPolishedStone("polished_stone");
+    public static BlockGlowstoneBrick glowstone_brick = new BlockGlowstoneBrick("glowstone_brick");
+    public static BlockIllumination glowair = new BlockIllumination("glowair");
 
     public static void registerBlocks(final IForgeRegistry<Block> event) {
         final Block[] blocks = {
@@ -93,27 +100,31 @@ public class ModBlocks {
                 cookie_jar_black,
                 reinforced_obsidian,
                 reinforced_glass,
-                dye_white_stairs,
-                dye_orange_stairs,
-                dye_magenta_stairs,
-                dye_light_blue_stairs,
-                dye_yellow_stairs,
-                dye_lime_stairs,
-                dye_pink_stairs,
-                dye_gray_stairs,
-                dye_silver_stairs,
-                dye_cyan_stairs,
-                dye_purple_stairs,
-                dye_blue_stairs,
-                dye_brown_stairs,
-                dye_green_stairs,
-                dye_red_stairs,
-                dye_black_stairs
+                blender_white,
+                blender_orange,
+                blender_magenta,
+                blender_light_blue,
+                blender_yellow,
+                blender_lime,
+                blender_pink,
+                blender_gray,
+                blender_silver,
+                blender_cyan,
+                blender_purple,
+                blender_blue,
+                blender_brown,
+                blender_green,
+                blender_red,
+                blender_black,
+                polished_stone,
+                glowstone_brick,
+                glowair
         };
+
+
 
         event.registerAll(blocks);
     }
-
 
     public static void registerItemBlocks(IForgeRegistry<Item> registry) {
         registry.registerAll(
@@ -143,22 +154,25 @@ public class ModBlocks {
                 cookie_jar_black.createItemBlock(),
                 reinforced_obsidian.createItemBlock(),
                 reinforced_glass.createItemBlock(),
-                dye_white_stairs.createItemBlock(),
-                dye_orange_stairs.createItemBlock(),
-                dye_magenta_stairs.createItemBlock(),
-                dye_light_blue_stairs.createItemBlock(),
-                dye_yellow_stairs.createItemBlock(),
-                dye_lime_stairs.createItemBlock(),
-                dye_pink_stairs.createItemBlock(),
-                dye_gray_stairs.createItemBlock(),
-                dye_silver_stairs.createItemBlock(),
-                dye_cyan_stairs.createItemBlock(),
-                dye_purple_stairs.createItemBlock(),
-                dye_blue_stairs.createItemBlock(),
-                dye_brown_stairs.createItemBlock(),
-                dye_green_stairs.createItemBlock(),
-                dye_red_stairs.createItemBlock(),
-                dye_black_stairs.createItemBlock()
+                blender_white.createItemBlock(),
+                blender_orange.createItemBlock(),
+                blender_magenta.createItemBlock(),
+                blender_light_blue.createItemBlock(),
+                blender_yellow.createItemBlock(),
+                blender_lime.createItemBlock(),
+                blender_pink.createItemBlock(),
+                blender_gray.createItemBlock(),
+                blender_silver.createItemBlock(),
+                blender_cyan.createItemBlock(),
+                blender_purple.createItemBlock(),
+                blender_blue.createItemBlock(),
+                blender_brown.createItemBlock(),
+                blender_green.createItemBlock(),
+                blender_red.createItemBlock(),
+                blender_black.createItemBlock(),
+                polished_stone.createItemBlock(),
+                glowstone_brick.createItemBlock(),
+                glowair.createItemBlock()
         );
     }
 
@@ -189,22 +203,25 @@ public class ModBlocks {
         registerBlockRender(cookie_jar_black);
         registerBlockRender(reinforced_obsidian);
         registerBlockRender(reinforced_glass);
-        registerBlockRender(dye_white_stairs);
-        registerBlockRender(dye_orange_stairs);
-        registerBlockRender(dye_magenta_stairs);
-        registerBlockRender(dye_light_blue_stairs);
-        registerBlockRender(dye_yellow_stairs);
-        registerBlockRender(dye_lime_stairs);
-        registerBlockRender(dye_pink_stairs);
-        registerBlockRender(dye_gray_stairs);
-        registerBlockRender(dye_silver_stairs);
-        registerBlockRender(dye_cyan_stairs);
-        registerBlockRender(dye_purple_stairs);
-        registerBlockRender(dye_blue_stairs);
-        registerBlockRender(dye_brown_stairs);
-        registerBlockRender(dye_green_stairs);
-        registerBlockRender(dye_red_stairs);
-        registerBlockRender(dye_black_stairs);
+        registerBlockRender(blender_white);
+        registerBlockRender(blender_orange);
+        registerBlockRender(blender_magenta);
+        registerBlockRender(blender_light_blue);
+        registerBlockRender(blender_yellow);
+        registerBlockRender(blender_lime);
+        registerBlockRender(blender_pink);
+        registerBlockRender(blender_gray);
+        registerBlockRender(blender_silver);
+        registerBlockRender(blender_cyan);
+        registerBlockRender(blender_purple);
+        registerBlockRender(blender_blue);
+        registerBlockRender(blender_brown);
+        registerBlockRender(blender_green);
+        registerBlockRender(blender_red);
+        registerBlockRender(blender_black);
+        registerBlockRender(polished_stone);
+        registerBlockRender(glowstone_brick);
+        registerBlockRender(glowair);
 
 
     }

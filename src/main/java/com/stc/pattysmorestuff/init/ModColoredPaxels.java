@@ -1,7 +1,7 @@
 package com.stc.pattysmorestuff.init;
 
-import com.stc.pattysmorestuff.items.ItemPaxel;
-import com.stc.pattysmorestuff.lib.ConfigPreInit;
+import com.stc.pattysmorestuff.items.tools.ItemPaxel;
+import com.stc.pattysmorestuff.configuration.ConfigPreInit;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;

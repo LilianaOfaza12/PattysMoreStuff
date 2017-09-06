@@ -1,6 +1,6 @@
 package com.stc.pattysmorestuff.tileentity.render;
 
-import com.stc.pattysmorestuff.tileentity.TileEntityJar;
+import com.stc.pattysmorestuff.tileentity.jar.TileEntityJar;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;

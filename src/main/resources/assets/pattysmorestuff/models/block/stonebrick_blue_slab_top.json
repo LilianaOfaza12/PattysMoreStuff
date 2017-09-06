@@ -1,8 +1,0 @@
-{
-    "parent": "block/upper_slab",
-    "textures": {
-        "bottom": "pattysmorestuff:blocks/stonebrick_blue",
-        "top": "pattysmorestuff:blocks/stonebrick_blue",
-        "side": "pattysmorestuff:blocks/stonebrick_blue"
-    }
-}
