@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "half=bottom": { "model": "pattysmorestuff:stonebrick_green_slab_bottom" },
-        "half=top": { "model": "pattysmorestuff:stonebrick_green_slab_top" }
-    }
-}

@@ -1,7 +1,6 @@
 package com.stc.pattysmorestuff.configuration;
 
 import com.stc.pattysmorestuff.PattysMoreStuff;
-import com.stc.pattysmorestuff.lib.ConfigPreInit;
 import net.minecraft.init.SoundEvents;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -12,13 +11,14 @@ public class ConfigurationPMS {
 
     public static void syncConfig() {
 
-        /*ConfigPreInit.disableTools = PattysMoreStuff.Config.get("PattysMoreStuff.Other.tools", "enableTools", true).getBoolean(true);
-        ConfigPreInit.disableArmor = PattysMoreStuff.Config.get("PattysMoreStuff.Other.armor", "enableArmor", true).getBoolean(true);
-        ConfigPreInit.disableBlocks = PattysMoreStuff.Config.get("PattysMoreStuff.Other.blocks", "enableBlocks", true).getBoolean(true);
-        ConfigPreInit.disableFurnaces = PattysMoreStuff.Config.get("PattysMoreStuff.Other.furnaces", "enableFurnaces", true).getBoolean(true);
-        ConfigPreInit.disableFood = PattysMoreStuff.Config.get("PattysMoreStuff.Other.food", "enableFood", true).getBoolean(true);
-        ConfigPreInit.disableMiscItems = PattysMoreStuff.Config.get("PattysMoreStuff.Other.miscItems", "enableMiscItems", true).getBoolean(true);
-        */
+        ConfigPreInit.enableCreativeAir = PattysMoreStuff.Config.getBoolean("Enables Or Disables Glowing Air In Creative Tab", "PattysMoreStuff.Other.miscItems", ConfigPreInit.enableCreativeAir, "Enables Or Disables Glowing Air In Creative Tab 'Set This To True To Enable'");
+        ConfigPreInit.canDisplay = PattysMoreStuff.Config.getBoolean("Enables Or Disables The Thank You Message", "PattysMoreStuff.Other.miscItems", ConfigPreInit.canDisplay, "Enables Or Disables The Thank You Message 'Set This To False To Disable'");
+
+        ConfigPreInit.lightlevel = PattysMoreStuff.Config.getInt("Light Level for Glowing Air", "PattysMoreStuff.Other.IlluminationWand", ConfigPreInit.lightlevel, 1, 10, "Light Level for Glowing Air");
+        ConfigPreInit.lightWandMaxDamage = PattysMoreStuff.Config.getInt("Illumination Wand Max Uses", "PattysMoreStuff.Other.IlluminationWand", ConfigPreInit.lightWandMaxDamage, 250, 999999999, "Illumination Wand Max Uses");
+        ConfigPreInit.milkBottleStackSize = PattysMoreStuff.Config.getInt("Milk Bottle Stack Size", "PattysMoreStuff.Other.Milk", ConfigPreInit.milkBottleStackSize, 1, 64, "Milk Bottle Stack Size");
+        ConfigPreInit.chocolateMilkBottleStackSize = PattysMoreStuff.Config.getInt("Chocolate Milk Bottle Stack Size", "PattysMoreStuff.Other.Milk", ConfigPreInit.chocolateMilkBottleStackSize, 1, 64, "Chocolate Milk Bottle Stack Size");
+
 
         ConfigPreInit.oreBlockCount = PattysMoreStuff.Config.get("PattysMoreStuff.Ore.dye", "How many ore blocks spawn together", ConfigPreInit.oreBlockCount).getInt();
         ConfigPreInit.oreChanceToSpawn = PattysMoreStuff.Config.get("PattysMoreStuff.Ore.dye", "The chance the ore can spawn", ConfigPreInit.oreChanceToSpawn).getInt();
@@ -89,7 +89,6 @@ public class ConfigurationPMS {
         if (PattysMoreStuff.Config.hasChanged()) {
             PattysMoreStuff.Config.save();
         }
-        if(ConfigPreInit.disableTools) {
 
             ConfigPreInit.NETHERSTAR_TOOL = EnumHelper.addToolMaterial("NETHERSTAR_TOOL",
                     PattysMoreStuff.Config.get("PattysMoreStuff.nether_star.regular", "Harvest Level", 3).getInt(),
@@ -304,10 +303,7 @@ public class ConfigurationPMS {
 
             if (PattysMoreStuff.Config.hasChanged()) {
                 PattysMoreStuff.Config.save();
-            }
         }
-
-        if(ConfigPreInit.disableArmor) {
 
             ConfigPreInit.DYE_ARMOR_BLACK = EnumHelper.addArmorMaterial("DYE_ARMOR_BLACK", "pattysmorestuff:black",
                     PattysMoreStuff.Config.get("PattysMoreStuff.dye_armor.black", "Durability", 5).getInt(),
@@ -673,7 +669,6 @@ public class ConfigurationPMS {
 
             if (PattysMoreStuff.Config.hasChanged()) {
                 PattysMoreStuff.Config.save();
-            }
         }
     }
 }
