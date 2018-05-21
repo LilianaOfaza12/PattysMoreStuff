@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "pattysmorestuff:stonebrick_cyan_stairs"
+    "item": "pattysmorestuff:stonebrick_cyan_stairs",
+	"count": 4
   }
 }

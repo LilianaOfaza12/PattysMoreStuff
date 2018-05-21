@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+	"## ",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:log",
+	"data": 3
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:jungle_log_stairs",
+	"count": 4
+  }
+}

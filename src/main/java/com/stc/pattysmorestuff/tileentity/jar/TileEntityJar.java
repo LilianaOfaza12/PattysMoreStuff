@@ -11,7 +11,7 @@ import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class TileEntityJar extends TileEntity
 {

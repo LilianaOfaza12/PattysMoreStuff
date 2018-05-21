@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+	"## ",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:sand",
+	"data": 1
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:red_sand_stairs",
+	"count": 4
+  }
+}

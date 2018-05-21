@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+	"## ",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:wool",
+	"data": 7
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:wool_gray_stairs",
+	"count": 4
+  }
+}

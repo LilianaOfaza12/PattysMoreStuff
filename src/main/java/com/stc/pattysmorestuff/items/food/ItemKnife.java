@@ -1,10 +1,11 @@
 package com.stc.pattysmorestuff.items.food;
 
-import com.stc.pattysmorestuff.init.ModTabs;
+import com.stc.pattysmorestuff.init.*;
 import net.minecraft.item.Item;
 
+
 /**
- * Created by patrick on 02/08/2017.
+ * Created by StuffTheChicken on 02/08/2017.
  */
 public class ItemKnife extends Item {
 
@@ -15,4 +16,5 @@ public class ItemKnife extends Item {
         this.setNoRepair();
         this.setCreativeTab(ModTabs.tabPattysFood);
     }
+
 }

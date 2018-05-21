@@ -1,7 +1,6 @@
 package com.stc.pattysmorestuff.blocks.furnaces;
 
 import com.stc.pattysmorestuff.init.ModFurnaces;
-import com.stc.pattysmorestuff.init.ModTabs;
 import com.stc.pattysmorestuff.tileentity.furnaces.TileEntityGoldFurnace;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
@@ -29,7 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.Random;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class BlockGoldFurnace extends BlockContainer {
 

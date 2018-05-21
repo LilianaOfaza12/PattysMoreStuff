@@ -9,7 +9,7 @@ import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 
 /**
- * Created by patrick on 20/07/2017.
+ * Created by StuffTheChicken on 20/07/2017.
  */
 public class ItemMoreArmor extends ItemArmor {
 

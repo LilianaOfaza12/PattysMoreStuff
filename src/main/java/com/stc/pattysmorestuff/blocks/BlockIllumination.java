@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by patrick on 02/08/2017.
+ * Created by StuffTheChicken on 02/08/2017.
  */
 public class BlockIllumination extends Block {
 
@@ -38,7 +38,7 @@ public class BlockIllumination extends Block {
         setLightOpacity(-2);
         setLightLevel(light);
         this.setHarvestLevel(null, 0);
-        if(ConfigPreInit.enableCreativeAir == true) {
+        if(ConfigPreInit.enableCreativeAir) {
             this.setCreativeTab(ModTabs.tabPattysBlocks);
         }
     }

@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLLog;
 
 /**
- * Created by patrick on 02/08/2017.
+ * Created by StuffTheChicken on 02/08/2017.
  */
 public class ItemMilkBottle extends ItemFood {
 

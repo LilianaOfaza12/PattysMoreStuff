@@ -2,19 +2,13 @@ package com.stc.pattysmorestuff.blocks.ores;
 
 import com.stc.pattysmorestuff.init.ModBlocks;
 import com.stc.pattysmorestuff.init.ModTabs;
-import com.stc.pattysmorestuff.items.IMetaBlockName;
-import com.stc.pattysmorestuff.items.tools.ItemPick;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -23,7 +17,7 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 /**
- * Created by patrick on 22/07/2017.
+ * Created by StuffTheChicken on 22/07/2017.
  */
 public class BlockEnderPearlOre extends Block {
 

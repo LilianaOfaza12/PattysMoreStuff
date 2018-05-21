@@ -11,6 +11,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.util.math.BlockPos;
@@ -27,8 +28,8 @@ public class ItemColoredBattleaxe  extends ItemTool {
 
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[]{Blocks.PLANKS, Blocks.BOOKSHELF, Blocks.LOG, Blocks.LOG2, Blocks.CHEST, Blocks.PUMPKIN, Blocks.LIT_PUMPKIN, Blocks.MELON_BLOCK, Blocks.LADDER, Blocks.WOODEN_BUTTON, Blocks.WOODEN_PRESSURE_PLATE});
 
-    private float speed;
-    private ToolMaterial material;
+    private final float attackDamage;
+    private final Item.ToolMaterial material;
 
     public ItemColoredBattleaxe(String name, ToolMaterial material) {
         super(material, EFFECTIVE_ON);
@@ -38,23 +39,23 @@ public class ItemColoredBattleaxe  extends ItemTool {
         this.maxStackSize = 1;
         this.setMaxDamage(material.getMaxUses());
         this.setCreativeTab(ModTabs.tabPattysBattleaxe);
-        this.speed = material.getDamageVsEntity() + 1.0F;
+        this.attackDamage = 3.0F + material.getAttackDamage();
 
     }
 
 
-    public float getStrVsBlock(ItemStack stack, IBlockState state)
+    public float getDestroySpeed(ItemStack stack, IBlockState state)
     {
         Material material = state.getMaterial();
-        return material != Material.WOOD && material != Material.PLANTS && material != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+        return material != Material.WOOD && material != Material.PLANTS && material != Material.VINE ? super.getDestroySpeed(stack, state) : this.efficiency;
     }
 
     /**
      * Returns the amount of damage this item will deal. One heart of damage is equal to 2 damage points.
      */
-    public float getDamageVsEntity()
+    public float getAttackDamage()
     {
-        return this.material.getDamageVsEntity();
+        return this.material.getAttackDamage();
     }
 
 
@@ -131,9 +132,10 @@ public class ItemColoredBattleaxe  extends ItemTool {
 
         if (equipmentSlot == EntityEquipmentSlot.MAINHAND)
         {
-            multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", 0.0D, 0));
-            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", (double)(this.speed - 4.0F), 0));
+            multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", (double)this.attackDamage, 0));
+            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", -2.4000000953674316D, 0));
         }
+
 
         return multimap;
     }

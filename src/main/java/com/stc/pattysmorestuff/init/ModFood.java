@@ -4,7 +4,7 @@ import com.stc.pattysmorestuff.items.*;
 import com.stc.pattysmorestuff.items.drinks.ItemChocolateMilk;
 import com.stc.pattysmorestuff.items.drinks.ItemDrinkable;
 import com.stc.pattysmorestuff.items.drinks.ItemMilkBottle;
-import com.stc.pattysmorestuff.items.drinks.ItemRedBull;
+import com.stc.pattysmorestuff.items.food.ItemCustomFood;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -12,7 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class ModFood {
 
@@ -40,9 +40,18 @@ public class ModFood {
     public static Item pumpkin_juice = new ItemDrinkable("pumpkin_juice", 5, 0.3F, false);
     public static Item bottle_milk = new ItemMilkBottle("bottle_milk", 1, 0.6F, false);
     public static Item bottle_chocolate_milk = new ItemChocolateMilk("bottle_chocolate_milk", 1, 0.6F, false);
-    public static Item redbull = new ItemRedBull("redbull", 1, 0.3F, false);
-    public static Item raw_chicken_wing = new ItemCustomFood("raw_chicken_wing", 1, 0.5F, false);
-    public static Item cooked_chicken_wing = new ItemCustomFood("cooked_chicken_wing", 1, 0.8F, false);
+
+    public static Item apple_slushie = new ItemDrinkable("apple_slushie", 4, 0.3F, false);
+    public static Item melon_slushie = new ItemDrinkable("melon_slushie", 2, 0.3F, false);
+    public static Item carrot_slushie = new ItemDrinkable("carrot_slushie", 3, 0.6F, false);
+    public static Item beetroot_slushie = new ItemDrinkable("beetroot_slushie", 1, 0.6F, false);
+    public static Item pumpkin_slushie = new ItemDrinkable("pumpkin_slushie", 5, 0.3F, false);
+
+    public static Item apple_smoothie = new ItemDrinkable("apple_smoothie", 4, 0.3F, false);
+    public static Item melon_smoothie = new ItemDrinkable("melon_smoothie", 2, 0.3F, false);
+    public static Item carrot_smoothie = new ItemDrinkable("carrot_smoothie", 3, 0.6F, false);
+    public static Item beetroot_smoothie = new ItemDrinkable("beetroot_smoothie", 1, 0.6F, false);
+    public static Item pumpkin_smoothie = new ItemDrinkable("pumpkin_smoothie", 5, 0.3F, false);
 
     public static void register(IForgeRegistry<Item> registry) {
 
@@ -50,8 +59,9 @@ public class ModFood {
             fried_egg, bacon_raw, bacon_cooked, sausage_raw, sausage_cooked, baguette_roll, baguette_bacon,
             baguette_egg, baguette_eggbacon, baguette_sausage, baguette_baconsausage, baguette_eggsausage,
                 baguette_eggbaconsausage, apple_pie, toast, fruit_salad, apple_juice, melon_juice, carrot_juice,
-                beetroot_juice, pumpkin_juice, bottle_milk, bottle_chocolate_milk, flour, redbull, raw_chicken_wing,
-                cooked_chicken_wing
+                beetroot_juice, pumpkin_juice, bottle_milk, bottle_chocolate_milk, flour,
+                apple_slushie, melon_slushie, carrot_slushie, beetroot_slushie, pumpkin_slushie,
+                apple_smoothie, melon_smoothie, carrot_smoothie, beetroot_smoothie, pumpkin_smoothie
         );
 
     }
@@ -83,9 +93,16 @@ public class ModFood {
             registerItemRender(bottle_milk);
             registerItemRender(bottle_chocolate_milk);
             registerItemRender(flour);
-            registerItemRender(redbull);
-            registerItemRender(raw_chicken_wing);
-            registerItemRender(cooked_chicken_wing);
+            registerItemRender(apple_slushie);
+            registerItemRender(melon_slushie);
+            registerItemRender(carrot_slushie);
+            registerItemRender(beetroot_slushie);
+            registerItemRender(pumpkin_slushie);
+            registerItemRender(apple_smoothie);
+            registerItemRender(melon_smoothie);
+            registerItemRender(carrot_smoothie);
+            registerItemRender(beetroot_smoothie);
+            registerItemRender(pumpkin_smoothie);
 
     }
 

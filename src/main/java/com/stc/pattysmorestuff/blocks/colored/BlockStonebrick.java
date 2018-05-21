@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 /**
- * Created by patrick on 02/08/2017.
+ * Created by StuffTheChicken on 02/08/2017.
  */
 public class BlockStonebrick extends Block {
 

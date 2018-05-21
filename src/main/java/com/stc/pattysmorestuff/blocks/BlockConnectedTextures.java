@@ -13,7 +13,7 @@ import net.minecraft.world.IBlockAccess;
 import javax.annotation.Nonnull;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class BlockConnectedTextures extends Block {
 

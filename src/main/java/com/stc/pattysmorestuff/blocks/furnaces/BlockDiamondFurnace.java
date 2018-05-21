@@ -1,7 +1,6 @@
 package com.stc.pattysmorestuff.blocks.furnaces;
 
 import com.stc.pattysmorestuff.init.ModFurnaces;
-import com.stc.pattysmorestuff.init.ModTabs;
 import com.stc.pattysmorestuff.tileentity.furnaces.TileEntityDiamondFurnace;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
@@ -29,7 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.Random;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class BlockDiamondFurnace extends BlockContainer {
 
@@ -190,10 +189,8 @@ public class BlockDiamondFurnace extends BlockContainer {
         return new TileEntityDiamondFurnace();
     }
 
-    /**
-     * Called by ItemBlocks just before a block is actually set in the world, to allow for adjustments to the
-     * IBlockstate
-     */
+
+    @Deprecated
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());

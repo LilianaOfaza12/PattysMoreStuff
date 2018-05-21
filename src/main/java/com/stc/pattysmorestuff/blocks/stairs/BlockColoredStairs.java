@@ -7,9 +7,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
 /**
- * Created by patrick on 22/07/2017.
+ * Created by StuffTheChicken on 22/07/2017.
  */
-public class BlockColoredStairs  extends BlockStairs {
+public class BlockColoredStairs extends BlockStairs {
 
     public BlockColoredStairs(String name, IBlockState modelState) {
         super(modelState);
@@ -17,7 +17,8 @@ public class BlockColoredStairs  extends BlockStairs {
         this.setRegistryName(name);
         this.setHardness(2.0F);
         this.setResistance(10.0F);
-        this.setCreativeTab(ModTabs.tabPattysBlocks);
+        this.useNeighborBrightness = true;
+        this.setCreativeTab(ModTabs.tabPattysStairs);
     }
 
     public Item createItemBlock() {

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+	"## ",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:log",
+	"data": 2
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:birch_log_stairs",
+	"count": 4
+  }
+}

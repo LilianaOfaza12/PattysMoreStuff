@@ -1,12 +1,13 @@
 package com.stc.pattysmorestuff.items.tools;
 
 import com.google.common.collect.Multimap;
-import com.google.common.collect.Sets;
 import com.stc.pattysmorestuff.init.ModTabs;
+import com.stc.pattysmorestuff.init.ModTools;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -16,21 +17,14 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTool;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class ItemPaxel extends ItemPickaxe {
 
@@ -41,7 +35,7 @@ public class ItemPaxel extends ItemPickaxe {
         super(materialIn);
         this.material = materialIn;
         this.setMaxDamage(material.getMaxUses());
-        this.speed = 4.0F + material.getDamageVsEntity();
+        this.speed = 4.0F + material.getAttackDamage();
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
         this.setCreativeTab(ModTabs.tabPattysPaxels);
@@ -49,9 +43,11 @@ public class ItemPaxel extends ItemPickaxe {
     }
 
     @Override
-    public float getStrVsBlock(ItemStack stack, IBlockState blockState)
-    {
-        return blockState.getBlock() != Blocks.BEDROCK ? efficiencyOnProperMaterial : 1.0F;
+    public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
+        if (stack.getItem() == ModTools.magma_cream_paxel) {
+            stack.addEnchantment(Enchantment.getEnchantmentByID(20), 3);
+        }
+        super.onCreated(stack, worldIn, playerIn);
     }
 
     @Override
@@ -117,7 +113,7 @@ public class ItemPaxel extends ItemPickaxe {
     {
         if ((double)state.getBlockHardness(worldIn, pos) != 0.0D)
         {
-            stack.damageItem(2, entityLiving);
+            stack.damageItem(1, entityLiving);
         }
 
         return true;
@@ -177,9 +173,10 @@ public class ItemPaxel extends ItemPickaxe {
                             this.setBlock(itemstack, player, worldIn, pos, Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
                             return EnumActionResult.SUCCESS;
                     }
-                }
-            }
 
+                }
+
+            }
             return EnumActionResult.PASS;
         }
     }

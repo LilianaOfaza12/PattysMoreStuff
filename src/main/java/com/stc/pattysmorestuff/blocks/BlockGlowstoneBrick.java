@@ -6,8 +6,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
+
 /**
- * Created by patrick on 02/08/2017.
+ * Created by StuffTheChicken on 02/08/2017.
  */
 public class BlockGlowstoneBrick extends Block {
 

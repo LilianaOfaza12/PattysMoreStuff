@@ -13,12 +13,11 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
 import javax.annotation.Nullable;
 import java.util.List;
 
 /**
- * Created by patrick on 02/08/2017.
+ * Created by StuffTheChicken on 02/08/2017.
  */
 public class ItemLightWand extends Item {
 
@@ -44,25 +43,15 @@ public class ItemLightWand extends Item {
             if (block == ModBlocks.glowair) {
                 worldIn.setBlockToAir(pos);
                 return EnumActionResult.SUCCESS;
+
             }
 
             worldIn.setBlockState(pos.offset(facing), ModBlocks.glowair.getDefaultState(), 3);
+            player.getHeldItem(hand).damageItem(1, player);
 
         }
         return EnumActionResult.SUCCESS;
+
     }
 
-    /*public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
-        if (!world.isRemote) {
-            Block block = world.getBlockState(pos).getBlock();
-            if (block == ModBlocks.glowair) {
-                world.setBlockToAir(pos);
-                return true;
-            }
-
-            world.setBlockState(pos.offset(side), ModBlocks.glowair.getDefaultState(), 3);
-
-        }
-        return true;
-    }*/
 }

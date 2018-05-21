@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "item": "pattysmorestuff:dye_gray_stairs"
+    "item": "pattysmorestuff:dye_gray_stairs",
+	"count": 4
   }
 }

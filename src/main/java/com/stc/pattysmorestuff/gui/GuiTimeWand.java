@@ -3,14 +3,10 @@ package com.stc.pattysmorestuff.gui;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
-import net.minecraftforge.fml.common.network.IGuiHandler;
-import org.lwjgl.input.Mouse;
-
-import java.awt.*;
 import java.io.IOException;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class GuiTimeWand extends GuiScreen {
 

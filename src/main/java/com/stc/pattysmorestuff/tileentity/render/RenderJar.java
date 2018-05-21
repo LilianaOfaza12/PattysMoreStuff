@@ -9,7 +9,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class RenderJar extends TileEntitySpecialRenderer<TileEntityJar> {
 
@@ -28,7 +28,7 @@ public class RenderJar extends TileEntitySpecialRenderer<TileEntityJar> {
             GlStateManager.rotate(90F, 1,0,0);
             GlStateManager.translate(0.5, 0.02, -0.1);
             for(int i = 0; i < te.cookieCount; i++){
-                Minecraft.getMinecraft().getRenderManager().doRenderEntity(ITEM, 0, 0, 0, 0 ,0, false);
+                Minecraft.getMinecraft().getRenderManager().renderEntity(ITEM, 0, 0, 0, 0 ,0, false);
                 GlStateManager.translate(0,0, -0.0625);
             }
         }

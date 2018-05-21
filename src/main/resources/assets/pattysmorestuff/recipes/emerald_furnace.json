@@ -1,13 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
+    "G#G",
 	"#C#",
-	"###"
+	"G#G"
   ],
   "key": {
     "#": {
     "item": "minecraft:emerald"
+    },
+	"G": {
+    "item": "minecraft:glass"
     },
 	"C": {
 	"item": "pattysmorestuff:diamond_furnace"

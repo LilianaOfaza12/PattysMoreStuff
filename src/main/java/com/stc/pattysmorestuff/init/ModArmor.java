@@ -1,7 +1,7 @@
 package com.stc.pattysmorestuff.init;
 
 import com.stc.pattysmorestuff.items.armor.ItemMoreArmor;
-import com.stc.pattysmorestuff.items.tools.ItemStarArmor;
+import com.stc.pattysmorestuff.items.armor.ItemStarArmor;
 import com.stc.pattysmorestuff.configuration.ConfigPreInit;
 import com.stc.pattysmorestuff.lib.Strings;
 import net.minecraft.client.Minecraft;
@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**
- * Created by patrick on 20/07/2017.
+ * Created by StuffTheChicken on 20/07/2017.
  */
 public class ModArmor {
 
@@ -40,11 +40,6 @@ public class ModArmor {
     public static Item blaze_leggings = new ItemMoreArmor("blaze_leggings", ConfigPreInit.BLAZE_ARMOR, "blaze", EntityEquipmentSlot.LEGS);
     public static Item blaze_boots = new ItemMoreArmor("blaze_boots", ConfigPreInit.BLAZE_ARMOR, "blaze", EntityEquipmentSlot.FEET);
 
-    public static Item slime_helmet = new ItemMoreArmor("slime_helmet", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.HEAD);
-    public static Item slime_chestplate = new ItemMoreArmor("slime_chestplate", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.CHEST);
-    public static Item slime_leggings = new ItemMoreArmor("slime_leggings", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.CHEST);
-    public static Item slime_boots = new ItemMoreArmor("slime_boots", ConfigPreInit.SLIME_ARMOR, "slime", EntityEquipmentSlot.CHEST);
-
     public static Item coal_helmet = new ItemMoreArmor("coal_helmet", ConfigPreInit.COAL_ARMOR, "coal", EntityEquipmentSlot.HEAD);
     public static Item coal_chestplate = new ItemMoreArmor("coal_chestplate", ConfigPreInit.COAL_ARMOR, "coal", EntityEquipmentSlot.CHEST);
     public static Item coal_leggings = new ItemMoreArmor("coal_leggings", ConfigPreInit.COAL_ARMOR, "coal", EntityEquipmentSlot.LEGS);
@@ -54,16 +49,6 @@ public class ModArmor {
     public static Item quartz_chestplate = new ItemMoreArmor("quartz_chestplate", ConfigPreInit.QUARTZ_ARMOR, "quartz", EntityEquipmentSlot.CHEST);
     public static Item quartz_leggings = new ItemMoreArmor("quartz_leggings", ConfigPreInit.QUARTZ_ARMOR, "quartz", EntityEquipmentSlot.LEGS);
     public static Item quartz_boots = new ItemMoreArmor("quartz_boots", ConfigPreInit.QUARTZ_ARMOR, "quartz", EntityEquipmentSlot.FEET);
-
-    public static Item flint_helmet = new ItemMoreArmor("flint_helmet", ConfigPreInit.FLINT_ARMOR, "flint", EntityEquipmentSlot.HEAD);
-    public static Item flint_chestplate = new ItemMoreArmor("flint_chestplate", ConfigPreInit.FLINT_ARMOR, "flint", EntityEquipmentSlot.CHEST);
-    public static Item flint_leggings = new ItemMoreArmor("flint_leggings", ConfigPreInit.FLINT_ARMOR, "flint", EntityEquipmentSlot.LEGS);
-    public static Item flint_boots = new ItemMoreArmor("flint_boots", ConfigPreInit.FLINT_ARMOR, "flint", EntityEquipmentSlot.FEET);
-
-    public static Item gunpowder_helmet = new ItemMoreArmor("gunpowder_helmet", ConfigPreInit.GUNPOWDER_ARMOR, "gunpowder", EntityEquipmentSlot.HEAD);
-    public static Item gunpowder_chestplate = new ItemMoreArmor("gunpowder_chestplate", ConfigPreInit.GUNPOWDER_ARMOR, "gunpowder", EntityEquipmentSlot.CHEST);
-    public static Item gunpowder_leggings = new ItemMoreArmor("gunpowder_leggings", ConfigPreInit.GUNPOWDER_ARMOR, "gunpowder", EntityEquipmentSlot.LEGS);
-    public static Item gunpowder_boots = new ItemMoreArmor("gunpowder_boots", ConfigPreInit.GUNPOWDER_ARMOR, "gunpowder", EntityEquipmentSlot.FEET);
 
     public static Item glowstone_helmet = new ItemMoreArmor("glowstone_helmet", ConfigPreInit.GLOWSTONE_ARMOR, "glowstone", EntityEquipmentSlot.HEAD);
     public static Item glowstone_chestplate = new ItemMoreArmor("glowstone_chestplate", ConfigPreInit.GLOWSTONE_ARMOR, "glowstone", EntityEquipmentSlot.CHEST);
@@ -85,11 +70,6 @@ public class ModArmor {
     public static Item redstone_leggings = new ItemMoreArmor("redstone_leggings", ConfigPreInit.REDSTONE_ARMOR, "redstone", EntityEquipmentSlot.LEGS);
     public static Item redstone_boots = new ItemMoreArmor("redstone_boots", ConfigPreInit.REDSTONE_ARMOR, "redstone", EntityEquipmentSlot.FEET);
 
-    public static Item snow_helmet = new ItemMoreArmor("snow_helmet", ConfigPreInit.SNOW_ARMOR, "snow", EntityEquipmentSlot.HEAD);
-    public static Item snow_chestplate = new ItemMoreArmor("snow_chestplate", ConfigPreInit.SNOW_ARMOR, "snow", EntityEquipmentSlot.CHEST);
-    public static Item snow_leggings = new ItemMoreArmor("snow_leggings", ConfigPreInit.SNOW_ARMOR, "snow", EntityEquipmentSlot.LEGS);
-    public static Item snow_boots = new ItemMoreArmor("snow_boots", ConfigPreInit.SNOW_ARMOR, "snow", EntityEquipmentSlot.FEET);
-
     public static Item magma_cream_helmet = new ItemMoreArmor("magma_cream_helmet", ConfigPreInit.MAGMA_CREAM_ARMOR, "magma_cream", EntityEquipmentSlot.HEAD);
     public static Item magma_cream_chestplate = new ItemMoreArmor("magma_cream_chestplate", ConfigPreInit.MAGMA_CREAM_ARMOR, "magma_cream", EntityEquipmentSlot.CHEST);
     public static Item magma_cream_leggings = new ItemMoreArmor("magma_cream_leggings", ConfigPreInit.MAGMA_CREAM_ARMOR, "magma_cream", EntityEquipmentSlot.CHEST);
@@ -105,16 +85,10 @@ public class ModArmor {
     public static Item soul_sand_leggings = new ItemMoreArmor("soul_sand_leggings", ConfigPreInit.SOUL_SAND_ARMOR, "soul_sand", EntityEquipmentSlot.LEGS);
     public static Item soul_sand_boots = new ItemMoreArmor("soul_sand_boots", ConfigPreInit.SOUL_SAND_ARMOR, "soul_sand", EntityEquipmentSlot.FEET);
 
-    public static Item clay_helmet = new ItemMoreArmor("clay_helmet", ConfigPreInit.CLAY_ARMOR, "clay", EntityEquipmentSlot.HEAD);
-    public static Item clay_chestplate = new ItemMoreArmor("clay_chestplate", ConfigPreInit.CLAY_ARMOR, "clay", EntityEquipmentSlot.CHEST);
-    public static Item clay_leggings = new ItemMoreArmor("clay_leggings", ConfigPreInit.CLAY_ARMOR, "clay", EntityEquipmentSlot.LEGS);
-    public static Item clay_boots = new ItemMoreArmor("clay_boots", ConfigPreInit.CLAY_ARMOR, "clay", EntityEquipmentSlot.FEET);
-
     public static Item red_netherbrick_helmet = new ItemMoreArmor("red_netherbrick_helmet", ConfigPreInit.RED_NETHER_BRICK_ARMOR, "red_nether_brick", EntityEquipmentSlot.HEAD);
     public static Item red_netherbrick_chestplate = new ItemMoreArmor("red_netherbrick_chestplate", ConfigPreInit.RED_NETHER_BRICK_ARMOR, "red_nether_brick", EntityEquipmentSlot.CHEST);
     public static Item red_netherbrick_leggings = new ItemMoreArmor("red_netherbrick_leggings", ConfigPreInit.RED_NETHER_BRICK_ARMOR, "red_nether_brick", EntityEquipmentSlot.LEGS);
     public static Item red_netherbrick_boots = new ItemMoreArmor("red_netherbrick_boots", ConfigPreInit.RED_NETHER_BRICK_ARMOR, "red_nether_brick", EntityEquipmentSlot.FEET);
-
 
 
     public static void register(IForgeRegistry<Item> registry) {
@@ -125,20 +99,15 @@ public class ModArmor {
                 emerald_helmet, emerald_chestplate, emerald_leggings, emerald_boots,
                 ender_helmet, ender_chestplate, ender_leggings, ender_boots,
                 blaze_helmet, blaze_chestplate, blaze_leggings, blaze_boots,
-                slime_helmet, slime_chestplate, slime_leggings, slime_boots,
                 coal_helmet, coal_chestplate, coal_leggings, coal_boots,
                 quartz_helmet, quartz_chestplate, quartz_leggings, quartz_boots,
-                flint_helmet, flint_chestplate, flint_leggings, flint_boots,
-                gunpowder_helmet, gunpowder_chestplate, gunpowder_leggings, gunpowder_boots,
                 glowstone_helmet, glowstone_chestplate, glowstone_leggings, glowstone_boots,
                 brick_helmet, brick_chestplate, brick_leggings, brick_boots,
                 nether_brick_helmet, nether_brick_chestplate, nether_brick_leggings, nether_brick_boots,
                 redstone_helmet, redstone_chestplate, redstone_leggings, redstone_boots,
-                snow_helmet, snow_chestplate, snow_leggings, snow_boots,
                 magma_cream_helmet, magma_cream_chestplate, magma_cream_leggings, magma_cream_boots,
                 sandstone_helmet, sandstone_chestplate, sandstone_leggings, sandstone_boots,
                 soul_sand_helmet, soul_sand_chestplate, soul_sand_leggings, soul_sand_boots,
-                clay_helmet, clay_chestplate, clay_leggings, clay_boots,
                 red_netherbrick_helmet, red_netherbrick_chestplate, red_netherbrick_leggings, red_netherbrick_boots
         );
     }
@@ -170,11 +139,6 @@ public class ModArmor {
         registerItemRender(blaze_leggings);
         registerItemRender(blaze_boots);
 
-        registerItemRender(slime_helmet);
-        registerItemRender(slime_chestplate);
-        registerItemRender(slime_leggings);
-        registerItemRender(slime_boots);
-
         registerItemRender(coal_helmet);
         registerItemRender(coal_chestplate);
         registerItemRender(coal_leggings);
@@ -184,16 +148,6 @@ public class ModArmor {
         registerItemRender(quartz_chestplate);
         registerItemRender(quartz_leggings);
         registerItemRender(quartz_boots);
-
-        registerItemRender(flint_helmet);
-        registerItemRender(flint_chestplate);
-        registerItemRender(flint_leggings);
-        registerItemRender(flint_boots);
-
-        registerItemRender(gunpowder_helmet);
-        registerItemRender(gunpowder_chestplate);
-        registerItemRender(gunpowder_leggings);
-        registerItemRender(gunpowder_boots);
 
         registerItemRender(glowstone_helmet);
         registerItemRender(glowstone_chestplate);
@@ -215,11 +169,6 @@ public class ModArmor {
         registerItemRender(redstone_leggings);
         registerItemRender(redstone_boots);
 
-        registerItemRender(snow_helmet);
-        registerItemRender(snow_chestplate);
-        registerItemRender(snow_leggings);
-        registerItemRender(snow_boots);
-
         registerItemRender(magma_cream_helmet);
         registerItemRender(magma_cream_chestplate);
         registerItemRender(magma_cream_leggings);
@@ -234,11 +183,6 @@ public class ModArmor {
         registerItemRender(soul_sand_chestplate);
         registerItemRender(soul_sand_leggings);
         registerItemRender(soul_sand_boots);
-
-        registerItemRender(clay_helmet);
-        registerItemRender(clay_chestplate);
-        registerItemRender(clay_leggings);
-        registerItemRender(clay_boots);
 
         registerItemRender(red_netherbrick_helmet);
         registerItemRender(red_netherbrick_chestplate);

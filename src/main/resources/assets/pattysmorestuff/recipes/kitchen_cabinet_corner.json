@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+	"###",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:planks",
+	"data": 0
+    },
+    "X": {
+      "item": "minecraft:coal",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:kitchen_cabinet_corner"
+  }
+}

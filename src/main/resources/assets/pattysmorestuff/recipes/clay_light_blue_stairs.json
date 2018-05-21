@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+	"## ",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:stained_hardened_clay",
+	"data": 3
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:clay_light_blue_stairs",
+	"count": 4
+  }
+}

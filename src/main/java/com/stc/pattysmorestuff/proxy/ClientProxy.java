@@ -1,15 +1,12 @@
 package com.stc.pattysmorestuff.proxy;
 
+import com.stc.pattysmorestuff.configuration.ConfigPreInit;
 import com.stc.pattysmorestuff.init.*;
 import com.stc.pattysmorestuff.tileentity.jar.TileEntityJar;
 import com.stc.pattysmorestuff.tileentity.render.RenderJar;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
-
-import java.awt.*;
-
 
 /**
  * Created by StuffTheChicken on 10/11/2016.
@@ -19,29 +16,40 @@ public class ClientProxy extends CommonProxy {
     public void registerRenders() {
 
         //Blocks
-        ModBlocks.registerModels();
-        ModFurnaces.registerModels();
-        ModColoredBlocks.registerModels();
+        if(ConfigPreInit.disableBlocks) {
 
+            ModBlocks.registerModels();
+            ModFurnaces.registerModels();
+            ModColoredBlocks.registerModels();
+            ModButtons.registerModels();
+        }
         //Items
-        ModItems.registerModels();
+        ModMiscItem.registerModels();
+        if(ConfigPreInit.disableOther) {
 
+            ModItems.registerModels();
+        }
         //Armor
-        ModArmor.registerModels();
-        ModColoredArmor.registerModels();
+        if(ConfigPreInit.disableArmor) {
+
+            ModArmor.registerModels();
+        }
 
         //Tools
-        ModTools.registerModels();
-        ModColoredTools.registerModels();
-        ModColoredPaxels.registerModels();
-        ModColoredBattleaxe.registerModels();
+        if(ConfigPreInit.disableTools) {
 
+            ModTools.registerModels();
+        }
         //Food
-        ModFood.registerModels();
+        if(ConfigPreInit.disableFood) {
 
+            ModFood.registerModels();
+        }
         //Jar
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityJar.class, new RenderJar());
+        if(ConfigPreInit.disableBlocks) {
 
+            ClientRegistry.bindTileEntitySpecialRenderer(TileEntityJar.class, new RenderJar());
+        }
     }
 
     @Override

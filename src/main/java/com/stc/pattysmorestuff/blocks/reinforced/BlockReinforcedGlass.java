@@ -3,7 +3,6 @@ package com.stc.pattysmorestuff.blocks.reinforced;
 import com.stc.pattysmorestuff.blocks.BlockConnectedTextures;
 import com.stc.pattysmorestuff.init.ModBlocks;
 import com.stc.pattysmorestuff.init.ModTabs;
-import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -28,7 +27,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class BlockReinforcedGlass extends BlockConnectedTextures {
 

@@ -12,6 +12,7 @@
     }
   },
   "result": {
-    "item": "pattysmorestuff:concrete_green_stairs"
+    "item": "pattysmorestuff:concrete_green_stairs",
+	"count": 4
   }
 }

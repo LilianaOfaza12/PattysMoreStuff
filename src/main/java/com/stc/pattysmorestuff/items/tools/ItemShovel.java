@@ -2,9 +2,11 @@ package com.stc.pattysmorestuff.items.tools;
 
 import com.google.common.collect.Sets;
 import com.stc.pattysmorestuff.init.ModTabs;
+import com.stc.pattysmorestuff.init.ModTools;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
@@ -21,7 +23,7 @@ import net.minecraft.world.World;
 import java.util.Set;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class ItemShovel extends ItemTool {
 
@@ -33,6 +35,13 @@ public class ItemShovel extends ItemTool {
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
         this.setCreativeTab(ModTabs.tabPattysTools);
+    }
+    @Override
+    public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
+        if (stack.getItem() == ModTools.magma_cream_shovel) {
+            stack.addEnchantment(Enchantment.getEnchantmentByID(20), 3);
+        }
+        super.onCreated(stack, worldIn, playerIn);
     }
 
     /**

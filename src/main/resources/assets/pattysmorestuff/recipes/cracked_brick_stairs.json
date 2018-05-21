@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+	"## ",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:stonebrick",
+	"data": 2
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:cracked_brick_stairs",
+	"count": 4
+  }
+}

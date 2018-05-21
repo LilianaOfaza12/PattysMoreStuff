@@ -2,25 +2,15 @@ package com.stc.pattysmorestuff.blocks.ores;
 
 import com.stc.pattysmorestuff.init.ModBlocks;
 import com.stc.pattysmorestuff.init.ModTabs;
-import com.stc.pattysmorestuff.items.IMetaBlockName;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -31,7 +21,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class BlockColoredOre extends BlockOre{
 
@@ -53,8 +43,7 @@ public class BlockColoredOre extends BlockOre{
         tooltip.add("When mined the block will drop random amounts of dye and most likely different each time!");
     }
 
-
-    @Override
+    /*@Override
     public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
         List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
 
@@ -70,7 +59,22 @@ public class BlockColoredOre extends BlockOre{
             }
         }
         return ret;
+    }*/
+
+    @Override
+    public void getDrops(net.minecraft.util.NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
+    {
+        Random rand = world instanceof World ? ((World)world).rand : RANDOM;
+        int count = this.quantityDropped(state, fortune, rand);
+
+        for(int i = 0; i < count; i++) {
+            this.captureDrops(true);
+            if (world instanceof World)
+                drops.add(new ItemStack(Items.DYE, 1, this.damageDropped(state)));
+            drops.addAll(this.captureDrops(false));
+        }
     }
+
 
     /**
      * Returns the quantity of items to drop on block destruction.

@@ -15,7 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.Set;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class ItemStarPick extends ItemTool {
 
@@ -92,9 +92,9 @@ public class ItemStarPick extends ItemTool {
         }
     }
 
-    public float getStrVsBlock(ItemStack stack, IBlockState state)
+    public float getDestroySpeed(ItemStack stack, IBlockState state)
     {
         Material material = state.getMaterial();
-        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getDestroySpeed(stack, state) : this.efficiency;
     }
 }

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north":  { "model": "pattysmorestuff:ceiling_light_silver" },
+        "facing=south":  { "model": "pattysmorestuff:ceiling_light_silver", "y": 180 },
+        "facing=west": { "model": "pattysmorestuff:ceiling_light_silver", "y": 270 },
+        "facing=east": { "model": "pattysmorestuff:ceiling_light_silver", "y": 90 }
+    }
+}

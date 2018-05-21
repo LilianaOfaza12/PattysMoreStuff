@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+	"#C#",
+	"S#S"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:planks",
+	"data": 0
+    },
+	"C": {
+	"item": "minecraft:chest"
+	},
+    "X": {
+      "item": "minecraft:coal",
+      "data": 0
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:kitchen_cabinet_draws"
+  }
+}

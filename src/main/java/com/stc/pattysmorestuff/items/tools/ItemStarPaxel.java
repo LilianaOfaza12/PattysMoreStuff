@@ -1,7 +1,6 @@
 package com.stc.pattysmorestuff.items.tools;
 
 import com.google.common.collect.Multimap;
-import com.google.common.collect.Sets;
 import com.stc.pattysmorestuff.init.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
@@ -14,10 +13,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTool;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -27,10 +24,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.util.Set;
-
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class ItemStarPaxel extends ItemPickaxe {
 
@@ -40,6 +35,9 @@ public class ItemStarPaxel extends ItemPickaxe {
 
     public ItemStarPaxel(String name, ToolMaterial materialIn) {
         super(materialIn);
+        this.material = materialIn;
+        this.setMaxDamage(material.getMaxUses());
+        this.speed = 4.0F + material.getAttackDamage();
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
         this.setCreativeTab(ModTabs.tabPattysPaxels);
@@ -49,12 +47,6 @@ public class ItemStarPaxel extends ItemPickaxe {
     @SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack stack) {
         return true;
-    }
-
-    @Override
-    public float getStrVsBlock(ItemStack stack, IBlockState blockState)
-    {
-        return blockState.getBlock() != Blocks.BEDROCK ? efficiencyOnProperMaterial : 1.0F;
     }
 
     @Override
@@ -120,7 +112,7 @@ public class ItemStarPaxel extends ItemPickaxe {
     {
         if ((double)state.getBlockHardness(worldIn, pos) != 0.0D)
         {
-            stack.damageItem(2, entityLiving);
+            stack.damageItem(1, entityLiving);
         }
 
         return true;
@@ -131,7 +123,6 @@ public class ItemStarPaxel extends ItemPickaxe {
     {
         return true;
     }
-
 
     public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot)
     {

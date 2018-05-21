@@ -7,7 +7,7 @@ import net.minecraft.client.resources.I18n;
 import java.io.IOException;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class GuiNight extends GuiScreen {
 

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+	"## ",
+	"###"
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:dirt",
+	"data": 1
+    }
+  },
+  "result": {
+    "item": "pattysmorestuff:coarse_dirt_stairs",
+	"count": 4
+  }
+}

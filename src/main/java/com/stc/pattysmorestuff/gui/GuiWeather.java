@@ -7,7 +7,7 @@ import net.minecraft.client.resources.I18n;
 import java.io.IOException;
 
 /**
- * Created by patrick on 02/08/2017.
+ * Created by StuffTheChicken on 02/08/2017.
  */
 public class GuiWeather extends GuiScreen {
 

@@ -1,15 +1,21 @@
 package com.stc.pattysmorestuff.items.drinks;
 
+import com.stc.pattysmorestuff.init.ModFood;
 import com.stc.pattysmorestuff.init.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLLog;
 
+import javax.annotation.Nullable;
+import java.util.List;
+
 /**
- * Created by patrick on 02/08/2017.
+ * Created by StuffTheChicken on 02/08/2017.
  */
 public class ItemDrinkable extends ItemFood {
 
@@ -23,6 +29,27 @@ public class ItemDrinkable extends ItemFood {
         setCreativeTab(ModTabs.tabPattysFood);
 
         this.saturation = saturation;
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+
+        if(stack.getItem() == ModFood.carrot_juice) {
+            tooltip.add("\u00A7cRight click a carrot on the blender to obtain this juice");
+        }
+        if(stack.getItem() == ModFood.melon_juice) {
+            tooltip.add("\u00A7cRight click a melon on the blender to obtain this juice");
+        }
+        if(stack.getItem() == ModFood.beetroot_juice) {
+            tooltip.add("\u00A7cRight click a beetroot on the blender to obtain this juice");
+        }
+        if(stack.getItem() == ModFood.pumpkin_juice) {
+            tooltip.add("\u00A7cRight click a pumpkin on the blender to obtain this juice");
+        }
+        if(stack.getItem() == ModFood.apple_juice) {
+            tooltip.add("\u00A7cRight click a apple on the blender to obtain this juice");
+        }
+
     }
 
     @Override

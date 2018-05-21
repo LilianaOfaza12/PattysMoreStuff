@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+	" G "
+  ],
+  "key": {
+    "C": {
+    "item": "minecraft:dye",
+	"data": 12
+    },
+	"G": {
+	"item": "minecraft:glowstone"
+	}
+  },
+  "result": {
+    "item": "pattysmorestuff:ceiling_light_baby_blue",
+	"count": 3
+  }
+}

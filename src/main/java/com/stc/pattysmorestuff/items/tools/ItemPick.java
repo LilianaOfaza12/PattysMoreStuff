@@ -2,18 +2,22 @@ package com.stc.pattysmorestuff.items.tools;
 
 import com.google.common.collect.Sets;
 import com.stc.pattysmorestuff.init.ModTabs;
+import com.stc.pattysmorestuff.init.ModTools;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 import java.util.Set;
 
 /**
- * Created by patrick on 21/07/2017.
+ * Created by StuffTheChicken on 21/07/2017.
  */
 public class ItemPick extends ItemPickaxe {
 
@@ -26,6 +30,14 @@ public class ItemPick extends ItemPickaxe {
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
         this.setCreativeTab(ModTabs.tabPattysTools);
+    }
+
+    @Override
+    public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
+        if (stack.getItem() == ModTools.magma_cream_pickaxe) {
+            stack.addEnchantment(Enchantment.getEnchantmentByID(20), 3);
+        }
+        super.onCreated(stack, worldIn, playerIn);
     }
 
     /**
@@ -85,9 +97,9 @@ public class ItemPick extends ItemPickaxe {
         }
     }
 
-    public float getStrVsBlock(ItemStack stack, IBlockState state)
+    public float getDestroySpeed(ItemStack stack, IBlockState state)
     {
         Material material = state.getMaterial();
-        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getDestroySpeed(stack, state) : this.efficiency;
     }
 }

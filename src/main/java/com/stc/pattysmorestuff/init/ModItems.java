@@ -14,11 +14,10 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.registries.IForgeRegistry;
 
 /**
- * Created by patrick on 20/07/2017.
+ * Created by StuffTheChicken on 20/07/2017.
  */
 public class ModItems {
 
-    public static Item obsidian_ingot = new ItemBase("obsidian_ingot");
     public static Item inf_water_bucket = new ItemInfWaterBucket("inf_water_bucket", Blocks.FLOWING_WATER);
     public static Item inf_lava_bucket = new ItemInfLavaBucket("inf_lava_bucket", Blocks.FLOWING_LAVA);
     public static Item time_wand = new ItemTimeWand("time_wand");
@@ -26,9 +25,9 @@ public class ModItems {
     public static Item weather_wand = new ItemWeatherWand("weather_wand");
     public static Item iron_knife = new ItemKnife("iron_knife");
 
+
     public static void register(IForgeRegistry<Item> registry) {
         registry.registerAll(
-                obsidian_ingot,
                 inf_water_bucket,
                 inf_lava_bucket,
                 time_wand,
@@ -41,7 +40,6 @@ public class ModItems {
 
     public static void registerModels() {
 
-        registerItemRender(obsidian_ingot);
         registerItemRender(inf_water_bucket);
         registerItemRender(inf_lava_bucket);
         registerItemRender(time_wand);
