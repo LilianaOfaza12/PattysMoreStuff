@@ -3,10 +3,14 @@ package com.stc.pattysmorestuff.handlers;
 import com.stc.pattysmorestuff.configuration.ConfigPreInit;
 import com.stc.pattysmorestuff.init.*;
 import net.minecraft.block.Block;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistryModifiable;
@@ -16,6 +20,7 @@ import net.minecraftforge.registries.IForgeRegistryModifiable;
  */
 @Mod.EventBusSubscriber
 public class RegistrationHandler {
+
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {

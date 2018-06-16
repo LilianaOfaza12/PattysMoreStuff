@@ -1,5 +1,7 @@
 package com.stc.pattysmorestuff.init;
 
+import com.stc.pattysmorestuff.blocks.fences.BlockDyeFence;
+import com.stc.pattysmorestuff.blocks.fences.BlockDyeFenceGate;
 import com.stc.pattysmorestuff.blocks.stairs.BlockColoredStairs;
 import com.stc.pattysmorestuff.blocks.colored.BlockDye;
 import com.stc.pattysmorestuff.blocks.colored.BlockStonebrick;
@@ -53,6 +55,40 @@ public class ModColoredBlocks {
     public static BlockColoredStairs dye_green_stairs  = new BlockColoredStairs("dye_green_stairs", dye_block_green.getDefaultState());
     public static BlockColoredStairs dye_red_stairs  = new BlockColoredStairs("dye_red_stairs", dye_block_red.getDefaultState());
     public static BlockColoredStairs dye_black_stairs  = new BlockColoredStairs("dye_black_stairs", dye_block_black.getDefaultState());
+
+    public static BlockDyeFence dye_black_fence = new BlockDyeFence("dye_black_fence");
+    public static BlockDyeFence dye_red_fence = new BlockDyeFence("dye_red_fence");
+    public static BlockDyeFence dye_green_fence = new BlockDyeFence("dye_green_fence");
+    public static BlockDyeFence dye_brown_fence = new BlockDyeFence("dye_brown_fence");
+    public static BlockDyeFence dye_blue_fence = new BlockDyeFence("dye_blue_fence");
+    public static BlockDyeFence dye_purple_fence = new BlockDyeFence("dye_purple_fence");
+    public static BlockDyeFence dye_cyan_fence = new BlockDyeFence("dye_cyan_fence");
+    public static BlockDyeFence dye_silver_fence = new BlockDyeFence("dye_silver_fence");
+    public static BlockDyeFence dye_gray_fence = new BlockDyeFence("dye_gray_fence");
+    public static BlockDyeFence dye_pink_fence = new BlockDyeFence("dye_pink_fence");
+    public static BlockDyeFence dye_lime_fence = new BlockDyeFence("dye_lime_fence");
+    public static BlockDyeFence dye_yellow_fence = new BlockDyeFence("dye_yellow_fence");
+    public static BlockDyeFence dye_light_blue_fence = new BlockDyeFence("dye_light_blue_fence");
+    public static BlockDyeFence dye_magenta_fence = new BlockDyeFence("dye_magenta_fence");
+    public static BlockDyeFence dye_orange_fence = new BlockDyeFence("dye_orange_fence");
+    public static BlockDyeFence dye_white_fence = new BlockDyeFence("dye_white_fence");
+
+    public static BlockDyeFenceGate dye_white_fence_gate = new BlockDyeFenceGate("dye_white_fence_gate");
+    public static BlockDyeFenceGate dye_orange_fence_gate = new BlockDyeFenceGate("dye_orange_fence_gate");
+    public static BlockDyeFenceGate dye_magenta_fence_gate = new BlockDyeFenceGate("dye_magenta_fence_gate");
+    public static BlockDyeFenceGate dye_light_blue_fence_gate = new BlockDyeFenceGate("dye_light_blue_fence_gate");
+    public static BlockDyeFenceGate dye_yellow_fence_gate = new BlockDyeFenceGate("dye_yellow_fence_gate");
+    public static BlockDyeFenceGate dye_lime_fence_gate = new BlockDyeFenceGate("dye_lime_fence_gate");
+    public static BlockDyeFenceGate dye_pink_fence_gate = new BlockDyeFenceGate("dye_pink_fence_gate");
+    public static BlockDyeFenceGate dye_gray_fence_gate = new BlockDyeFenceGate("dye_gray_fence_gate");
+    public static BlockDyeFenceGate dye_silver_fence_gate = new BlockDyeFenceGate("dye_silver_fence_gate");
+    public static BlockDyeFenceGate dye_cyan_fence_gate = new BlockDyeFenceGate("dye_cyan_fence_gate");
+    public static BlockDyeFenceGate dye_purple_fence_gate = new BlockDyeFenceGate("dye_purple_fence_gate");
+    public static BlockDyeFenceGate dye_blue_fence_gate = new BlockDyeFenceGate("dye_blue_fence_gate");
+    public static BlockDyeFenceGate dye_brown_fence_gate = new BlockDyeFenceGate("dye_brown_fence_gate");
+    public static BlockDyeFenceGate dye_green_fence_gate = new BlockDyeFenceGate("dye_green_fence_gate");
+    public static BlockDyeFenceGate dye_red_fence_gate = new BlockDyeFenceGate("dye_red_fence_gate");
+    public static BlockDyeFenceGate dye_black_fence_gate = new BlockDyeFenceGate("dye_black_fence_gate");
 
     public static BlockStonebrick stonebrick_black = new BlockStonebrick("stonebrick_black");
     public static BlockStonebrick stonebrick_red = new BlockStonebrick("stonebrick_red");
@@ -193,7 +229,15 @@ public class ModColoredBlocks {
                 glass_magenta_stairs, glass_light_blue_stairs, glass_yellow_stairs,
                 glass_lime_stairs, glass_pink_stairs, glass_gray_stairs, glass_silver_stairs,
                 glass_cyan_stairs, glass_purple_stairs, glass_blue_stairs, glass_brown_stairs,
-                glass_green_stairs, glass_red_stairs, glass_black_stairs
+                glass_green_stairs, glass_red_stairs, glass_black_stairs, dye_white_fence,
+                dye_orange_fence, dye_magenta_fence, dye_light_blue_fence, dye_yellow_fence,
+                dye_lime_fence, dye_pink_fence, dye_gray_fence, dye_silver_fence, dye_cyan_fence,
+                dye_purple_fence, dye_blue_fence, dye_brown_fence, dye_green_fence, dye_red_fence,
+                dye_black_fence, dye_white_fence_gate, dye_orange_fence_gate, dye_magenta_fence_gate,
+                dye_light_blue_fence_gate, dye_yellow_fence_gate, dye_lime_fence_gate, dye_pink_fence_gate,
+                dye_gray_fence_gate, dye_silver_fence_gate, dye_cyan_fence_gate, dye_purple_fence_gate,
+                dye_blue_fence_gate, dye_brown_fence_gate, dye_green_fence_gate, dye_red_fence_gate,
+                dye_black_fence_gate
 
         };
         event.registerAll(blocks);
@@ -336,7 +380,41 @@ public class ModColoredBlocks {
                 glass_brown_stairs.createItemBlock(),
                 glass_green_stairs.createItemBlock(),
                 glass_red_stairs.createItemBlock(),
-                glass_black_stairs.createItemBlock()
+                glass_black_stairs.createItemBlock(),
+
+                dye_white_fence.createItemBlock(),
+                dye_orange_fence.createItemBlock(),
+                dye_magenta_fence.createItemBlock(),
+                dye_light_blue_fence.createItemBlock(),
+                dye_yellow_fence.createItemBlock(),
+                dye_lime_fence.createItemBlock(),
+                dye_pink_fence.createItemBlock(),
+                dye_gray_fence.createItemBlock(),
+                dye_silver_fence.createItemBlock(),
+                dye_cyan_fence.createItemBlock(),
+                dye_purple_fence.createItemBlock(),
+                dye_blue_fence.createItemBlock(),
+                dye_brown_fence.createItemBlock(),
+                dye_green_fence.createItemBlock(),
+                dye_red_fence.createItemBlock(),
+                dye_black_fence.createItemBlock(),
+
+                dye_white_fence_gate.createItemBlock(),
+                dye_orange_fence_gate.createItemBlock(),
+                dye_magenta_fence_gate.createItemBlock(),
+                dye_light_blue_fence_gate.createItemBlock(),
+                dye_yellow_fence_gate.createItemBlock(),
+                dye_lime_fence_gate.createItemBlock(),
+                dye_pink_fence_gate.createItemBlock(),
+                dye_gray_fence_gate.createItemBlock(),
+                dye_silver_fence_gate.createItemBlock(),
+                dye_cyan_fence_gate.createItemBlock(),
+                dye_purple_fence_gate.createItemBlock(),
+                dye_blue_fence_gate.createItemBlock(),
+                dye_brown_fence_gate.createItemBlock(),
+                dye_green_fence_gate.createItemBlock(),
+                dye_red_fence_gate.createItemBlock(),
+                dye_black_fence_gate.createItemBlock()
 
 
         );
@@ -479,6 +557,39 @@ public class ModColoredBlocks {
         registerBlockRender(glass_red_stairs);
         registerBlockRender(glass_black_stairs);
 
+        registerBlockRender(dye_white_fence);
+        registerBlockRender(dye_orange_fence);
+        registerBlockRender(dye_magenta_fence);
+        registerBlockRender(dye_light_blue_fence);
+        registerBlockRender(dye_yellow_fence);
+        registerBlockRender(dye_lime_fence);
+        registerBlockRender(dye_pink_fence);
+        registerBlockRender(dye_gray_fence);
+        registerBlockRender(dye_silver_fence);
+        registerBlockRender(dye_cyan_fence);
+        registerBlockRender(dye_purple_fence);
+        registerBlockRender(dye_blue_fence);
+        registerBlockRender(dye_brown_fence);
+        registerBlockRender(dye_green_fence);
+        registerBlockRender(dye_red_fence);
+        registerBlockRender(dye_black_fence);
+
+        registerBlockRender(dye_white_fence_gate);
+        registerBlockRender(dye_orange_fence_gate);
+        registerBlockRender(dye_magenta_fence_gate);
+        registerBlockRender(dye_light_blue_fence_gate);
+        registerBlockRender(dye_yellow_fence_gate);
+        registerBlockRender(dye_lime_fence_gate);
+        registerBlockRender(dye_pink_fence_gate);
+        registerBlockRender(dye_gray_fence_gate);
+        registerBlockRender(dye_silver_fence_gate);
+        registerBlockRender(dye_cyan_fence_gate);
+        registerBlockRender(dye_purple_fence_gate);
+        registerBlockRender(dye_blue_fence_gate);
+        registerBlockRender(dye_brown_fence_gate);
+        registerBlockRender(dye_green_fence_gate);
+        registerBlockRender(dye_red_fence_gate);
+        registerBlockRender(dye_black_fence_gate);
 
     }
 

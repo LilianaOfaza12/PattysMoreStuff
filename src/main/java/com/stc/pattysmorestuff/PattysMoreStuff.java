@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
 import java.io.File;
 
 @Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION, acceptedMinecraftVersions = Strings.MC_VERSION, guiFactory = "com.stc.pattysmorestuff.gui.PMSGuiFactory")
@@ -32,7 +33,6 @@ public class PattysMoreStuff
     @Mod.Instance("pattysmorestuff")
     public static PattysMoreStuff instance;
 
-
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -41,6 +41,7 @@ public class PattysMoreStuff
 
         ModTabs.registerTabs();
         ModCrafting.furnaceRecipes();
+
     }
 
     @EventHandler

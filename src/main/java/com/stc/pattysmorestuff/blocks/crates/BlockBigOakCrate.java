@@ -132,26 +132,7 @@ public class BlockBigOakCrate extends BlockContainer {
         {
             ILockableContainer ilockablecontainer = (TileEntityBigOakCrate)tileentity;
 
-            if (!p_189418_3_ && this.isBlocked(p_189418_1_, p_189418_2_))
             {
-                return null;
-            }
-            else
-            {
-                for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
-                {
-                    BlockPos blockpos = p_189418_2_.offset(enumfacing);
-                    Block block = p_189418_1_.getBlockState(blockpos).getBlock();
-
-                    if (block == this)
-                    {
-                        if (this.isBlocked(p_189418_1_, blockpos))
-                        {
-                            return null;
-                        }
-                    }
-                }
-
                 return ilockablecontainer;
             }
         }
@@ -189,16 +170,6 @@ public class BlockBigOakCrate extends BlockContainer {
     public int getStrongPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
     {
         return side == EnumFacing.UP ? blockState.getWeakPower(blockAccess, pos, side) : 0;
-    }
-
-    private boolean isBlocked(World worldIn, BlockPos pos)
-    {
-        return this.isBelowSolidBlock(worldIn, pos);
-    }
-
-    private boolean isBelowSolidBlock(World worldIn, BlockPos pos)
-    {
-        return worldIn.getBlockState(pos.up()).isSideSolid(worldIn, pos.up(), EnumFacing.DOWN);
     }
 
     public boolean hasComparatorInputOverride(IBlockState state)

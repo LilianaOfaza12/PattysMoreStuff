@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "IBI",
-    "BIB",
-    "IBI"
+    "IOI",
+	"OIO",
+	"IOI"
   ],
   "key": {
+    "O": {
+    "item": "minecraft:obsidian"
+    },
     "I": {
-      "item": "minecraft:obsidian"
-    }
-	"B": {
-		"item": "minecraft:iron_bars"
-	}
+    "item": "minecraft:iron_bars"
+    }	
   },
   "result": {
     "item": "pattysmorestuff:reinforced_obsidian",
